@@ -161,12 +161,13 @@ Abbiamo usato le seguenti formule statistiche per....
 
 \chapter{Pendolo a torsione}
 
-\subsubsection{ strumenti}
-micrometro: $ \pm 1 \mu m$
-metro: $\pm 1 mm$
-sensore di rotazione: $\pm 0.09$ gradi
+\section{Introduzione}
 
-\subsubsection{Dati geometrici}
+\subsection{ Strumentazione e dati geometrici}
+Micrometro: $ \pm 1 \mu m$
+Metro: $\pm 1 mm$
+Sensore di rotazione: $\pm 0.09$ gradi
+
 \begin{tabular}{ll}
 Masse puntiformi: & 0.074 kg\\
 Lunghezza sbarra: & 0.38 m\\
@@ -191,13 +192,39 @@ Diametro carrucola: & 29 mm\\
 
 \end{tabular}
 
-\section{Brevi accenni teorici}
-La costante di proporzionalità $c$ \'e detta costante di torsione del filo ed \'e legata ai parametrié fisici del filo tramite l'equazione:
 
+- Misura posizione angolare -> accel -> momento d'inerzia
+- Misura periodo -> costante c
+- Misura angolo di equilibrio -> costante c
+
+\subsection{Oggetto della ricerca}
+L'esperienza si prefissa l'obiettivo di misura le costanti di torsione $c$ di tre fili di sezione differente. 
+
+
+\subsection{Metodo}
+Per poter arrivare a questo risultato finale, l'esperienza si compone di tre differenti fasi.
+
+In primis misureremo sperimentalmente il momento d'inerzia di una serie di corpi, grazie all'uguaglianza: 
+$$ bF_p = M = I \alpha $$
+L'accelerazione \alpha verrà ricavata sperimentalmente dai dati forniti da un sensore di rotazione che misurerà lo spontamento angolare del nostro corpo quando è soggetto ad un momento causato dalla forza peso. Tramite strumenti informatici verrà poi calcolata l'accelerazione associata. Lo scopo è trovare il momento d'inerzia sperimentale.
+
+Nella seconda fase, utilizzeremo un pendolo fisico.    
+ 
+Questo ci permetterà di calcolare nella seconda parte la costante di torsione $c$ sfruttando la seguente eguaglianza:
+
+$$ c = 4\pi^2\frac{I}{T^2} $$
+
+La quale è ricavata dall'equazione del periodo del moto oscillatorio di un pendolo fisico:
+
+$$ T = 2\pi \sqrt{\frac{I}{c}}$$
+
+che è stato misurato sperimentalmente per tre fili di differente sezione.
+
+Inoltre, la costante  $c$ è anche legata ai parametri fisici del filo tramite l'equazione:
 
 $$ c = G \frac{\pi}{2}\frac{r^4}{l} $$
 
-$$ T = 2\pi \sqrt{\frac{I}{c}}$$
+Questo ci conduce alla terza parte dell'esperimento, che ci permette di calcolare c tramite una condizione di equilibrio.
 
 
 dove $r$ e $l$ sono rispettivamente il raggio e la lunghezza del filo, $I$ è il momento d'inerzia, $T$ il periodo, e $G$ è il modulo di rigidità o di scorrimento ed è una proprietà specifica del materiale di cui il filo è realizzato.
@@ -205,14 +232,17 @@ dove $r$ e $l$ sono rispettivamente il raggio e la lunghezza del filo, $I$ è il
 Dunque
 $$ c = 4\pi^2\frac{I}{T^2} $$
 
-Questo esperimento si suddivide in due parti:
-\subsection{Misure dei momenti d'inerzia}
-In questa prima parte dell'esperienza si misureranno i momenti d'inerzia dei seguenti corpi, elencati con i rispettivi momenti teorici:
+
+\section{Raccolta dati}
+
+
 $ 1/2 m R^2 $
 $ 1/2 m (R^2_1 + R^2_2) $
 $ 1/12 m L^2 + 2 \mu D^2  $
-\subsubsection*{Procedimento}
-Al fine di calcolare sperimentalmente il momento d'inerzia dei seguenti corpi,
+
+
+
+
 \begin{itemize}
 \item disco di raggio e massa
 \item anello di raggi e massa
@@ -221,18 +251,9 @@ Al fine di calcolare sperimentalmente il momento d'inerzia dei seguenti corpi,
 
 
 
-Ne misuriamo la posizione angolare in funzione del tempo, 
 
-I corpi vengono fissati a turno sul perno di una puleggia A posta su un sensore di moto rotatorio, collegato tramite interfaccia al PC. Per mettere in rotazione la puleggia si deve tirare il filo avvolto attorno ad essa, applicando una forza. Si utilizza la forza peso esercitata da masse calibrate sospese all’altro capo del filo. Per fare questo si deve montare sulla base del sensore di moto, lateralmente, una seconda puleggia B, su cui si fa scorrere il filo proveniente dalla puleggia del sensore di moto. All'estremità del filo si lega il supporto di sospensione delle masse calibrate.
-Quando si pongono sul supporto una o più masse il sistema si mette in rotazione. Il sensore di moto rotatorio misura la posizione della puleggia (e dei corpi ad essa solidali) in funzione del tempo, e quindi la velocità angolare  al grafico di [] in funzione del tempo si può ricavare l’accelerazione  per derivazione.
-Il modulo del momento della forza applicata è calcolabile come:
 
-dove T è la tensione del filo ed r è il braccio della forza, cioè il raggio della puleggia A. La tensione del filo può essere ricavata risolvendo l’equazione del moto della massa ms che cade con accelerazione lineare a:
-
-che permette di ricavare I dalla misura dell’accelerazione  del raggio r e della massa. La misura di I può essere ripetuta variando la massa sospesa, e quindi variando l'accelerazione angolare. Confrontare i risultati ottenuti con il momento di inerzia calcolato a partire dai parametri geometrici del corpo.
-Ripetere il procedimento per ciascuno dei corpi a disposizione. L’anello va fissato sopra il disco in modo da misurare il momento di inerzia totale dei due corpi.
-
-\subsection{Pendolo a torsione Misura statica}
+\subsection{FASE B: Pendolo a torsione }
 
 Ponendo
 $$ M_{peso} = bmg = c\theta $$
@@ -242,7 +263,7 @@ dove $b$
 Non siamo riusciti a trovare i valori di G, quindi abbiamo cercato di arrivare a una migliore stima:
 $$ G = \frac{2cl}{\pi r^4} $$
 
-\subsection{Pendolo a torsione Misura dinamica}
+\subsection{FASE C: Misura di equilibrio}
 
 Calcolo C a partire dalle caratteristiche geometriche dei corpi:
 
@@ -343,7 +364,7 @@ values = [ 3.875 3.9 3.9 3.875 3.9 3.875 3.875
 \end{verbatim}
 
 
-\section{Raccolta dati}
+
 Abbiamo effettuato una serie di misurazioni 
 \section{Analisi dei dati}
 \section{Conclusioni}
