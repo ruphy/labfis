@@ -163,7 +163,24 @@ Abbiamo usato le seguenti formule statistiche per....
 
 \section{Introduzione}
 
+
+\subsection{Oggetto della ricerca}
+L'esperienza si prefissa l'obiettivo di misura le costanti di torsione $c$ di tre fili di sezione differente. 
+
+
+\subsection{Metodo}
+L'esperienza si compone di tre differenti fasi.
+\begin{itemize}
+\item Misura sperimentale dello spostamento angolare a seguito del momento della forza peso, al fine di calcolarne il momento d'inerzia 
+\item Misura sperimentale del periodo di un pendolo di torsione, al fine di calcolare la costante di torsione dei fili
+\item Misura della costante $c$ di torsione tramite l'instaurazione di un equilibrio tra il momento elastico e il momento della forza peso, e confronto con il valore teorico di $c$
+\end{itemize}
+
 \subsection{ Strumentazione e dati geometrici}
+
+Nell'esperimento verrà utilizzato un pendolo di torsione strutturato nel seguente modo:
+
+
 Micrometro: $ \pm 1 \mu m$
 Metro: $\pm 1 mm$
 Sensore di rotazione: $\pm 0.09$ gradi
@@ -193,62 +210,20 @@ Diametro carrucola: & 29 mm\\
 \end{tabular}
 
 
-- Misura posizione angolare -> accel -> momento d'inerzia
-- Misura periodo -> costante c
-- Misura angolo di equilibrio -> costante c
+\section{Raccolta dei dati}
 
-\subsection{Oggetto della ricerca}
-L'esperienza si prefissa l'obiettivo di misura le costanti di torsione $c$ di tre fili di sezione differente. 
+\subsubsection{Dati geometrici fili A,B,C}
+\begin{tabular}{|l|l|l|l|}
+\toprule
+ & Filo A & Filo B & Filo C \\
+\midrule
+Diametro (mm) & 1.750 & 1.175 & 0.880 \\
+\midrule
+Lunghezza (cm) & 41.3 &  43 & 33.5 \\
+\bottomrule
+\end{tabular}
 
-
-\subsection{Metodo}
-Per poter arrivare a questo risultato finale, l'esperienza si compone di tre differenti fasi.
-
-In primis misureremo sperimentalmente il momento d'inerzia di una serie di corpi, grazie all'uguaglianza: 
-$$ bF_p = M = I \alpha $$
-L'accelerazione $\alpha$ verrà ricavata sperimentalmente dai dati forniti da un sensore di rotazione che misurerà lo spontamento angolare del nostro corpo quando è soggetto ad un momento causato dalla forza peso. Tramite strumenti informatici verrà poi calcolata l'accelerazione associata. Lo scopo è trovare il momento d'inerzia sperimentale.
-
-Nella seconda fase, utilizzeremo un pendolo fisico.    
- 
-Questo ci permetterà di calcolare nella seconda parte la costante di torsione $c$ sfruttando la seguente eguaglianza:
-
-$$ c = 4\pi^2\frac{I}{T^2} $$
-
-La quale è ricavata dall'equazione del periodo del moto oscillatorio di un pendolo fisico:
-
-$$ T = 2\pi \sqrt{\frac{I}{c}}$$
-
-che è stato misurato sperimentalmente per tre fili di differente sezione.
-
-Inoltre, la costante  $c$ è anche legata ai parametri fisici del filo tramite l'equazione:
-
-$$ c = G \frac{\pi}{2}\frac{r^4}{l} $$
-
-Questo ci conduce alla terza parte dell'esperimento, che ci permette di calcolare c tramite una condizione di equilibrio.
-
-
-dove $r$ e $l$ sono rispettivamente il raggio e la lunghezza del filo, $I$ è il momento d'inerzia, $T$ il periodo, e $G$ è il modulo di rigidità o di scorrimento ed è una proprietà specifica del materiale di cui il filo è realizzato.
-
-Dunque
-$$ c = 4\pi^2\frac{I}{T^2} $$
-
-
-In questa prima parte dell'esperienza si misureranno i momenti d'inerzia dei seguenti corpi, elencati con i rispettivi momenti teorici:
-$$ \frac{1}{2} m R^2 $$
-$$ \frac{1}{2} m (R^2_1 + R^2_2) $$
-$$ \frac{1}{12} m L^2 + 2 \mu D^2  $$
-
-- Grafico angolo/tempo cadute
-- Grafico accelerazione/tempo cadute
-- Calcolo momenti da dati sperimentali:
-
-Calcoliamo $I$ nel seguente modo:
-$$ bF_p = I\alpha $$
-La forza peso ($F_p$) è nota, così come il braccio ($b$) e, dall'elaborazione dei dati sperimentali, possiamo calcolare $\alpha$.
-
-I momenti di inerzia sono risultati essere
-
-A fronte di risulati teorici attesi di
+\subsection{FASE 1: Misura dei momenti d'inerzia}
 
 \begin{itemize}
 \item disco di raggio e massa
@@ -256,11 +231,144 @@ A fronte di risulati teorici attesi di
 \item una sbarra cilindrica omogenea, con due masse uguali, scorrevoli su di essa, poste equidistanti dall’asse di rotazione, di lunghezza e massa
 \end{itemize}
 
+Per procedere a ricavare sperimentalmente il momento d'inerzia di questi corpi, si è utilizzato un sistema di due pulleggie e un sensore di rotazione.
+Il sensore di rotazione fornisce la posizione angolare in funzione del tempo. 
+
+
+
+- Grafico angolo/tempo cadute
+- Grafico accelerazione/tempo cadute
+- Calcolo momenti da dati sperimentali:
 
 
 
 
-\subsection{FASE B: Pendolo a torsione }
+
+
+Calcolo C a partire dalle caratteristiche geometriche dei corpi:
+
+$$ I_sbarra = 0.00844 $$
+$$ I_disco = 0.00013 $$
+$$ I_anello = 0.00046 $$
+
+
+
+\subsection{FASE 2: Pendolo di torsione}
+
+Da inserire:
+- Grafico (isto+gaussiana) dei Periodi
+- Grafico spazio/tempo dei Periodi
+
+
+Abbiamo ricavato i seguenti periodi per ogni filo:
+\subsubsection{Filo A}
+
+\begin{verbatim}
+= Period (in s) =
+Mean = 0.644
+
+String preformatted for GNU Octave:
+values = [ 0.65 0.65 0.65 0.625 0.65 0.675 0.65 0.625
+0.65 0.65 0.65 0.625 0.65 0.65 0.625 0.65
+0.65 0.65 0.625 0.675 0.625 0.65 0.625 0.65 0.65 0.65
+0.65 0.625 0.65 0.675 0.625 0.65 0.65 0.625
+0.625 0.675 0.65 0.65 0.625 0.65 0.625 0.65 0.625 0.65
+0.65 0.625 0.65 0.65 0.65 0.625]
+
+\end{verbatim}
+
+\subsubsection{Filo B}
+Periodo di oscillazione (s):
+\\
+\begin{center}
+\begin{tabular}{llllllll}
+2.4   & 2.4   & 2.425 & 2.4  & 2.4   & 2.425 & 2.4  & 2.4 \\
+2.425 & 2.425 & 2.425 & 2.45 & 2.45  & 2.5   & 2.5  & 2.45 \\
+\end{tabular}
+\end{center}
+Media = 2.43
+
+\subsubsection{Filo C}
+
+\begin{verbatim}
+= Period (in s) =
+Mean = 3.844
+
+String preformatted for GNU Octave:
+values = [ 3.875 3.9 3.9 3.875 3.9 3.875 3.875
+3.875 3.875 3.85 3.875 3.85 3.85 3.85 3.825
+3.825 3.825 3.8 3.8 3.75 3.775 3.75]
+\end{verbatim}
+
+\subsection{FASE 3: Misura di equilibrio}
+
+\subsubsection{Filo A}
+\begin{tabular}{|l|l|}
+\toprule
+Peso (g) & Rotazione (gradi)\\
+\midrule
+50g & 4.0 \\
+100g & 7.0 \\
+200g & 13.0 \\
+\bottomrule
+\end{tabular}
+\\ \\
+\subsubsection{Filo B}
+\begin{tabular}{|l|l|}
+\toprule
+Peso (g) & Rotazione (gradi)\\
+\midrule
+50g & 12.0 \\
+100g & 23.0 \\
+200g & 47.0 \\
+\bottomrule
+\end{tabular}
+\\ \\
+\subsubsection{Filo C}
+\begin{tabular}{|l|l|}
+\toprule
+Peso (g) & Rotazione (gradi)\\
+\midrule
+50g & 31.0 \\
+100g & 61.0 \\
+200g & 126.0 \\
+\bottomrule
+\end{tabular}
+
+\section{Analisi dei dati}
+
+\subsection{FASE A: Misura dei momenti d'inerzia}
+
+Acquisiti i dati della posizione angolare in funzione del tempo, è possibile calcolare l'accelerazione angolare del sistema. A questo punto, si può calcolare $I$ nel seguente modo:
+$$ bF_p = I\alpha $$
+La forza peso ($F_p$) è nota, così come il braccio ($b$) e, dall'elaborazione dei dati sperimentali, possiamo calcolare $\alpha$.
+
+seguenti corpi, elencati con i rispettivi momenti teorici:
+$$ \frac{1}{2} m R^2 $$
+$$ \frac{1}{2} m (R^2_1 + R^2_2) $$
+$$ \frac{1}{12} m L^2 + 2 \mu D^2  $$
+
+Grafici
+
+
+\subsection{FASE B: Pendolo di torsione}
+
+
+Questo ci permetterà di calcolare nella seconda parte la costante di torsione $c$ sfruttando la seguente eguaglianza:
+
+$$ c = 4\pi^2\frac{I}{T^2} $$
+
+
+$$ T = 2\pi \sqrt{\frac{I}{c}}$$
+
+
+
+
+\subsection{FASE C: Misura di equilibrio}
+
+$$ c = G \frac{\pi}{2}\frac{r^4}{l} $$
+
+dove $r$ e $l$ sono rispettivamente il raggio e la lunghezza del filo, $I$ è il momento d'inerzia, $T$ il periodo, e $G$ è il modulo di rigidità o di scorrimento ed è una proprietà specifica del materiale di cui il filo è realizzato.
 
 Ponendo
 $$ M_{peso} = bmg = c\theta $$
@@ -284,9 +392,6 @@ Non siamo riusciti a trovare i valori di G tabulati in quanto non conoscevamo il
 
 $$ G = \frac{2cl}{\pi r^4} $$
 
-
-\subsection{FASE C: Misura di equilibrio}
-
 I valori calcolati sono stati:
 \begin{center}
 \begin{tabular}{lll}
@@ -306,117 +411,6 @@ Acciaio & Titanio \\
 \end{tabular}
 \end{center}
 
-Supporremo il valore di G uguale a quello tabulato da qui in poi.
-
-\subsection{Pendolo a torsione Misura dinamica}
-
-
-Da inserire:
-- Grafico (isto+gaussiana) dei Periodi
-- Grafico spazio/tempo dei Periodi
-
-Calcolo C a partire dalle caratteristiche geometriche dei corpi:
-
-$$ I_sbarra = 0.00844 $$
-$$ I_disco = 0.00013 $$
-$$ I_anello = 0.00046 $$
-
-
-\subsection{Filo A}
-\begin{tabular}{ll}
-Diametro: & 1,750 mm\\
-Lunghezza: & 41,3 cm\\
-\end{tabular}
-\\ \\
-Le misurazioni sono state le seguenti:
-\begin{center}
-\begin{tabular}{|l|l|}
-\toprule
-Peso (g) & Rotazione (gradi)\\
-\midrule
-50g & 4.0 \\
-100g & 7.0 \\
-200g & 13.0 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\begin{verbatim}
-= Period (in s) =
-Mean = 0.644
-
-String preformatted for GNU Octave:
-values = [ 0.65 0.65 0.65 0.625 0.65 0.675 0.65 0.625
-0.65 0.65 0.65 0.625 0.65 0.65 0.625 0.65
-0.65 0.65 0.625 0.675 0.625 0.65 0.625 0.65 0.65 0.65
-0.65 0.625 0.65 0.675 0.625 0.65 0.65 0.625
-0.625 0.675 0.65 0.65 0.625 0.65 0.625 0.65 0.625 0.65
-0.65 0.625 0.65 0.65 0.65 0.625]
-\end{verbatim}
-
-\subsection{Filo B}
-\begin{tabular}{ll}
-Diametro:  & 1,175 mm \\
-Lunghezza: & 43 cm \\
-
-\end{tabular}
-\\ \\
-Le misurazioni sono state le seguenti:
-\begin{center}
-\begin{tabular}{|l|l|}
-\toprule
-Peso (g) & Rotazione (gradi)\\
-\midrule
-50g & 12.0 \\
-100g & 23.0 \\
-200g & 47.0 \\
-\bottomrule
-\end{tabular}
-\end{center}
-Periodo di oscillazione (s):
-\\
-\begin{center}
-\begin{tabular}{llllllll}
-2.4   & 2.4   & 2.425 & 2.4  & 2.4   & 2.425 & 2.4  & 2.4 \\
-2.425 & 2.425 & 2.425 & 2.45 & 2.45  & 2.5   & 2.5  & 2.45 \\
-\end{tabular}
-\end{center}
-Media = 2.43
-
-[Grafico Octave]
-
-\subsection{Filo C}
-\begin{tabular}{ll}
-Diametro: & 0,880 mm \\
-Lunghezza: & 33,5 cm \\
-\end{tabular}
-\\ \\Le misurazioni sono state le seguenti:
-\begin{center}
-\begin{tabular}{|l|l|}
-\toprule
-Peso (g) & Rotazione (gradi)\\
-\midrule
-50g & 31.0 \\
-100g & 61.0 \\
-200g & 126.0 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\begin{verbatim}
-= Period (in s) =
-Mean = 3.844
-
-String preformatted for GNU Octave:
-values = [ 3.875 3.9 3.9 3.875 3.9 3.875 3.875
-3.875 3.875 3.85 3.875 3.85 3.85 3.85 3.825
-3.825 3.825 3.8 3.8 3.75 3.775 3.75]
-\end{verbatim}
-
-
-
-Abbiamo effettuato una serie di misurazioni 
-\section{Analisi dei dati}
 \section{Conclusioni}
 \end{document} 
 
