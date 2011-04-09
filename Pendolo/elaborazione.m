@@ -11,9 +11,9 @@ for j=firstFile:1:lastFile
     file = strcat(variable, '.txt');
     
     eval(['load ' file]);
-    eval(['data', num2str(data), ' = ', variable, ';'])
-    tempo = load(file, (:, 1))
-    ang = file(:, 2)
+#    eval(['data', num2str(data), ' = ', variable, ';'])
+    tempo = dati_1.txt(:,1) #load(file, (:, 1))
+    ang = dati_1.txt(:, 2)
 
     for i = (1 : (numel(tempo)-1));
         dx = (tempo(i)-tempo(i+1))

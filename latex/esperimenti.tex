@@ -18,7 +18,7 @@
 \newtheorem{prop}{Proprietà}
 % \newtheorem{def}[cap]{×}
  
- 
+\author{awa}
 % Title Page
 \title{Esperimento}
 
@@ -206,7 +206,7 @@ Per poter arrivare a questo risultato finale, l'esperienza si compone di tre dif
 
 In primis misureremo sperimentalmente il momento d'inerzia di una serie di corpi, grazie all'uguaglianza: 
 $$ bF_p = M = I \alpha $$
-L'accelerazione \alpha verrà ricavata sperimentalmente dai dati forniti da un sensore di rotazione che misurerà lo spontamento angolare del nostro corpo quando è soggetto ad un momento causato dalla forza peso. Tramite strumenti informatici verrà poi calcolata l'accelerazione associata. Lo scopo è trovare il momento d'inerzia sperimentale.
+L'accelerazione $\alpha$ verrà ricavata sperimentalmente dai dati forniti da un sensore di rotazione che misurerà lo spontamento angolare del nostro corpo quando è soggetto ad un momento causato dalla forza peso. Tramite strumenti informatici verrà poi calcolata l'accelerazione associata. Lo scopo è trovare il momento d'inerzia sperimentale.
 
 Nella seconda fase, utilizzeremo un pendolo fisico.    
  
@@ -233,15 +233,22 @@ Dunque
 $$ c = 4\pi^2\frac{I}{T^2} $$
 
 
-\section{Raccolta dati}
+In questa prima parte dell'esperienza si misureranno i momenti d'inerzia dei seguenti corpi, elencati con i rispettivi momenti teorici:
+$$ \frac{1}{2} m R^2 $$
+$$ \frac{1}{2} m (R^2_1 + R^2_2) $$
+$$ \frac{1}{12} m L^2 + 2 \mu D^2  $$
 
+- Grafico angolo/tempo cadute
+- Grafico accelerazione/tempo cadute
+- Calcolo momenti da dati sperimentali:
 
-$ 1/2 m R^2 $
-$ 1/2 m (R^2_1 + R^2_2) $
-$ 1/12 m L^2 + 2 \mu D^2  $
+Calcoliamo $I$ nel seguente modo:
+$$ bF_p = I\alpha $$
+La forza peso ($F_p$) è nota, così come il braccio ($b$) e, dall'elaborazione dei dati sperimentali, possiamo calcolare $\alpha$.
 
+I momenti di inerzia sono risultati essere
 
-
+A fronte di risulati teorici attesi di
 
 \begin{itemize}
 \item disco di raggio e massa
@@ -258,12 +265,55 @@ $ 1/12 m L^2 + 2 \mu D^2  $
 Ponendo
 $$ M_{peso} = bmg = c\theta $$
 
-dove $b$ 
+dove $b$ è il braccio di applicazione della forza peso, ovvero il raggio della carrucola.
+I valori di c calcolati dono dunque stati (in $N\cdot m/rad$):
+\\
+\begin{center}
+\begin{tabular}{l|lll}
+Peso & Filo A & Filo B & Filo C \\
+\midrule
+50g & 0.1019 & 0.0340 & 0.0135 \\
+100g & 0.1164 & 0.0354 & 0.0134 \\
+200g & 0.1254 & 0.0347 & 0.0129 \\
+\midrule
+Media & & & \\
+\end{tabular}
+\end{center}
 
-Non siamo riusciti a trovare i valori di G, quindi abbiamo cercato di arrivare a una migliore stima:
+Non siamo riusciti a trovare i valori di G tabulati in quanto non conoscevamo il materiale in cui era costruito, quindi abbiamo cercato di arrivare a una migliore stima per riconoscere il materiale del filo. Abbiamo utilizzato un valore medio di $c$ per calcolare $G$ secondo la seguente formula:
+
 $$ G = \frac{2cl}{\pi r^4} $$
 
+
 \subsection{FASE C: Misura di equilibrio}
+
+I valori calcolati sono stati:
+\begin{center}
+\begin{tabular}{lll}
+Filo A & Filo B & Filo C \\
+\midrule
+49 GPa & 78 GPa & 73 GPa \\
+\end{tabular}
+\end{center}
+
+Da cui abbiamo dedotto che il filo A fosse in titanio, e i fili B e C in acciaio.
+I dati tabulati sono i seguenti
+\begin{center}
+\begin{tabular}{ll}
+Acciaio & Titanio \\
+\midrule
+41 GPa & 78 GPa \\
+\end{tabular}
+\end{center}
+
+Supporremo il valore di G uguale a quello tabulato da qui in poi.
+
+\subsection{Pendolo a torsione Misura dinamica}
+
+
+Da inserire:
+- Grafico (isto+gaussiana) dei Periodi
+- Grafico spazio/tempo dei Periodi
 
 Calcolo C a partire dalle caratteristiche geometriche dei corpi:
 
