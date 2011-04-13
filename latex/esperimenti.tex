@@ -7,6 +7,7 @@
 \usepackage{booktabs}
 \usepackage[table]{xcolor}
 \usepackage{amssymb}
+\usepackage{multirow}
 
 \renewcommand\chaptername{Esperimento}
  
@@ -27,6 +28,7 @@
 \maketitle
 
 \chapter{Viscosità}
+
 \subsection{Da fare}
 \begin{itemize}
  \item Grafici con barrette di errore
@@ -161,6 +163,7 @@ Abbiamo usato le seguenti formule statistiche per....
 
 \chapter{Pendolo a torsione}
 
+6 Aprile 2011
 \section{Introduzione}
 
 
@@ -212,26 +215,28 @@ Diametro carrucola: & 29 mm\\
 
 \section{Raccolta dei dati}
 
-\subsubsection{Dati geometrici fili A,B,C}
+In primis sono stati raccolti i dati relativi alle caratteristiche geometriche dei tre fili in esame:
+\
 \begin{tabular}{|l|l|l|l|}
-\toprule
+\hline
  & Filo A & Filo B & Filo C \\
-\midrule
+\hline
 Diametro (mm) & 1.750 & 1.175 & 0.880 \\
-\midrule
+
 Lunghezza (cm) & 41.3 &  43 & 33.5 \\
-\bottomrule
+\hline
 \end{tabular}
 
-\subsection{FASE 1: Misura dei momenti d'inerzia}
+\subsection{Misura dei momenti d'inerzia}
 
+In questa fase si provvederà a ricavare  sperimentalmente i momenti d'inerzia dei seguenti corpi:
 \begin{itemize}
-\item disco di raggio e massa
-\item anello di raggi e massa
-\item una sbarra cilindrica omogenea, con due masse uguali, scorrevoli su di essa, poste equidistanti dall’asse di rotazione, di lunghezza e massa
+\item Disco 
+\item Anello
+\item Sbarra cilindrica omogenea, con due masse uguali, scorrevoli su di essa, poste equidistanti dall’asse di rotazione
 \end{itemize}
 
-Per procedere a ricavare sperimentalmente il momento d'inerzia di questi corpi, si è utilizzato un sistema di due pulleggie e un sensore di rotazione.
+Si è utilizzato un sistema di due pulleggie e un sensore di rotazione.
 Il sensore di rotazione fornisce la posizione angolare in funzione del tempo. 
 
 
@@ -244,16 +249,7 @@ Il sensore di rotazione fornisce la posizione angolare in funzione del tempo.
 
 
 
-
-Calcolo C a partire dalle caratteristiche geometriche dei corpi:
-
-$$ I_sbarra = 0.00844 $$
-$$ I_disco = 0.00013 $$
-$$ I_anello = 0.00046 $$
-
-
-
-\subsection{FASE 2: Pendolo di torsione}
+\subsection{Pendolo di torsione}
 
 Da inserire:
 - Grafico (isto+gaussiana) dei Periodi
@@ -275,7 +271,11 @@ values = [ 0.65 0.65 0.65 0.625 0.65 0.675 0.65 0.625
 0.625 0.675 0.65 0.65 0.625 0.65 0.625 0.65 0.625 0.65
 0.65 0.625 0.65 0.65 0.65 0.625]
 
+
 \end{verbatim}
+
+
+Media = 0.644
 
 \subsubsection{Filo B}
 Periodo di oscillazione (s):
@@ -300,44 +300,25 @@ values = [ 3.875 3.9 3.9 3.875 3.9 3.875 3.875
 3.825 3.825 3.8 3.8 3.75 3.775 3.75]
 \end{verbatim}
 
-\subsection{FASE 3: Misura di equilibrio}
+\subsection{ Misura di equilibrio}
 
-\subsubsection{Filo A}
-\begin{tabular}{|l|l|}
-\toprule
-Peso (g) & Rotazione (gradi)\\
-\midrule
-50g & 4.0 \\
-100g & 7.0 \\
-200g & 13.0 \\
-\bottomrule
-\end{tabular}
-\\ \\
-\subsubsection{Filo B}
-\begin{tabular}{|l|l|}
-\toprule
-Peso (g) & Rotazione (gradi)\\
-\midrule
-50g & 12.0 \\
-100g & 23.0 \\
-200g & 47.0 \\
-\bottomrule
-\end{tabular}
-\\ \\
-\subsubsection{Filo C}
-\begin{tabular}{|l|l|}
-\toprule
-Peso (g) & Rotazione (gradi)\\
-\midrule
-50g & 31.0 \\
-100g & 61.0 \\
-200g & 126.0 \\
-\bottomrule
+
+\subsubsection{Filo A,B,C}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|c|}{} \\
+& A & B & C \\
+50g & 4.0 & 12.0 & 31.0 \\
+100g & 7.0 & 23.0 & 61.0 \\
+200g & 13.0 & 47.0 & 126.0 \\
+\hline
+
+\hline
 \end{tabular}
 
 \section{Analisi dei dati}
 
-\subsection{FASE A: Misura dei momenti d'inerzia}
+\subsection{Misura dei momenti d'inerzia}
 
 Acquisiti i dati della posizione angolare in funzione del tempo, è possibile calcolare l'accelerazione angolare del sistema. A questo punto, si può calcolare $I$ nel seguente modo:
 $$ bF_p = I\alpha $$
@@ -351,7 +332,14 @@ $$ \frac{1}{12} m L^2 + 2 \mu D^2  $$
 Grafici
 
 
-\subsection{FASE B: Pendolo di torsione}
+Questi dati vanno confrontati con i momenti d'inerzia calcolati partendo dai dati geometrici dei corpi
+
+
+$$ I_sbarra = 0.00844 $$
+$$ I_disco = 0.00013 $$
+$$ I_anello = 0.00046 $$
+
+\subsection{Pendolo di torsione}
 
 
 Questo ci permetterà di calcolare nella seconda parte la costante di torsione $c$ sfruttando la seguente eguaglianza:
@@ -364,7 +352,7 @@ $$ T = 2\pi \sqrt{\frac{I}{c}}$$
 
 
 
-\subsection{FASE C: Misura di equilibrio}
+\subsection{Misura di equilibrio}
 
 $$ c = G \frac{\pi}{2}\frac{r^4}{l} $$
 
@@ -412,6 +400,24 @@ Acciaio & Titanio \\
 \end{center}
 
 \section{Conclusioni}
+
+\chapter{Oscillazioni forzate e smorzate}
+
+\section{Introduzione}
+\subsection{Oggetto della ricerca}
+L'oggetto di questa ricerca è lo studio delle oscillazioni smorzate e forzate di un pendolo. Studiando il variare delle oscillazioni con il variare della frequenza operativa della forzante, si studierà il fenomeno della risonanza.
+\subsection{Metodo}
+L'esperimento è suddiviso in tre fasi:
+\begin{
+\subsection{Strumenti}
+\section{Raccolta dati}
+\subsection{Oscillazioni libere}
+
+\subsection{Oscillazioni smorzate}
+\subsection{Oscillazioni smorzate-forzate}
+\section{Analisi dati}
+\section{Conclusioni}
+
 \end{document} 
 
 
