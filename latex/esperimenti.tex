@@ -484,23 +484,30 @@ L'oscillatore smorzato e sforzato da il risultato
 
 $\omega$ & Ampiezza \\
 \midrule
-3.05 &	1.84\\
-1.75	& 1.05\\
-2.42	 & 1.30\\
-3.69	& 3.42\\
 1.15	& 0.89\\
 1.31	& 0.94\\
+1.75	& 1.05\\
 1.97	& 1.09\\
+2.42	 & 1.30\\
 2.55	& 1.30\\
+3.05 &	1.84\\
 3.31	& 1.91\\
+3.69	& 3.42\\
 3.95	& 6.35\\
-5.51	& 1.19 \\
-5.19	 & 1.74\\
 4.94	& 2.48\\
-
+5.19	 & 1.74\\
+5.51	& 1.19 \\
 \midrule
 
 \end{tabular}
+
+Interpolando questi dati con il programma DataStudio, secondo la funzione
+$$ A(\omega) = \frac{M_0}{\sqrt{ ({\omega_0}^2-\omega^2)^2 + 4\gamma^2\omega^2}} $$
+
+e lasciando liberi i parametri $M_0$, $\gamma$ e $\omega_0$ abbiamo trovato i seguenti valori:
+$$ \omega_0 = 4.25 $$
+$$ \gamma = 0.193 m^4/kg  CHECK $$
+$$ M_0 = 15.3 $$
 
 \section{Conclusioni}
 
