@@ -469,6 +469,10 @@ $$ \theta (t) = A_0 e^{- \gamma t} \sin(wt+\phi)+\theta_0 $$
 Dunque, noti $\omega$ e $\gamma$, è possibile calcolare $ \omega_0 $, cioè la pulsazione per le oscillazioni libere, tramite l'equazione:
 $$ \omega = \sqrt{\omega_0^2 - \gamma^2} $$
 
+e confrontarlo con il valore che avevamo ricavato interpolando direttamente il grafico delle oscillazioni libere
+
+$$\omega_0 = 4.272\ rad/s$$
+
 \subsubsection{4.80mm}
 
 \begin{center}
@@ -485,10 +489,9 @@ $\theta_0$ & -1.53 rad& 0.0019 \\
 \end{tabular}
 \end{center}
 
-Il valore così calcolato è leggermente maggiore di quello ricavato dalla misurazione diretta. $$\omega_{interpolato} =  4.275 rad/s$$
-$$\omega_{misurato} = 4.272 rad/s$$
+Il valore così calcolato è leggermente maggiore di quello ricavato dalla misurazione diretta. $$\omega_{0} = 4.275\ rad/s$$
 
-Questi due risultati sono in perfetto accordo nei limiti della precisione dello strumento.
+Questo risultato è in perfetto accordo nei limiti della precisione dello strumento.
 \subsubsection{2.80mm}
 
 \begin{center}
@@ -498,12 +501,15 @@ Parametri & Valore ricavato & $ \pm \sigma$ \\
 \midrule
 $A_0$ & 3.40 rad & 0.020\\
 $\gamma$ & 0.636 $m^4/kg$& 0.0057\\
-$\omega$ & -4.25 rad/s& 0.0064\\
-$\phi$ & 2.38 rad & 0.0076 \\
-$\theta_0$ & -0.57 rad& 0.0038 \\
+$\omega$ & -4.25 $rad/s$& 0.0064\\
+$\phi$ & 2.38 $rad$ & 0.0076 \\
+$\theta_0$ & -0.57 $rad$& 0.0038 \\
 \midrule
 \end{tabular}
 \end{center}
+
+$$\omega_{0} = 4.297\ rad/s$$
+
 \subsubsection{1.00mm}
 
 \begin{center}
@@ -519,36 +525,60 @@ $\theta_0$ & 0.055 rad& 0.0016 \\
 \midrule
 \end{tabular}
 \end{center}
+
+$$\omega_{0} = 4.291\ rad/s $$
+
 \subsection{Oscillazioni smorzate-forzate}
 Tramite l'interpolazione dei grafici di posizione angolare in funzione del tempo con una funzione sinosuidale, sono stati trovati i valori dell'ampiezza e del periodo di ognuna delle oscillazioni.
 
-\begin{tabular}{l|l}
-$\omega$ (rad/s) & Ampiezza (rad) \\
-\midrule
-1.15	& 0.89\\
-1.31	& 0.94\\
-1.75	& 1.05\\
-1.97	& 1.09\\
-2.42	& 1.30\\
-2.55	& 1.30\\
-3.05    & 1.84\\
-3.31	& 1.91\\
-3.69	& 3.42\\
-3.95	& 6.35\\
-4.94	& 2.48\\
-5.19	& 1.74\\
-5.51	& 1.19 \\
-\midrule
-
-\end{tabular}
-
-Interpolando questi dati con il programma DataStudio, secondo la funzione
+Dopodiché abbiamo interpolato questi dati con il programma DataStudio, secondo la funzione
 $$ A(\omega) = \frac{M_0}{\sqrt{ ({\omega_0}^2-\omega^2)^2 + 4\gamma^2\omega^2}} $$
 
-e lasciando liberi i parametri $M_0$, $\gamma$ e $\omega_0$ abbiamo trovato i seguenti valori:
+e lasciando liberi i parametri $M_0$, $\gamma$ e $\omega_0$ abbiamo trovato alcuni valori.
+\\
+\subsubsection{4.80mm}
+\begin{tabular}{l|l|l}
+$\omega$ (rad/s) & Periodo (s) & Ampiezza (rad) \\
+\midrule
+1.15	& 5.45 & 0.89\\
+1.31	& 4.78 & 0.94\\
+1.75	& 3.57 & 1.05\\
+1.97	& 3.19 & 1.09\\
+2.42	& 2.59 & 1.30\\
+2.55	& 2.46 & 1.30\\
+3.05    & 2.06 & 1.84\\
+3.31	& 1.90 & 1.91\\
+3.69	& 1.70 & 3.42\\
+3.95	& 1.59 & 6.35\\
+4.94	& 1.27 & 2.48\\
+5.19	& 1.21 & 1.74\\
+5.51	& 1.14 & 1.19 \\
+\midrule
+\end{tabular}
+\\
+FAI IL GRAFICO!!!
+\\
+
 $$ \omega_0 = 4.25 $$
 $$ \gamma = 0.193 m^4/kg  CHECK $$
 $$ M_0 = 15.3 $$
+
+\subsubsection{2.80mm}
+\begin{tabular}{l|l|l}
+$\omega$ (rad/s) & Periodo (s) & Ampiezza (rad) \\
+\midrule
+3.14 & 2.00 & 1.68 \\
+3.85 & 1.63 & 2.95 \\
+4.36 & 1.44 & 3.22 \\
+4.83 & 1.30 & 2.17 \\
+5.06 & 1.24 & 1.67 \\
+5.46 & 1.15 & 1.20 \\
+5.71 & 1.10 & 0.99 \\
+6.40 & 0.98 & 0.68 \\
+7.06 & 0.89 & 0.51 \\
+8.49 & 0.74 & 0.26 \\
+\midrule
+\end{tabular}
 
 \section{Conclusioni}
 
