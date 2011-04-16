@@ -402,7 +402,7 @@ Acciaio & Titanio \\
 
 \section{Conclusioni}
 
-\chapter{Oscillazioni forzate e smorzate}
+\chapter{Oscillazioni smorzate e forzate}
 
 \section{Introduzione}
 \subsection{Oggetto della ricerca}
@@ -422,12 +422,15 @@ Alimentatore & $\pm 0.01$ V\\
 L'esperimento è suddiviso in tre fasi:
 
 \begin{itemize}
-\item \textbf{Oscillazioni libere}
+\item \textbf{Oscillazioni pseudo-libere}
 Si pone in oscillazione il disco, con il magnete  posizionato lontano e l'oscillatore elettromeccanico spento. Si misura il periodo delle oscillazioni libere.
-\item  \textbf{Oscillazioni smorzate}
-
+\item \textbf{Oscillazioni smorzate}
+Si pone un magnete vicino al disco metallico in rotazione, che sarà così smorzato. Abbiamo posto il magnete alle distanze di 4.8mm, 2.80mm e 1.00mm.
 \item \textbf{Oscillazioni smorzate e forzate}
+Per queste misurazioni abbiamo acceso anche un oscillatore elettromeccanico, che fornisse una componente forzante. Variando la frequenza di questo oscillatore cerchiamo la frequenza di risonanza del sistema.
 \end{itemize}
+
+[se la consegnamo, aggiungi diagramma]
 
 \section{Raccolta dati}
 
@@ -436,14 +439,14 @@ Nella sezione "oscillazioni smorzate-forzate", ci siamo serviti di una fotocellu
 
 \subsection{Oscillazioni libere}
 
--Grafici posizione tempo 
+- Grafici posizione tempo 
 
 \subsection{Oscillazioni smorzate}
 
 - Grafici 
 \subsection{Oscillazioni smorzate-forzate}
 
--Grafici
+- Grafici
 
 \section{Analisi dati}
 
@@ -453,36 +456,69 @@ In questa prima fase dell'analisi dei dati, estrapoliamo dalla posizione in funz
 
 \subsection{Oscillazioni smorzate}
 
-L'interpolazione dei dati tramite la seguente equazione:
+Abbiamo ricavato i valori dei parametri liberi utilizzando il programma DataStudio, e interpolando i dati con la seguente equazione:
 $$ \theta (t) = A_0 e^{- \gamma t} \sin(wt+\phi)+\theta_0 $$
 
-ha fornito i seguenti valori:
 
-\begin{tabular}{l|l|l}
-\midrule
-Costante & Valore & $ \pm \sigma$ \\
-\midrule
-$A_0$ & 3.08 & 0.020\\
-$\gamma$ & 0.197 & 0.0019\\
-$w$ & -4.27 & 0.0019\\
-$\phi$ & 1.93 & 0.0069 \\
-$\theta_0$ & -1.53 & 0.0019 \\
-\midrule
-\end{tabular}
-
-
-Da questi valore è possibile calcolare $ \omega_0 $, cioè la pulsazione per le oscillazioni libere, tramite l'equazione:
+Dunque, noti $\omega$ e $\gamma$, è possibile calcolare $ \omega_0 $, cioè la pulsazione per le oscillazioni libere, tramite l'equazione:
 $$ \omega = \sqrt{\omega_0^2 - \gamma^2} $$
 
-Che assume il valore $\omega_0 =  4.27  rad/s$
+\subsubsection{4.80mm}
 
+\begin{center}
+\begin{tabular}{l|l|l}
+\midrule
+Parametri & Valore ricavato & $ \pm \sigma$ \\
+\midrule
+$A_0$ & 3.08 rad & 0.020\\
+$\gamma$ & 0.197 $m^4/kg$& 0.0019\\
+$\omega$ & -4.27 rad/s& 0.0019\\
+$\phi$ & 1.93 rad & 0.0069 \\
+$\theta_0$ & -1.53 rad& 0.0019 \\
+\midrule
+\end{tabular}
+\end{center}
+
+Il valore così calcolato è leggermente maggiore di quello ricavato dalla misurazione diretta. $$\omega_{interpolato} =  4.275 rad/s$$
+$$\omega_{misurato} = 4.272 rad/s$$
+
+Questi due risultati sono in perfetto accordo nei limiti della precisione dello strumento.
+\subsubsection{2.80mm}
+
+\begin{center}
+\begin{tabular}{l|l|l}
+\midrule
+Parametri & Valore ricavato & $ \pm \sigma$ \\
+\midrule
+$A_0$ & 3.40 rad & 0.020\\
+$\gamma$ & 0.636 $m^4/kg$& 0.0057\\
+$\omega$ & -4.25 rad/s& 0.0064\\
+$\phi$ & 2.38 rad & 0.0076 \\
+$\theta_0$ & -0.57 rad& 0.0038 \\
+\midrule
+\end{tabular}
+\end{center}
+\subsubsection{1.00mm}
+
+\begin{center}
+\begin{tabular}{l|l|l}
+\midrule
+Parametri & Valore ricavato & $ \pm \sigma$ \\
+\midrule
+$A_0$ & 18600 rad & 1300 \\
+$\gamma$ & 1.50 $m^4/kg$& 0.0011\\
+$\omega$ & 4.02 rad/s& 0.0077\\
+$\phi$ & 26.3 rad & 0.0046 \\
+$\theta_0$ & 0.055 rad& 0.0016 \\
+\midrule
+\end{tabular}
+\end{center}
 \subsection{Oscillazioni smorzate-forzate}
 
-L'oscillatore smorzato e sforzato da il risultato
+L'oscillatore smorzato e sforzato fornisce il risultato\\
 
 \begin{tabular}{l|l}
-
-$\omega$ & Ampiezza \\
+$\omega$ (rad/s) & Ampiezza (rad) \\
 \midrule
 1.15	& 0.89\\
 1.31	& 0.94\\
