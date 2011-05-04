@@ -1,4 +1,3 @@
-#
 # Caduta libera
 # Raccolta del dato: Tempi (ms)
 # Distanze \pm 1cm. Possibile che la sferetta parta circa un centimetro sotto la distanza dichiarata
