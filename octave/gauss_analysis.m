@@ -9,7 +9,7 @@
 #
 # Dimensione dell'intervallo, per l'istogramma
 
-function gauss_analysis(caption, dk, a)
+function x, y = gauss_analysis(caption, dk, a)
 
 # Altre proprietà
 #
@@ -38,7 +38,7 @@ hist(a, bins, 1/dk)
 
 x = linspace(mean(a)-3*std(a),mean(a)+3*std(a),300);
 y = (1/(sigma*sqrt(2*pi))) * exp(-((x-mu).^2 / (2*(sigma.^2)) ) );
-plot (x, y)
+# plot (x, y)
 
 #printf("**************************************\n");
 printf("== %s ==\n", caption);
