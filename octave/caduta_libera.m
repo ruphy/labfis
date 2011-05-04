@@ -5,7 +5,8 @@
 
 # x = scalar (meters), t = scalar (secs)
 function calcolag(x, t)
-  g = (2*(x-0))./(t*t);
+  t2 = t+0.003;
+  g = (2*x)./(t2*t2);
   printf(" >> g stimata: %f\n", g);
   printf(" >> errore: %f\n\n", (g-9.81)/9.81);
 endfunction
