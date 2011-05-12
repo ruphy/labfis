@@ -9,6 +9,7 @@
 \usepackage{amssymb}
 \usepackage{multirow}
 \usepackage{fullpage}
+\usepackage{float}
 \usepackage{graphicx}
 
 \renewcommand\chaptername{Esperimento}
@@ -609,6 +610,9 @@ FAI IL GRAFICO!!! (w - A(w))
 $$ \omega_0 = 4.37\ rad/s $$
 $$ \gamma = 1.40 \pm 0.14\ s^{-1}$$
 $$ M_0 = 17.1 \pm 1.4\ s$$
+
+\includegraphics[scale=0.2]{graf}
+
 \section{Conclusioni}
 L'esperimento è riuscito un sacco.
 
@@ -638,19 +642,20 @@ $m_c\cong 2m$ & massa manubrio\\
 \section{Misura periodo}
 \section{Analisi dati}
 \section{Conclusioni}
-
-\chapter{Pendolo di Kater}
 \chapter{Banco Ottico}
 \section{Introduzione}
 \subsection{Scopo dell'esperimento e metodo in breve}
-L'esperimento è diviso in tre parti.
-Nella prima, si verifica la validità della Legge di Snell (vedi contenuti teorici) e la reversibilità del cammino luminoso, tramite varie  misure dell'angolo di rifrazione $\theta_{rifrazione}$ per un angolo $\theta_{incidenza} $ di incidenza,per un raggio luminoso attraversante un semi-cilindro in plexiglass. Si ricerca la miglior stima dell'indice di rifrazione del plexiglass.
-Nella seconda parte, si ricerca l'indice di rifrazione del plexiglass studiando l'angolo di deviazione minima di un prisma a base triangolare e di un prisma a base trapezoidale.(vedi contenuti teorici per spiegazione). 
-Inoltre, si ricerchi la distanza di cui viene traslato il raggio quando passa per due superfici parallele con un certo angolo  $\theta $ di incidenza.
-Nell'ultima parte, si verifica la legge dei punti coniugati tramite la misura delle distanze p e q e la validità dell'ingrandimento ottico M. 
+L'esperimento si compone di tre parti.
+
+Nella prima, si verifica la validità della Legge di Snell (vedi contenuti teorici) e la reversibilità del cammino ottico: dato un raggio luminoso attraversante un semi-cilindro in plexiglass, misuriamo l'angolo di incidenza $\theta_{rifrazione}$ ed il corrispondente  angolo di rifrazione $\theta_{rifrazione}$. Sempre grazie alla legge di Snell si ricerca la miglior stima dell'indice di rifrazione del plexiglass $n$.
+
+Nella seconda parte, si ricerca $n$ studiando l'angolo di deviazione minima $\delta_{min}$ di un prisma a base triangolare e di un prisma a base trapezoidale (vedi contenuti teorici). 
+Inoltre, si ricerca la distanza di cui viene traslato il raggio, che arriva con un certo angolo di incidenza $\theta$, quando passa per due superfici parallele.
+
+Infine si verifica la legge dei punti coniugati tramite la misura delle distanze $p$ e $q$ e la validità dell'ingrandimento ottico M. 
 
 \subsection{Strumenti}
-In questa tabella vengono riassunti gli strumenti rivelatori utilizzati con le relative precisioni, e il set-up dell'esperimento.
+In questa tabella vengono riassunti gli strumenti rivelatori utilizzati, con le relative precisioni, e il set-up dell'esperimento.
 \begin{tabular}{c|c}
 Strumento & Precisione \\
 \midrule
@@ -658,13 +663,67 @@ Piatt. Graduata & $\pm 1 grado $ \\
 Metro & $\pm 1 mm $\\
 \end{tabular}
 
-L'esperimento si è svolto su una rotaia, che permetteva di spostare la piattaforma rotante. 
+Durante l'esecuzione dell'esperimento ci si è serviti di un proiettore con diversi tipi di sorgente luminosa. Durante l'esperimento è stato impostato sulla modalità a singolo raggio luminoso per le prime due parti e successivamente sulla modalità oggetto per la terza e ultima parte. 
+Questo proiettore, insieme alla piattaforma girevole graduata, alle lenti ed a uno schermo bianco, può scorrere liberamente lungo una rotaia, permettendo di modificare le distanze tra gli oggetti a piacimento.
 
-\section{Raccolta dati}
-\section{Analisi dati}
+\section{Reversibilità del cammino luminoso}
+\subsection{Raccolta dati}
+Tutte le misure seguenti sono in Gradi.\\
+\begin{center}
+
+\begin{tabular}{c|c||c|c}
+ \multicolumn{2}{c}{\textit{Faccia piana}} &
+\multicolumn{2}{c}{\textit{Faccia curva}} \\
+$\theta_{incidenza} $ & $\theta_{rifrazione} $ &$\theta_{incidenza} $ & $\theta_{rifrazione} $\\
+\midrule
+ 10 & 7 & 7 & 10 \\
+15 & 10 & &\\
+20 & \textbf{13.5} & 13.5 & 20\\ 
+25 & \textbf{16.5} & & \\
+30 & 20 & 30 & 20\\
+40 & 26 & 26 & 40\\
+35 & 23 & &\\
+45&  \textbf{28.5} & & \\
+\multicolumn{4}{c}{\textit{Misure in gradi}} \\
+\end{tabular}
+\end{center}
+
+\subsection{Analisi dei dati}
+Raccolti i valori degli angoli di incidenza e dei corrispondenti angoli di rifrazione, possiamo calcolare la miglior stima di $n$. 
+La legge di Snell esprime la relazione che lega gli indici di rifrazione dei due materiali attraversati dal raggio luminoso, e i seni degli angoli di incidenza e rifrazione:\\
+
+\begin{center}
+$n_1 sin\theta_1 = n_2 sin\theta_2$
+\end{center}
+
+Posto $n_a \simeq1 $ ( indice di rifrazione dell'aria ), si ricava:
+
+$$n_2 = \frac{sin\theta_1}{sin\theta_2}$$
+
+Nell'elaborazione dei dati, abbiamo selezionato solo le coppie di misure cui corrispondesse un errore relativo percentuale minore del 6\%, al fine di avere una stima più precisa del valore vero di $n$.\\
+
+\begin{tabular}{c|c|c|c|c|c}
+\textbf{$\theta_1$} & 25 & 30 & 40 & 35 & 45\\
+\midrule
+\textbf{$\theta_2$} & 16.5 & 20 & 26 & 23 & 28.5\\
+\midrule
+\textbf{$n_i$} (*) & 1.489 & 1.462 & 1.468 & 1.468 & 1.482\\
+\end{tabular}\\
+
+(*) in questo caso abbiamo tenuto un numero superiore di cifre significative, in quanto si tratta di calcoli intermedi
+
+$$\overline{n} = \frac{\displaystyle\sum\limits_{i=1}^N n_i}{N} = 1.47$$
+
+$$\sigma_n = \sqrt{\frac{\displaystyle\sum\limits_{i=1}^N n_i}{N-1}} = 0.01$$
+
+$$\sigma_{\overline{n}} = \frac{\sigma_n}{\sqrt{N}} = 0.004$$
+
+$$n_{best} = 1.47 \pm 0.004 $$
+
+
 \section{Conclusioni}
 
-
+\chapter{Pendolo di Kater}
 \section{Introduzione}
 \subsection{Scopo dell'esperimento}
 Misura di g
