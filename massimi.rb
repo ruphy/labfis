@@ -87,7 +87,7 @@ maxs.size.times do |i|
   dtime = (((maxs[i+1][:time]-maxs[i][:time])*1000).round.to_f/1000)
   timesum += dtime
   
-  octave += " "
+  octave += ", "
   # Show deltas (dt between each phase)
   octave += dtime.to_s
 end
