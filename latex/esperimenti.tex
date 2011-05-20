@@ -10,6 +10,7 @@
 \usepackage{multirow}
 \usepackage{fullpage}
 \usepackage{float}
+\usepackage{subfig}
 \usepackage{graphicx}
 
 \renewcommand\chaptername{Esperimento}
@@ -555,7 +556,7 @@ $\omega$ (rad/s) & Periodo (s) & Ampiezza (rad) \\
 FAI IL GRAFICO!!! (w - A(w))
 \\
 
-$$ \omega_0 = 4.25 rad/s $$
+$$ \omega_0 = 4.25\ rad/s $$
 $$ \gamma = 0.193\ s^{-1}$$
 $$ M_0 = 15.3\ s$$
 
@@ -607,7 +608,7 @@ $\omega$ (rad/s) & Periodo (s) & Ampiezza (rad) \\
 FAI IL GRAFICO!!! (w - A(w))
 \\
 
-$$ \omega_0 = 4.37\ rad/s $$'
+$$ \omega_0 = 4.37\ rad/s $$
 $$ \gamma = 1.40 \pm 0.14\ s^{-1}$$
 $$ M_0 = 17.1 \pm 1.4\ s$$
 
@@ -680,8 +681,10 @@ Questo proiettore, insieme alla piattaforma girevole graduata, alle lenti ed a u
 \section{Reversibilità del cammino luminoso}
 \subsection{Raccolta dati}
 Tutte le misure seguenti sono espresse in gradi.\\
-\begin{center}
 
+
+\begin{table}
+\center
 \begin{tabular}{c|c||c|c}
  \multicolumn{2}{c}{\textit{Faccia piana}} &
 \multicolumn{2}{c}{\textit{Faccia curva}} \\
@@ -695,9 +698,9 @@ $\theta_{incidenza} $ & $\theta_{rifrazione} $ &$\theta_{incidenza} $ & $\theta_
 40 & 26 & 26 & 40\\
 35 & 23 & &\\
 45&  \textbf{28.5} & & \\
-\multicolumn{4}{c}{\textit{Misure in gradi}} \\
 \end{tabular}
-\end{center}
+\caption*{Misure in gradi}
+\end{table}
 
 \subsection{Analisi dei dati}
 Raccolti i valori degli angoli di incidenza e dei corrispondenti angoli di rifrazione, possiamo calcolare la miglior stima di $n$. 
@@ -729,7 +732,7 @@ Nell'elaborazione dei dati, abbiamo selezionato solo le coppie di misure cui cor
 
 $$\overline{n} = \frac{\displaystyle\sum\limits_{i=1}^N n_i}{N} = 1.474 $$
 
-$$\sigma_n = \sqrt{\frac{\displaystyle\sum\limits_{i=1}^N n_i}{N-1}} = 0.01$$
+$$\sigma_n = \sqrt{\frac{\sum_{i=1}^N n_i}{N-1}} = 0.01$$
 
 $$\sigma_{\overline{n}} = \frac{\sigma_n}{\sqrt{N}} = 0.004$$
 
@@ -746,7 +749,8 @@ In tabella sono riportati i valori trovati per ogni misurazione dell'angolo rifr
 
 Per ovvie ragioni geometriche, nel caso del prisma a base trapezoidale (è presente un solo angolo acuto, di 45 gradi) è stato impossibile effettuare misure riferite a vari vertici.
 
-\begin{flushleft}
+\begin{table}
+\center
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{|c | c | c|}
 \hline
@@ -763,13 +767,9 @@ Spigolo & $\delta_{min}$ (andata) & $\delta_{min}$ (ritorno)\\
 1 & 28 & 21\\
 \hline
 \end{tabular}
-\end{flushleft}
-\begin{flushright}
+\end{table}
+
 $\overline{\delta}_{min} = \frac{\displaystyle\sum\limits_{i=1}^6 \delta_i}{6} = 1.52$
-\end{flushright}
-
-
-
 
 %Angolo deviazione minima, immagine
 \subsection{Analisi dei dati}
@@ -785,7 +785,7 @@ d: diametro circonferenza proiettata}\\
 In tabella sono riportati sulla destra le misure effettuate con lente di focale $f=100 mm$, a sinistra con lente di focale $f=200mm$ 
 \\
 \begin{center}
-\begin{tabular}{c|c|c||c|c|c}
+\begin{tabular}{*{3}{c|}*{3}{|c}}
 p($cm$) &q($cm$)&d($cm$) &p($cm$) &q($cm$)&d($cm$)\\
 \midrule
 13.5 & 36.5 & 5.5 & 73.4 & 26.6 & 0.7\\
