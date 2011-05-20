@@ -1,7 +1,7 @@
 *.aux
 *~
 *.log
-*.pdf
+latex/*.pdf
 *.gz
 *.lyx
 *.backup
