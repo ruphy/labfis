@@ -889,18 +889,43 @@ Lunghezza = 90cm
 Diametro = 3.9cm
 \\
 Data la relazione
-$$ L = n\frac{\lambda_{n}}{2}		$$ con n=1,2,3.. 
+\begin{equation}
+\nu_n= \frac{vn}{2L}		
+\end{equation}
+ con $v$ velocità del suono nel mezzo e n=1,2,3.. 
+\\
+
+Verifichiamo che data una $\nu$ fondamentale a cui associamo il valore $n=1$, quelle successive saranno multipli interi della fondamentale. 
+
+
+
 \begin{center}
-
-
 \begin{tabular}{c|c|c|c|c|c}
-Frequenza di Risonanza (Hz) & 185 & 370 & 558 & 930 & 1320 \\
+$\nu$ (Hz) & 185 & 370 & 558 & 930 & 1320 \\
+$n$ & 1 & 2 & 3 & 5 & 7\\
+
 \end{tabular}
 \end{center}
 
+\includegraphics[scale=0.5]{risonanza}
 
-$$ vn = 2L\nu $$
 
+$$ m_{1} = 189 \pm 1.1 $$
+$$ m_2 = 104 \pm 0.5 $$ 
+
+con $m$  coefficente angolare della retta. Per la 7.1 si ha che $m=\frac{v}{2L}$, da cui ricaviamo $v$. bisogna prima apportare una correzione alla formula scritta in precedenza. Per un tubo aperto reale la posizione di nodi e antinodi dipende dal diametro del tubo, pertanto apportiamo la seguente correzione:
+
+$$ L+ 0.8d = n\frac{\lambda}{2} $$
+
+con $d$ diametro del tubo (3.9 cm). 
+Si ricava $$v=2(L+0.8d)m=351.994 m/s$$
+
+
+Si può ricavare $v$ direttamente dalla 7.1( con la correzione), sostituendo a $\nu$ la frequenza fondamentale $\nu = 185$ Hz
+
+$$ v = \frac{\nu2(L+0.8d)}{n} = 344.544 m/s$$ 
+ 
+ Si verifica sperimentalmente che all'interno di un intervallo di ampiezza 10 Hz lo strumento non è in grado di distinguere ulteriori variazioni nella lettura delle frequenze. Se ne ricava che l'errore associato alle misure è di 5 Hz.  
 \section{Analisi}
 
 
