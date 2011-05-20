@@ -12,6 +12,34 @@
 \usepackage{float}
 \usepackage{subfig}
 \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+%\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+
+\lstset{
+%	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+%	rulecolor=,
+	language=python,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+%        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
 
 \renewcommand\chaptername{Esperimento}
  
@@ -931,6 +959,91 @@ $$ v = \frac{\nu2(L+0.8d)}{n} = 344.544 m/s$$
  Si verifica sperimentalmente che all'interno di un intervallo di ampiezza 10 Hz lo strumento non è in grado di distinguere ulteriori variazioni nella lettura delle frequenze. Se ne ricava che l'errore associato alle misure è di 5 Hz.  
 \section{Analisi}
 
+\chapter*{Appendice}
+\section*{Metodo di analisi dei dati informatizzato}
+Per l'analisi dei dati sperimentali si è fatto largo uso di strumenti informatici ausiliari.
+In particolare, è stata usata l'applicazione DataStudio per la raccolta di dati da sensori elettronici, ed occasionalmente per l'interpolazione dei dati.
+Per quanto riguarda l'analisi degli errori, si è preferita una soluzione costruita tramite il pacchetto software open source "Sage", distribuito sotto i termini della GNU General Public License.
+
+Questo strumento utilizza il linguaggio di programmazione Python, e alcune librerie esterne. Di seguito viene allegato e commentato il programma principale, scritto da noi.
+
+\begin{lstlisting}
+reset()
+
+format = "png"
+dpis = 90
+
+import numpy as np
+import matplotlib.pyplot as plt
+\end{lstlisting}
+
+Questa sezione è un preambolo: vengono importate le librerie principali, viene impostato il formato di output desiderato (in questo caso "png", comodo per lo sviluppo) e la risoluzione di questo output.
+
+\begin{lstlisting}
+class Analyzer:
+    uuid = "" # internally used
+    caption = "" # caption for the histogram/plot
+    color = '#50e300' # histogram color
+    nOfBins = 5; # number of bins (default: 5)
+    data = [] # array with data. if you're using integer values,
+    		  # make sure at least one is a float.
+    x = "" # x-axis label, latex syntax
+    y = "" # y-axis label, latex syntax
+    
+    plotText = "" # optional: print this text on the plot - latex syntax
+    xUnitOfMeasure = "" # optional: unit of measure of x
+    
+\end{lstlisting}
+
+Questa è la classe base
+
+\begin{lstlisting}    
+    def setTitle(self, caption):
+        self.caption = caption
+        self.uuid = caption.replace('\\', '').replace(' ', '')
+        
+    # Note: make sure xUnitOfMeasure is set before calling this
+    def quickPrepare(self, list):
+        m = self.xUnitOfMeasure
+        self.y = "f(k)/\\Delta k"
+        self.data = list['data']
+        self.setTitle(d['uuid'])
+        if('bins' in d):
+            self.nOfBins = d['bins']
+        self.plotText = '\mu = %.5f %s;\ \sigma = %.5f %s;'\
+                        % (mean(self.data), m, std(self.data), m)
+        
+    def plotGauss(self):
+        a = self.data
+        
+        plt.clf()
+        mu = mean(a)
+        sigma = std(a)
+        n, bins, patches = plt.hist(a, self.nOfBins, normed=1, facecolor=self.color, alpha=0.75)
+        
+        x = np.arange(min(bins)-10*sigma, max(bins)+10*sigma, 0.02*(max(bins)-min(bins)));
+        y = 1/(sigma*np.sqrt(2*np.pi)) * np.exp( -((x-mu)^2 / (2* (sigma^2) )) );
+        l = plt.plot(x, y, 'k--', linewidth=1)
+        
+        plt.xlabel(r"$"+self.x+"$")
+        plt.ylabel(r"$"+self.y+"$")
+        
+        plt.title(r"$"+self.caption.replace(' ', '\\ ')+"$")
+        plt.axis([mu-3*sigma, mu+3*sigma, 0, 3/(sigma*np.sqrt(2*np.pi))])
+        
+        plt.annotate(r"$"+self.plotText+"$", xy=(0.075,0.85), xycoords='axes fraction')
+        
+        plt.grid(True)
+        plt.savefig(self.uuid+"."+format, dpi=dpis)
+        
+    def statAnalysis(self):
+        stderr = "%.5f" % (std(self.data)/np.sqrt(len(self.data)))
+        media = "%.5f" % mean(self.data)
+        stddev = "%.5f" % std(self.data)
+        print "=== "+self.caption+" ==="
+        print "Media: "+ media +" - Std. Dev.: "+ stddev
+        print "Errore della media: "+ stderr
+\end{lstlisting}
 
 \end{document} 
 
