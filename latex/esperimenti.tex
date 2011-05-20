@@ -727,24 +727,24 @@ Nell'elaborazione dei dati, abbiamo selezionato solo le coppie di misure cui cor
 (*) in questo caso abbiamo tenuto un numero superiore di cifre significative, in quanto si tratta di calcoli intermedi 
 %Ripensare alle cifre significative
 
-$$\overline{n} = \frac{\displaystyle\sum\limits_{i=1}^N n_i}{N} = 1.47$$
+$$\overline{n} = \frac{\displaystyle\sum\limits_{i=1}^N n_i}{N} = 1.474 $$
 
 $$\sigma_n = \sqrt{\frac{\displaystyle\sum\limits_{i=1}^N n_i}{N-1}} = 0.01$$
 
 $$\sigma_{\overline{n}} = \frac{\sigma_n}{\sqrt{N}} = 0.004$$
 
-$$n_{best} = 1.47 \pm 0.004 $$
+$$n_{best} = 1.474  \pm 0.004 $$
 
 %Cifre significative incertezza diverse da cifre significative misura!
 
 \section{Misura dell'angolo di deviazione minima}
 \subsection{Raccolta dati}
 
-L'angolo di deviazione minima ($\delta_{min}$) è il più piccolo angolo misurato facendo incidere un fascio di luce su una faccia del prisma (con inclinazione variabile) e misurando l'ampiezza dell'angolo rifratto.
+L'angolo di deviazione minima ($\delta_{min}$) è il più piccolo angolo misurato facendo incidere un fascio di luce su una faccia di prisma (con inclinazione variabile) e misurando l'ampiezza dell'angolo rifratto. Nel nostro esperimento abbiamo utilizzato due prismi: uno con base un triangolo equilatero e l'altro un trapezio rettangolo.
 
-In tabella sono riportati i valori trovati per ogni misurazione dell'angolo rifratto. Per aumentare il livello di precisione, abbiamo raccolto i dati relativi agli angoli di deviazione minima per ogni faccia del prisma a base triangolare, identificando ogni misurazione con il numero dello spigolo compreso tra le faccie colpite e il verso di percorrrenza della luce.
+In tabella sono riportati i valori trovati per ogni misurazione dell'angolo rifratto. Per aumentare il livello di precisione, abbiamo raccolto i dati relativi agli angoli di deviazione minima per ogni faccia di prisma a base triangolare, identificando ogni misurazione con il numero dello spigolo compreso tra le facce colpite e il verso di percorrenza della luce.
 
-Per ovvie ragioni geometriche (è presente un solo angolo acuto), è stato impossibile effettuare misure riferite a vari vertici.
+Per ovvie ragioni geometriche, nel caso del prisma a base trapezoidale (è presente un solo angolo acuto, di 45 gradi) è stato impossibile effettuare misure riferite a vari vertici.
 
 \begin{flushleft}
 \renewcommand{\arraystretch}{1.2}
@@ -763,16 +763,26 @@ Spigolo & $\delta_{min}$ (andata) & $\delta_{min}$ (ritorno)\\
 1 & 28 & 21\\
 \hline
 \end{tabular}
-$\overline{\delta}_{min} = \frac{\displaystyle\sum\limits_{i=1}^6 \delta_i}{6} = 1.52$
-
 \end{flushleft}
+\begin{flushright}
+$\overline{\delta}_{min} = \frac{\displaystyle\sum\limits_{i=1}^6 \delta_i}{6} = 1.52$
+\end{flushright}
+
+
+
 
 %Angolo deviazione minima, immagine
-Per misurare l'angolo di deviazione minima b
 \subsection{Analisi dei dati}
 
 \section{Lenti sottili}
-A destra, misure con lente di focale $f=100 mm$, a sinistra misure con lente di focale $f=200mm$ 
+\subsection{Raccolta dati}
+Nell'ultima parte dell'esperimento, si verifica la validità della legge dei punti coniugati,
+$$ \frac{1}{f} = \frac{1}{q} + \frac{1}{p} $$
+\textit{p: distanza sorgente-lente\\
+q: distanza lente-schermo\\
+d: diametro circonferenza proiettata}\\
+
+In tabella sono riportati sulla destra le misure effettuate con lente di focale $f=100 mm$, a sinistra con lente di focale $f=200mm$ 
 \\
 \begin{center}
 \begin{tabular}{c|c|c||c|c|c}
@@ -785,10 +795,21 @@ p($cm$) &q($cm$)&d($cm$) &p($cm$) &q($cm$)&d($cm$)\\
 22.0 & 18.0 & 2.1 & 28.1 & 61.9 & 4.8\\
 \end{tabular}
 \end{center}
-\subsection{Raccolta dati}
+
+Inserire propagazione degli errori. 
 \subsection{Analisi dei dati}
+Per verificare la validità, rappresentare su un grafico i punti ($\frac{1}{p};\frac{1}{q})$ e verificare che i punti sono disposti lungo una retta. 
+Calcolo l'incertezza $\sigma_{q}$ e $\sigma_{p}$, tramite la Dev.Stand. 
+
+%Grafico delle due rette
+
 
 \section{Conclusioni}
+
+
+
+
+
 
 \chapter{Pendolo di Kater}
 \section{Introduzione}
@@ -859,6 +880,29 @@ $d(m_b,c_1)$ & Periodo in c2 & $\sigma$ \\
 \end{tabular}
 
 $\pm\sigma$
+
+\chapter{Tubo di risonanza}
+\section{Introduzione}
+\section{Tubo aperto contenente aria}
+Dati geometrici tubo:
+Lunghezza = 90cm
+Diametro = 3.9cm
+\\
+Data la relazione
+$$ L = n\frac{\lambda_{n}}{2}		$$ con n=1,2,3.. 
+\begin{center}
+
+
+\begin{tabular}{c|c|c|c|c|c}
+Frequenza di Risonanza (Hz) & 185 & 370 & 558 & 930 & 1320 \\
+\end{tabular}
+\end{center}
+
+
+$$ vn = 2L\nu $$
+
+\section{Analisi}
+
 
 \end{document} 
 
