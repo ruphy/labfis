@@ -1,5 +1,6 @@
 \documentclass[a4paper,10pt]{report}
  
+\usepackage[cm]{fullpage}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -20,6 +21,8 @@
 
 \definecolor{listinggray}{gray}{0.9}
 %\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+
+\addtolength{\voffset}{-10pt}
 
 \hypersetup{colorlinks=false}
  
@@ -935,6 +938,7 @@ $\pm\sigma$
 \subsection{Descrizione dell'esperimento}
 
 \subsection{Raccolta dati}
+Tutti i valori riportati in tabella sono in millisecondi.
 \begin{center}
 \begin{tabular}{r|*{14}{c}}
 \textbf{20 cm} & 197 & 199 & 197 & 200 & 199 & 203 & 200 & 203 & 196 & 199 & 196 & 199 & 197 & 205\\
@@ -956,7 +960,6 @@ $$\sigma_{\bar{x}} = 0.430\ ms$$
 $$\mathrm{Stima\ di\ g} = 10.10\ m/s^2$$
 $$\mathrm{Stima\ (corretta)\ di\ g} = 9.80\ m/s^2 $$
 $$\frac{\Delta g_c}{g} = 0.00072$$
-
 \includegraphics[scale=0.75]{../grafici/90cm.png}
 $$\sigma_{\bar{x}} = 0.296\ ms $$
 $$\mathrm{Stima\ di\ g} = 10.02\ m/s^2$$
