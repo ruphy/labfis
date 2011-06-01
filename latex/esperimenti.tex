@@ -853,8 +853,8 @@ Calcolo l'incertezza $\sigma_{q}$ e $\sigma_{p}$, tramite la Dev. Std.
 
 
 
-\chapter{Pendolo di Kater}
-\section{Introduzione}
+\chapter{Calcolo dell'accelerazione di gravità}
+\section{Pendolo di Kater}
 \subsection{Scopo dell'esperimento}
 Misura di g
 \subsection{Metodo}
@@ -863,10 +863,12 @@ Pendolo di Kater (struttura definita in seguito)
 $d(m_a,c_1)=15.4 cm$
 Cronometro digitale con fotocellula $\pm 0.0001 s$ 
 \section{Raccolta Dati}
-\begin{tabular}{*{8}{|c}}
-\textbf{$d(m_b,c_1)=15cm$} & \textbf{$d(m_b,c_1)=17.9cm$} & \textbf{$d(m_b,c_1)=84.4cm$}& \textbf{$d(m_b,c_1)=81.3cm$}& \textbf{$d(m_b,c_1)=12cm$}\\
+
+\begin{center}
+\begin{tabular}{*{5}{|c}|}
+\textbf{$d(c_1)=15cm$} & \textbf{$d(c_1)=17.9cm$} & \textbf{$d(c_1)=84.4cm$}& \textbf{$d(c_1)=81.3cm$}& \textbf{$d(c_1)=12cm$}\\
 \midrule
- \textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}\\
+ \textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}\\
  1.9809 & 1.9211 & 1.9934 & 1.9735 & 2.0040\\
  1.9796 & 1.9207 & 1.9932 & 1.9744 & 2.0041\\
  1.9816 & 1.9264 & 1.9931 & 1.9746 & 2.0043\\
@@ -878,22 +880,24 @@ Cronometro digitale con fotocellula $\pm 0.0001 s$
  1.9810 & 1.9278 & 1.9937 & 1.9754 & 2.0046\\
  1.9831 & 1.9278 & 1.9935 & 1.9750 & 2.0058\\
 
- \textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}\\
+ \textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}\\
  1.9934 & 1.9882 & 1.9946 &	1.9802 & \\
- 1.9946 & 1.9902 & 1.9939 &	1.9812\\
- 1.9911 & 1.9907 & 1.9943 &	1.9820\\
- 1.9919 & 1.9908 & 1.9941 &	1.9818\\
- 1.9940 & 1.9907 & 1.9940 &	1.9819\\
- 1.9923 & 1.9907 & 1.9952 &	1.9813\\
- 1.9939 & 1.9888 & 1.9954 &	1.9816\\
- 1.9934 & 1.9898 & 1.9943 &	1.9818\\
- 1.9914 & 1.9898 & 1.9947 &	1.9812\\
- 1.9958 & 1.9878 & 1.9941 &	1.9810\\
- 
- 
+ 1.9946 & 1.9902 & 1.9939 &	1.9812 & \\
+ 1.9911 & 1.9907 & 1.9943 &	1.9820 & \\
+ 1.9919 & 1.9908 & 1.9941 &	1.9818 & \\
+ 1.9940 & 1.9907 & 1.9940 &	1.9819 & \\
+ 1.9923 & 1.9907 & 1.9952 &	1.9813 & \\
+ 1.9939 & 1.9888 & 1.9954 &	1.9816 & \\
+ 1.9934 & 1.9898 & 1.9943 &	1.9818 & \\
+ 1.9914 & 1.9898 & 1.9947 &	1.9812 & \\
+ 1.9958 & 1.9878 & 1.9941 &	1.9810 & \\
 \end{tabular}
+\end{center}
 
 Abbiamo ricavato i seguenti valore medi e dev.standard 
+
+\begin{center}
+\begin{tabular}{c   c}
 \begin{tabular}{|c|c|c|}
 $d(m_b,c_1)$ & Periodo in c1 & $\sigma$ \\
 \midrule
@@ -906,7 +910,7 @@ $d(m_b,c_1)$ & Periodo in c1 & $\sigma$ \\
 81.3 & 1.9755&\\
 84.4 & 1.9935&\\
 \end{tabular}
-
+&
 \begin{tabular}{|c|c|c|}
 $d(m_b,c_1)$ & Periodo in c2 & $\sigma$ \\
 \midrule
@@ -919,8 +923,45 @@ $d(m_b,c_1)$ & Periodo in c2 & $\sigma$ \\
 81.3 & 1.9755&\\
 84.4 & 1.9935&\\
 \end{tabular}
-
+\end{tabular}
+\end{center}
+CONTROLLA I VALORI
 $\pm\sigma$
+
+\section{Caduta libera}
+
+\subsection{Raccolta dati}
+
+
+\begin{center}
+\begin{tabular}{r|*{14}{c}}
+\textbf{20 cm} & 197 & 199 & 197 & 200 & 199 & 203 & 200 & 203 & 196 & 199 & 196 & 199 & 197 & 205\\
+& 198 & 199 & 198 & 197 & 199 & 198 & 197 & 198 & 200 & 198 & 199 & 199 & 198 & 204\\
+\midrule
+\textbf{35 cm} & 265 & 265 & 265 & 261 & 262 & 263 & 266 & 262 & 269 & 266 & 261 & 263 & 262 & 261\\
+\midrule
+\textbf{50 cm} & 314 & 315 & 314 & 321 & 319 & 316 & 315 & 315 & 315 & 314 & 314 & 315\\
+\midrule
+\textbf{60 cm} & 347 & 345 & 346 & 347 & 344 & 344 & 348 & 345 & 346 & 344 & 345 & 345\\
+\midrule
+\textbf{90 cm} & 424& 424& 424& 423& 425& 424& 426& 423& 424& 423& 422& 425& 423\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=0.75]{../grafici/20cm.png}
+$$\sigma_{\bar{x}} = 0.430$$
+g stimata: 10.10076
+g (con correzione 3ms): 9.80296
+errore: -0.00072
+
+\includegraphics[scale=0.75]{../grafici/90cm.png}
+$$\sigma_{\bar{x}} = 0.296$$
+$$\mathrm{Stima\ di\ g} = 10.02 $$
+$$\mathrm{Stima\ (corretta)\ di\ g} - 9.88 $$
+
+errore: 0.00707
+\end{center}
 
 \chapter{Tubo di risonanza}
 \section{Introduzione}
@@ -974,19 +1015,16 @@ $$ v = 2L_c\frac{\nu}{n} = 344.544\pm9.39\ m/s$$
 Posta una frequenza corrispondente a $n>1$, spostiamo all'interno del tubo il microfono e cerchiamo i punti corrispondenti a ventri e nodi (posizione rispetto all'inizio del tubo).\\
 
 \begin{center}
-\begin{tabular}{r  r}
+\begin{tabular}{r r r r}
 
-$\nu$ =370 Hz ($n$=2) & $\nu$ =558 Hz ($n$ = 3)\\
-\\
-\textit{nodo 1}: 0 cm & \textit{nodo 1}:  0 cm\\
-\textit{ventre 1}: 22.5 cm & \textit{ventre 2}: 15 cm\\
-\textit{nodo 2}: 45 cm &\textit{nodo 2}: 30 cm\\
-\textit{ventre 2}: 67.5 cm&\textit{ventre 3}: 45 cm\\
-\textit{nodo3}: 90 cm & \textit{nodo 3}: 60 cm\\
-&\textit{ventre 4}: 75 cm\\
-&\textit{nodo 4}: 90 cm\\
-\\
-
+\multicolumn{2}{c}{$\nu$ = 370 Hz}&\multicolumn{2}{c}{$\nu$ = 558 Hz}\\
+\textit{nodo 1}:& 0 cm & \textit{nodo 1}:& 0 cm\\
+\textit{ventre 1}:& 22.5 cm & \textit{ventre 2}:& 15 cm\\
+\textit{nodo 2}:& 45 cm &\textit{nodo 2}:& 30 cm\\
+\textit{ventre 2}:& 67.5 cm&\textit{ventre 3}:& 45 cm\\
+\textit{nodo 3}:& 90 cm & \textit{nodo 3}:& 60 cm\\
+& & \textit{ventre 4}:& 75 cm \\
+& & \textit{nodo 4}:& 90 cm \\
 \end{tabular}
 \end{center}
 
