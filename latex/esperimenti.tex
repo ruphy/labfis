@@ -1153,34 +1153,20 @@ Velocità di propagazione di un'onda elastica in un mezzo materiale:
 v=\sqrt{\frac{\tau}{\mu}}
 \end{equation}
 
-con $\tau$: tensione 
-$\mu$: massa per unità di lunghezza della corda\\
+scegliendo come $\tau$ la tensione e come $\mu$ la massa per unità di lunghezza della corda\\
 
 Le frequenze delle armoniche di ordine superiore sono date dall'equazione:
 \begin{equation}
 \nu=\frac{n}{2L}\sqrt{\frac{\tau}{\pi\rho}}
 \end{equation}
 
-L: distanza tra i due punti di sospensione
+dove L è la distanza tra i due punti di sospensione, $n\in \mathbb{N}$ è il numero dell'armonica, $\rho$ la densità della corda e $\tau$ la tensione.
 
-\section{Oscillazioni forzate}
-Legge temporale delle oscillazioni forzate:
-
-\begin{equation}
-x(t)=Bt\cos\Omega
-\end{equation}
-
-B: ampiezza
-
-\begin{equation}
-B\propto\frac{F_0}{\omega_n^2-\Omega^2}
-\end{equation}
-
-Abbiamo cercato la prima armonica variando la lunghezza del filo
-[grafico]
+In tabella sono riportati i dati della frequenza a cui è stata trovata la prima armonica.
 
 \begin{center}
 \begin{tabular}{|c|c|}
+\toprule
 Lunghezza (m) & Frequenza (Hz) \\
 \midrule
 1.10 & 19.33 \\
@@ -1194,9 +1180,15 @@ Lunghezza (m) & Frequenza (Hz) \\
 0.75 & 27.85 \\
 0.60 & 35.00 \\
 0.50 & 42.67 \\
+\bottomrule
 \end{tabular}
 \end{center}
 
+Inserendo questi dati su di un grafico, e interpolando la curva con Sage, troviamo il seguente grafico.
+
+\includegraphics[scale=0.75]{"../grafici/CordaPrimaArmonica"}
+
+Nota: $\rho$ è lasciato parametro libero, mentre invece $\tau$ è pari a 10.3 N, dato da un peso di 1.050 Kg sospeso a un'estremità della corda.
 
 \chapter*{Appendice}
 \section*{Metodo di analisi dei dati informatizzato}
