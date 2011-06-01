@@ -44,7 +44,7 @@
         keywordstyle=\color[rgb]{0,0,1},
         commentstyle=\color[rgb]{0.133,0.545,0.133},
         stringstyle=\color[rgb]{0.627,0.126,0.941},
-}
+} \hypersetup{colorlinks=false}
 
 \renewcommand\chaptername{Esperimento}
  
@@ -61,7 +61,7 @@
 \tableofcontents
 
 \chapter{Viscosità}
-
+\section{wa}
 \subsection{Da fare}
 \begin{itemize}
  \item Grafici con barrette di errore
@@ -74,22 +74,21 @@
 \section{Misurazioni preliminari}
 \subsection{Sferette}
 Abbiamo raccolto le seguenti misurazioni per quanto riguarda il diametro delle sferette:
-\\
-
-\begin{tabular}{|l|l|l|}
- \toprule
- Sferette tipo 1: & 3mm & 3mm \\
- Sferette tipo 2: & 4mm & 4mm \\
- Sferette tipo 3: & 5mm & 5mm \\
- Sferette tipo 4: & 6mm & 6mm \\
- \bottomrule
+\begin{center}
+\begin{tabular}{|l|l|}
+\toprule
+ Sferette tipo 1: & 3mm\\
+ Sferette tipo 2: & 4mm\\
+ Sferette tipo 3: & 5mm\\
+ Sferette tipo 4: & 6mm\\
+\bottomrule
 \end{tabular}
-\\
-\\
+\end{center}
+
 La sensibilità del calibro è di 0.05mm.\\
 Peso delle sferette:
-\\
 
+\begin{center}
 \begin{tabular}{lll}
  Sferette tipo 1:
  & 0.1102g & 0.1102g \\
@@ -108,8 +107,8 @@ Peso delle sferette:
   & (3,521g/4) & 0.8806g \\
   & 0.8802g & 0.8807g \\
 \end{tabular}
-\\
-\\
+\end{center}
+
 La sensibilità della bilancia è di $10^{-6}$ kg
 
 In particolare, per una sferetta singola da 5mm, abbiamo ottenuto le seguenti misurazioni\\
@@ -159,6 +158,7 @@ Di seguito le tabelle che registrano il tempo impiegato per attraversare il flui
 \bottomrule
 \end{tabular}
 \subsubsection{Sferette da 3mm}
+
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \toprule
  5,28s & 5,09s & 4,96s & 5,25s & 5,28s & 5,12s & 5,06s & 5,12s & 5,06s & 5,28s \\
@@ -166,8 +166,7 @@ Di seguito le tabelle che registrano il tempo impiegato per attraversare il flui
  5,18s & 5,18s & 5,21s & 4,87 & 5,34s &  &  &  &  & \\
 \bottomrule
 \end{tabular}
-\\
-\\
+
 * = per queste misurazioni, la pallina si è avvicinata molto alla parete del tubo, e dunque le misurazioni potrebbero essere falsate.
 TODO: rimuovi i vecchi valori
 
@@ -312,7 +311,7 @@ Media = 0.644
 
 \subsubsection{Filo B}
 Periodo di oscillazione (s):
-\\
+
 \begin{center}
 \begin{tabular}{llllllll}
 2.4   & 2.4   & 2.425 & 2.4  & 2.4   & 2.425 & 2.4  & 2.4 \\
@@ -398,7 +397,7 @@ $$ M_{peso} = bmg = c\theta $$
 
 dove $b$ è il braccio di applicazione della forza peso, ovvero il raggio della carrucola.
 I valori di c calcolati dono dunque stati (in $N\cdot m/rad$):
-\\
+
 \begin{center}
 \begin{tabular}{l|lll}
 Peso & Filo A & Filo B & Filo C \\
@@ -562,7 +561,8 @@ $\theta_0$ & 0.055 rad& 0.0016 \\
 $$\omega_{0} = 4.291\ rad/s $$
 
 \subsection{Oscillazioni smorzate-forzate}
-Tramite l'interpolazione dei grafici di posizione angolare in funzione del tempo con una funzione sinosuidale, sono stati trovati i valori dell'ampiezza e del periodo di ognuna delle oscillazioni.
+Tramite l'interpolazione dei grafici di posizione angolare in funzione del tempo con una funzione\\
+sinosuidale, sono stati trovati i valori dell'ampiezza e del periodo di ognuna delle oscillazioni.
 
 Dopodiché abbiamo interpolato questi dati con il programma DataStudio, secondo la funzione
 $$ A(\omega) = \frac{M_0}{\sqrt{ ({\omega_0}^2-\omega^2)^2 + 4\gamma^2\omega^2}} $$
@@ -595,7 +595,7 @@ $\omega$ (rad/s) & Periodo (s) & A (rad) \\
 
 
 \includegraphics[scale=0.75]{"../grafici/Magnetea48mm"}
-\\
+
 
 $$ \omega_0 = 4.25\ rad/s $$
 $$ \gamma = 0.193\ s^{-1}$$
@@ -1211,9 +1211,9 @@ class Analyzer:
     
 \end{lstlisting}
 
-Questa è la classe base
+Questa è la classe base: si occupa di disegnare il grafico e di fornire l'analisi statistica di base
 
-\begin{lstlisting}    
+\begin{lstlisting}
     def setTitle(self, caption):
         self.caption = caption
         self.uuid = caption.replace('\\', '').replace(' ', '')
