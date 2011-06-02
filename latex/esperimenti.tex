@@ -1,5 +1,6 @@
 \documentclass[a4paper,10pt]{report}
  
+\usepackage[cm]{fullpage}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -15,9 +16,16 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{textcomp}
+
+\usepackage{hyperref}
+
 \definecolor{listinggray}{gray}{0.9}
 %\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
 
+\addtolength{\voffset}{-10pt}
+
+\hypersetup{colorlinks=false}
+ 
 \lstset{
 %	backgroundcolor=\color{lbcolor},
 	tabsize=4,
@@ -39,7 +47,7 @@
         keywordstyle=\color[rgb]{0,0,1},
         commentstyle=\color[rgb]{0.133,0.545,0.133},
         stringstyle=\color[rgb]{0.627,0.126,0.941},
-}
+} \hypersetup{colorlinks=false}
 
 \renewcommand\chaptername{Esperimento}
  
@@ -52,9 +60,11 @@
 \begin{document}
 
 \maketitle
+\setcounter{tocdepth}{3}
+\tableofcontents
 
 \chapter{Viscosità}
-
+\section{wa}
 \subsection{Da fare}
 \begin{itemize}
  \item Grafici con barrette di errore
@@ -67,22 +77,21 @@
 \section{Misurazioni preliminari}
 \subsection{Sferette}
 Abbiamo raccolto le seguenti misurazioni per quanto riguarda il diametro delle sferette:
-\\
-
-\begin{tabular}{|l|l|l|}
- \toprule
- Sferette tipo 1: & 3mm & 3mm \\
- Sferette tipo 2: & 4mm & 4mm \\
- Sferette tipo 3: & 5mm & 5mm \\
- Sferette tipo 4: & 6mm & 6mm \\
- \bottomrule
+\begin{center}
+\begin{tabular}{|l|l|}
+\toprule
+ Sferette tipo 1: & 3mm\\
+ Sferette tipo 2: & 4mm\\
+ Sferette tipo 3: & 5mm\\
+ Sferette tipo 4: & 6mm\\
+\bottomrule
 \end{tabular}
-\\
-\\
+\end{center}
+
 La sensibilità del calibro è di 0.05mm.\\
 Peso delle sferette:
-\\
 
+\begin{center}
 \begin{tabular}{lll}
  Sferette tipo 1:
  & 0.1102g & 0.1102g \\
@@ -101,8 +110,8 @@ Peso delle sferette:
   & (3,521g/4) & 0.8806g \\
   & 0.8802g & 0.8807g \\
 \end{tabular}
-\\
-\\
+\end{center}
+
 La sensibilità della bilancia è di $10^{-6}$ kg
 
 In particolare, per una sferetta singola da 5mm, abbiamo ottenuto le seguenti misurazioni\\
@@ -152,6 +161,7 @@ Di seguito le tabelle che registrano il tempo impiegato per attraversare il flui
 \bottomrule
 \end{tabular}
 \subsubsection{Sferette da 3mm}
+
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \toprule
  5,28s & 5,09s & 4,96s & 5,25s & 5,28s & 5,12s & 5,06s & 5,12s & 5,06s & 5,28s \\
@@ -159,8 +169,7 @@ Di seguito le tabelle che registrano il tempo impiegato per attraversare il flui
  5,18s & 5,18s & 5,21s & 4,87 & 5,34s &  &  &  &  & \\
 \bottomrule
 \end{tabular}
-\\
-\\
+
 * = per queste misurazioni, la pallina si è avvicinata molto alla parete del tubo, e dunque le misurazioni potrebbero essere falsate.
 TODO: rimuovi i vecchi valori
 
@@ -305,7 +314,7 @@ Media = 0.644
 
 \subsubsection{Filo B}
 Periodo di oscillazione (s):
-\\
+
 \begin{center}
 \begin{tabular}{llllllll}
 2.4   & 2.4   & 2.425 & 2.4  & 2.4   & 2.425 & 2.4  & 2.4 \\
@@ -391,7 +400,7 @@ $$ M_{peso} = bmg = c\theta $$
 
 dove $b$ è il braccio di applicazione della forza peso, ovvero il raggio della carrucola.
 I valori di c calcolati dono dunque stati (in $N\cdot m/rad$):
-\\
+
 \begin{center}
 \begin{tabular}{l|lll}
 Peso & Filo A & Filo B & Filo C \\
@@ -555,7 +564,8 @@ $\theta_0$ & 0.055 rad& 0.0016 \\
 $$\omega_{0} = 4.291\ rad/s $$
 
 \subsection{Oscillazioni smorzate-forzate}
-Tramite l'interpolazione dei grafici di posizione angolare in funzione del tempo con una funzione sinosuidale, sono stati trovati i valori dell'ampiezza e del periodo di ognuna delle oscillazioni.
+Tramite l'interpolazione dei grafici di posizione angolare in funzione del tempo con una funzione\\
+sinosuidale, sono stati trovati i valori dell'ampiezza e del periodo di ognuna delle oscillazioni.
 
 Dopodiché abbiamo interpolato questi dati con il programma DataStudio, secondo la funzione
 $$ A(\omega) = \frac{M_0}{\sqrt{ ({\omega_0}^2-\omega^2)^2 + 4\gamma^2\omega^2}} $$
@@ -565,6 +575,10 @@ e lasciando liberi i parametri $M_0$, $\gamma$ e $\omega_0$ abbiamo trovato alcu
 \clearpage
 
 \subsubsection{4.80mm}
+\begin{center}
+
+\includegraphics[scale=0.75]{"../grafici/Magnetea48mm"}
+\end{center}
 \begin{center}
 \begin{tabular}{l|l|l}
 $\omega$ (rad/s) & Periodo (s) & A (rad) \\
@@ -583,16 +597,17 @@ $\omega$ (rad/s) & Periodo (s) & A (rad) \\
 5.19	& 1.21 & 1.74\\
 5.51	& 1.14 & 1.19 \\
 \midrule
+
 \end{tabular}
-\end{center}
-
-
-\includegraphics[scale=0.75]{"../grafici/Magnetea48mm"}
-\\
-
 $$ \omega_0 = 4.25\ rad/s $$
 $$ \gamma = 0.193\ s^{-1}$$
 $$ M_0 = 15.3\ s$$
+
+
+\end{center}
+
+
+
 
 \subsubsection{2.80mm}
 \begin{center}
@@ -613,7 +628,7 @@ $\omega$ (rad/s) & Periodo (s) & A (rad) \\
 \end{tabular}
 \end{center}
 \includegraphics[scale=0.75]{"../grafici/Magnetea28mm"}
-\\
+
 
 
 $$ \omega_0 = 4.26\ rad/s $$
@@ -642,7 +657,7 @@ $\omega$ (rad/s) & Periodo (s) & A (rad) \\
 \end{tabular}
 \end{center}
 \includegraphics[scale=0.75]{"../grafici/Magnetea10mm"}
-\\
+
 
 $$ \omega_0 = 4.37\ rad/s $$
 $$ \gamma = 1.40 \pm 0.14\ s^{-1}$$
@@ -662,7 +677,7 @@ L'esperimento è riuscito un sacco.
 \subsection{Oggetto della ricerca}
 Misurazione della costante di gravitazione G mediante la bilancia di Cavendish.
 \subsection{Strumenti}
-Bilancia di Cavendish\\
+Bilancia di Cavendish
 
 \begin{tabular}{ll}
 m=38.3$\pm$0.2 g & massa sfere piccole\\
@@ -687,19 +702,19 @@ $m_c\cong 2m$ & massa manubrio\\
 \section{Introduzione}
 \subsection{Scopo dell'esperimento e metodo in breve}
 L'esperimento si compone di tre parti.
-\\
+
 
 Nella prima, si verifica la validità della Legge di Snell e la reversibilità del cammino ottico: dato un raggio luminoso attraversante un semi-cilindro in plexiglass, misuriamo l'angolo di incidenza $\theta_{rifrazione}$ ed il corrispondente  angolo di rifrazione $\theta_{rifrazione}$. Sempre grazie alla legge di Snell si ricerca la miglior stima dell'indice di rifrazione del plexiglass $n$.
-\\
+
 
 Nella seconda parte, si ricerca $n$ studiando l'angolo di deviazione minima $\delta_{min}$ di un prisma a base triangolare e di un prisma a base trapezoidale. 
 Inoltre, si ricerca la distanza di cui viene traslato il raggio, che arriva con un certo angolo di incidenza $\theta$, quando passa per due superfici parallele.
-\\
+
 
 Infine si verifica la legge dei punti coniugati tramite la misura delle distanze $p$ e $q$ e la validità dell'ingrandimento ottico M. 
 
 \subsection{Strumenti}
-In questa tabella vengono riassunti gli strumenti rivelatori utilizzati, con le relative precisioni, e il set-up dell'esperimento.\\
+In questa tabella vengono riassunti gli strumenti rivelatori utilizzati, con le relative precisioni, e il set-up dell'esperimento.
 \begin{center}
 \begin{tabular}{c|c}
 Strumento & Precisione \\
@@ -716,7 +731,7 @@ Questo proiettore, insieme alla piattaforma girevole graduata, alle lenti ed a u
 
 \section{Reversibilità del cammino luminoso}
 \subsection{Raccolta dati}
-Tutte le misure seguenti sono espresse in gradi.\\
+Tutte le misure seguenti sono espresse in gradi.
 
 
 \begin{table}
@@ -739,8 +754,8 @@ $\theta_{incidenza} $ & $\theta_{rifrazione} $ &$\theta_{incidenza} $ & $\theta_
 \end{table}
 
 \subsection{Analisi dei dati}
-Raccolti i valori degli angoli di incidenza e dei corrispondenti angoli di rifrazione, possiamo calcolare la miglior stima di $n$. 
-La legge di Snell esprime la relazione che lega gli indici di rifrazione dei due materiali attraversati dal raggio luminoso, e i seni degli angoli di incidenza e rifrazione:\\
+Raccolti i valori degli angoli di incidenza e dei corrispondenti angoli di rifrazione, possiamo calcolare la miglior stima di $n$.
+La legge di Snell esprime la relazione che lega gli indici di rifrazione dei due materiali attraversati dal raggio luminoso, e i seni degli angoli di incidenza e rifrazione:
 
 \begin{center}
 $n_1 sin\theta_1 = n_2 sin\theta_2$
@@ -750,10 +765,9 @@ Poiché $n_a \simeq1 $ ( indice di rifrazione dell'aria ), si ricava:
 
 $$n_2 = \frac{sin\theta_1}{sin\theta_2}$$
 
-Nell'elaborazione dei dati, abbiamo selezionato solo le coppie di misure cui corrispondesse un errore relativo percentuale minore del 6\%, al fine di avere una stima più precisa del valore vero di $n$.\\
+Nell'elaborazione dei dati, abbiamo selezionato solo le coppie di misure cui corrispondesse un errore relativo percentuale minore del 6\%, al fine di avere una stima più precisa del valore vero di $n$.
+
 \begin{center}
-
-
 \begin{tabular}{c|c|c|c|c|c}
 \textbf{$\theta_1$} & 25 & 30 & 40 & 35 & 45\\
 \midrule
@@ -814,15 +828,15 @@ $\overline{\delta}_{min} = \frac{\displaystyle\sum\limits_{i=1}^6 \delta_i}{6} =
 \subsection{Raccolta dati}
 Nell'ultima parte dell'esperimento, si verifica la validità della legge dei punti coniugati,
 $$ \frac{1}{f} = \frac{1}{q} + \frac{1}{p} $$
-\textit{p: distanza sorgente-lente\\
-q: distanza lente-schermo\\
-d: diametro circonferenza proiettata}\\
+\textit{p: distanza sorgente-lente}
+\textit{q: distanza lente-schermo}
+\textit{d: diametro circonferenza proiettata}
 
-In tabella sono riportati sulla destra le misure effettuate con lente di focale $f=100 mm$, a sinistra con lente di focale $f=200mm$ 
-\\
+In tabella sono riportati sulla destra le misure effettuate con lente di focale $f=100 mm$, a sinistra con lente di focale $f=200mm$. Tutti i valori sono in cm.
+
 \begin{center}
 \begin{tabular}{*{3}{c|}*{3}{|c}}
-p($cm$) &q($cm$)&d($cm$) &p($cm$) &q($cm$)&d($cm$)\\
+p & q &d &p &q&d\\
 \midrule
 13.5 & 36.5 & 5.5 & 73.4 & 26.6 & 0.7\\
 36.2 & 13.8 & 0.8 & 26.4 & 73.6 & 5.5\\
@@ -835,7 +849,7 @@ p($cm$) &q($cm$)&d($cm$) &p($cm$) &q($cm$)&d($cm$)\\
 Inserire propagazione degli errori. 
 \subsection{Analisi dei dati}
 Per verificare la validità, rappresentare su un grafico i punti ($\frac{1}{p};\frac{1}{q})$ e verificare che i punti sono disposti lungo una retta. 
-Calcolo l'incertezza $\sigma_{q}$ e $\sigma_{p}$, tramite la Dev.Stand. 
+Calcolo l'incertezza $\sigma_{q}$ e $\sigma_{p}$, tramite la Dev. Std. 
 
 %Grafico delle due rette
 
@@ -847,21 +861,23 @@ Calcolo l'incertezza $\sigma_{q}$ e $\sigma_{p}$, tramite la Dev.Stand.
 
 
 
-\chapter{Pendolo di Kater}
-\section{Introduzione}
+\chapter{Calcolo di g - accelerazione di gravità}
+\section{Pendolo di Kater}
 \subsection{Scopo dell'esperimento}
 Misura di g
 \subsection{Metodo}
 \subsection{Strumenti}
 Pendolo di Kater (struttura definita in seguito)
 $d(m_a,c_1)=15.4 cm$
-Cronometro digitale con fotocellula $\pm 0.0001 s$ 
+Cronometro digitale con fotocellula a precisione $\pm 0.1 \cdot 10^{-3}\ s$ 
 \section{Raccolta Dati}
-\begin{tabular}{| c | c | c | c | c | c | c |}
 
-\textbf{$d(m_b,c_1)=15cm$} & \textbf{$d(m_b,c_1)=17.9cm$} & \textbf{$d(m_b,c_1)=84.4cm$}& \textbf{$d(m_b,c_1)=81.3cm$}& \textbf{$d(m_b,c_1)=12cm$}\\
+\begin{center}
+\begin{tabular}{*{5}{|c}|}
+\toprule
+\textbf{$d(c_1)=15cm$} & \textbf{$d(c_1)=17.9cm$} & \textbf{$d(c_1)=84.4cm$}& \textbf{$d(c_1)=81.3cm$}& \textbf{$d(c_1)=12cm$}\\
 \midrule
- \textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}\\
+ \textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}\\
  1.9809 & 1.9211 & 1.9934 & 1.9735 & 2.0040\\
  1.9796 & 1.9207 & 1.9932 & 1.9744 & 2.0041\\
  1.9816 & 1.9264 & 1.9931 & 1.9746 & 2.0043\\
@@ -873,22 +889,25 @@ Cronometro digitale con fotocellula $\pm 0.0001 s$
  1.9810 & 1.9278 & 1.9937 & 1.9754 & 2.0046\\
  1.9831 & 1.9278 & 1.9935 & 1.9750 & 2.0058\\
 
- \textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}\\
+ \textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}&\textbf{Coltello2}\\
  1.9934 & 1.9882 & 1.9946 &	1.9802 & \\
- 1.9946 & 1.9902 & 1.9939 &	1.9812\\
- 1.9911 & 1.9907 & 1.9943 &	1.9820\\
- 1.9919 & 1.9908 & 1.9941 &	1.9818\\
- 1.9940 & 1.9907 & 1.9940 &	1.9819\\
- 1.9923 & 1.9907 & 1.9952 &	1.9813\\
- 1.9939 & 1.9888 & 1.9954 &	1.9816\\
- 1.9934 & 1.9898 & 1.9943 &	1.9818\\
- 1.9914 & 1.9898 & 1.9947 &	1.9812\\
- 1.9958 & 1.9878 & 1.9941 &	1.9810\\
- 
- 
+ 1.9946 & 1.9902 & 1.9939 &	1.9812 & \\
+ 1.9911 & 1.9907 & 1.9943 &	1.9820 & \\
+ 1.9919 & 1.9908 & 1.9941 &	1.9818 & \\
+ 1.9940 & 1.9907 & 1.9940 &	1.9819 & \\
+ 1.9923 & 1.9907 & 1.9952 &	1.9813 & \\
+ 1.9939 & 1.9888 & 1.9954 &	1.9816 & \\
+ 1.9934 & 1.9898 & 1.9943 &	1.9818 & \\
+ 1.9914 & 1.9898 & 1.9947 &	1.9812 & \\
+ 1.9958 & 1.9878 & 1.9941 &	1.9810 & \\
+\bottomrule
 \end{tabular}
+\end{center}
 
 Abbiamo ricavato i seguenti valore medi e dev.standard 
+
+\begin{center}
+\begin{tabular}{c   c}
 \begin{tabular}{|c|c|c|}
 $d(m_b,c_1)$ & Periodo in c1 & $\sigma$ \\
 \midrule
@@ -901,7 +920,7 @@ $d(m_b,c_1)$ & Periodo in c1 & $\sigma$ \\
 81.3 & 1.9755&\\
 84.4 & 1.9935&\\
 \end{tabular}
-
+&
 \begin{tabular}{|c|c|c|}
 $d(m_b,c_1)$ & Periodo in c2 & $\sigma$ \\
 \midrule
@@ -914,8 +933,60 @@ $d(m_b,c_1)$ & Periodo in c2 & $\sigma$ \\
 81.3 & 1.9755&\\
 84.4 & 1.9935&\\
 \end{tabular}
-
+\end{tabular}
+\end{center}
+CONTROLLA I VALORI
 $\pm\sigma$
+
+\section{Caduta libera}
+
+\subsection{Descrizione dell'esperimento}
+
+\subsection{Raccolta dati}
+Tutti i valori riportati in tabella sono in millisecondi.
+\begin{center}
+\begin{tabular}{r|*{14}{c}}
+\textbf{20 cm} & 197 & 199 & 197 & 200 & 199 & 203 & 200 & 203 & 196 & 199 & 196 & 199 & 197 & 205\\
+& 198 & 199 & 198 & 197 & 199 & 198 & 197 & 198 & 200 & 198 & 199 & 199 & 198 & 204\\
+\midrule
+\textbf{35 cm} & 265 & 265 & 265 & 261 & 262 & 263 & 266 & 262 & 269 & 266 & 261 & 263 & 262 & 261\\
+\midrule
+\textbf{50 cm} & 314 & 315 & 314 & 321 & 319 & 316 & 315 & 315 & 315 & 314 & 314 & 315\\
+\midrule
+\textbf{60 cm} & 347 & 345 & 346 & 347 & 344 & 344 & 348 & 345 & 346 & 344 & 345 & 345\\
+\midrule
+\textbf{90 cm} & 424& 424& 424& 423& 425& 424& 426& 423& 424& 423& 422& 425& 423\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=0.75]{../grafici/20cm.png}
+$$\sigma_{\bar{x}} = 0.430\ ms$$
+$$\mathrm{Stima\ di\ g} = 10.10\ m/s^2$$
+$$\mathrm{Stima\ (corretta)\ di\ g} = 9.80\ m/s^2 $$
+$$\frac{\Delta g_c}{g} = 0.00072$$
+\includegraphics[scale=0.75]{../grafici/90cm.png}
+$$\sigma_{\bar{x}} = 0.296\ ms $$
+$$\mathrm{Stima\ di\ g} = 10.02\ m/s^2$$
+$$\mathrm{Stima\ (corretta)\ di\ g} = 9.88\ m/s^2 $$
+$$\frac{\Delta g_c}{g} = 0.00707$$
+\end{center}
+
+La correzione applicata è di 3 ms aggiunti al tempo segnato dal cronometro. Non avendo dati più precisi sulla costruzione del cronometro stesso, assumiamo questo tempo come [delay]... scrivi meglio!
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+$h$ (m) & $g$ (m/s$^2$) & $g_c$ (m/s$^2$) & $\Delta g/g$ & $\Delta g_c/g$\\
+\midrule
+0.20 & 10.10 & 9.80 & 0.02964 & 0.00072 \\
+0.35 & 10.07 & 9.85 & 0.02659 & 0.00362 \\
+0.50 & 10.04 & 9.85 & 0.02354 & 0.00435 \\
+0.60 & 10.05 & 9.88 & 0.02475 & 0.00718 \\
+0.90 & 10.02 & 9.88 & 0.02138 & 0.00707 \\
+\end{tabular}
+\end{center}
+
+
 
 \chapter{Tubo di risonanza}
 \section{Introduzione}
@@ -969,19 +1040,16 @@ $$ v = 2L_c\frac{\nu}{n} = 344.544\pm9.39\ m/s$$
 Posta una frequenza corrispondente a $n>1$, spostiamo all'interno del tubo il microfono e cerchiamo i punti corrispondenti a ventri e nodi (posizione rispetto all'inizio del tubo).\\
 
 \begin{center}
-\begin{tabular}{r  r}
+\begin{tabular}{r r r r}
 
-$\nu$ =370 Hz ($n$=2) & $\nu$ =558 Hz ($n$ = 3)\\
-\\
-\textit{nodo 1}: 0 cm & \textit{nodo 1}:  0 cm\\
-\textit{ventre 1}: 22.5 cm & \textit{ventre 2}: 15 cm\\
-\textit{nodo 2}: 45 cm &\textit{nodo 2}: 30 cm\\
-\textit{ventre 2}: 67.5 cm&\textit{ventre 3}: 45 cm\\
-\textit{nodo3}: 90 cm & \textit{nodo 3}: 60 cm\\
-&\textit{ventre 4}: 75 cm\\
-&\textit{nodo 4}: 90 cm\\
-\\
-
+\multicolumn{2}{c}{$\nu$ = 370 Hz}&\multicolumn{2}{c}{$\nu$ = 558 Hz}\\
+\textit{nodo 1}:& 0 cm & \textit{nodo 1}:& 0 cm\\
+\textit{ventre 1}:& 22.5 cm & \textit{ventre 2}:& 15 cm\\
+\textit{nodo 2}:& 45 cm &\textit{nodo 2}:& 30 cm\\
+\textit{ventre 2}:& 67.5 cm&\textit{ventre 3}:& 45 cm\\
+\textit{nodo 3}:& 90 cm & \textit{nodo 3}:& 60 cm\\
+& & \textit{ventre 4}:& 75 cm \\
+& & \textit{nodo 4}:& 90 cm \\
 \end{tabular}
 \end{center}
 
@@ -992,7 +1060,7 @@ $\nu$ =370 Hz ($n$=2) & $\nu$ =558 Hz ($n$ = 3)\\
 La condizione per l'instaurarsi di onde stazionarie in un tubo chiuso ad una estremità è data dalla relazione:
 
 \begin{equation}
-\L=(2n-1)\frac{\lambda}{4}
+ L=(2n-1)\frac{\lambda}{4}
 \end{equation}
 
 Operativamente, abbiamo risolto l'equazione soprastante rispetto a $n$.
@@ -1075,7 +1143,7 @@ Il risultato atteso è dunque $v=222.7 m/s$. Confrontando questo risultato con i
 $t_1 = 4.96 ms $\\
 $t_2 = 14.6 ms $\\
 $\Delta t = 9.64 ms $ \\
-Applicando la formula 7.x con $L_{tubo} = 147 cm$, otteniamo:
+Applicando la formula [ref] con $L_{tubo} = 147 cm$, otteniamo:
 $$ v = 305.0 \pm \sigma m/s $$ 
 
 
@@ -1088,16 +1156,16 @@ La \textbf{molla A} ha una lunghezza a riposo $L=0,430 m$ e di massa $M=4.289g$\
 \begin{tabular}{c|c|c}
 Massa & Misura L & $\Delta L$ \\
 \midrule
-200 & 0,422 &\\
-250 & 0,420 & \\
-300 & 0,418 & \\
-400 & 0,414 & \\
-450 &  0,412 & \\
-500 & 0,410 & \\
-550 & 0,408 &\\
-600 & 0,406 &\\
-650 & 0,404 &\\
-700 & 0,402 &\\
+200 & 0,422 & 0.008\\
+250 & 0,420 & 0.010\\
+300 & 0,418 & 0.012\\
+400 & 0,414 & 0.016\\
+450 & 0,412 & 0.018\\
+500 & 0,410 & 0.020\\
+550 & 0,408 & 0.022\\
+600 & 0,406 & 0.024\\
+650 & 0,404 & 0.026\\
+700 & 0,402 & 0.028\\
 \end{tabular}
 \subsection*{Molla B}
 La \textbf{molla B} ha una lunghezza a riposo $L=0,426 m$ e di massa $M=4.029 g$\\
@@ -1140,6 +1208,7 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 250 & 16.1 & 33.1 & 48.7 & 63.4 & 81.3 \\
 \end{tabular}
 \\
+
 \begin{tabular}{ c | c | c | c | c | c }
 Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 \midrule
@@ -1149,6 +1218,7 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 350 & 10.9 & 22.8 & 35.2 & 46.9 & 58.3\\
 \end{tabular}
 \end{center}
+
 
 
 Velocità di propagazione di un'onda elastica in un mezzo materiale:
@@ -1170,28 +1240,43 @@ L($cm$) & $\nu (Hz) $ \\
 v=\sqrt{\frac{\tau}{\mu}}
 \end{equation}
 
-con $\tau$: tensione 
-$\mu$: massa per unità di lunghezza della corda\\
+scegliendo come $\tau$ la tensione e come $\mu$ la massa per unità di lunghezza della corda\\
 
 Le frequenze delle armoniche di ordine superiore sono date dall'equazione:
 \begin{equation}
 \nu=\frac{n}{2L}\sqrt{\frac{\tau}{\pi\rho}}
 \end{equation}
 
-L: distanza tra i due punti di sospensione
+dove L è la distanza tra i due punti di sospensione, $n\in \mathbb{N}$ è il numero dell'armonica, $\rho$ la densità della corda e $\tau$ la tensione.
 
-\section{Oscillazioni forzate}
-Legge temporale delle oscillazioni forzate:
+In tabella sono riportati i dati della frequenza a cui è stata trovata la prima armonica.
 
-\begin{equation}
-x(t)=Bt\cos\Omega
-\end{equation}
+\begin{center}
+\begin{tabular}{|c|c|}
+\toprule
+Lunghezza (m) & Frequenza (Hz) \\
+\midrule
+1.10 & 19.33 \\
+1.15 & 18.25 \\
+1.17 & 17.75 \\
+1.22 & 17.00 \\
+1.34 & 15.69 \\
+1.53 & 13.92 \\
+1.60 & 12.96 \\
+0.91 & 22.83 \\
+0.75 & 27.85 \\
+0.60 & 35.00 \\
+0.50 & 42.67 \\
+\bottomrule
+\end{tabular}
+\end{center}
 
-B: ampiezza
+Inserendo questi dati su di un grafico, e interpolando la curva con Sage, troviamo il seguente grafico.
 
-\begin{equation}
-B\propto\frac{F_0}{\omega_n^2-\Omega^2}
-\end{equation}
+\includegraphics[scale=0.75]{"../grafici/CordaPrimaArmonica"}
+
+Nota: $\rho$ è lasciato parametro libero, mentre invece $\tau$ è pari a 10.3 N, dato da un peso di 1.050 Kg sospeso a un'estremità della corda.
+
 \chapter*{Appendice}
 \section*{Metodo di analisi dei dati informatizzato}
 Per l'analisi dei dati sperimentali si è fatto largo uso di strumenti informatici ausiliari.
@@ -1228,9 +1313,9 @@ class Analyzer:
     
 \end{lstlisting}
 
-Questa è la classe base
+Questa è la classe base: si occupa di disegnare il grafico e di fornire l'analisi statistica di base
 
-\begin{lstlisting}    
+\begin{lstlisting}
     def setTitle(self, caption):
         self.caption = caption
         self.uuid = caption.replace('\\', '').replace(' ', '')
