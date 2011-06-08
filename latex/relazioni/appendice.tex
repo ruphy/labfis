@@ -1,0 +1,249 @@
+
+\section{Introduzione}
+\subsection{Scopo dell'esperimento e metodo in breve}
+L'esperimento si compone di tre parti.
+
+
+Nella prima, si verifica la validità della Legge di Snell e la reversibilità del cammino ottico: dato un raggio luminoso attraversante un semi-cilindro in plexiglass, misuriamo l'angolo di incidenza $\theta_{rifrazione}$ ed il corrispondente  angolo di rifrazione $\theta_{rifrazione}$. Sempre grazie alla legge di Snell si ricerca la miglior stima dell'indice di rifrazione del plexiglass $n$.
+
+
+Nella seconda parte, si ricerca $n$ studiando l'angolo di deviazione minima $\delta_{min}$ di un prisma a base triangolare e di un prisma a base trapezoidale. 
+Inoltre, si ricerca la distanza di cui viene traslato il raggio, che arriva con un certo angolo di incidenza $\theta$, quando passa per due superfici parallele.
+
+
+Infine si verifica la legge dei punti coniugati tramite la misura delle distanze $p$ e $q$ e la validità dell'ingrandimento ottico M. 
+
+\subsection{Strumenti}
+In questa tabella vengono riassunti gli strumenti rivelatori utilizzati, con le relative precisioni, e il set-up dell'esperimento.
+\begin{center}
+\begin{tabular}{c|c}
+Strumento & Precisione \\
+\midrule
+Piatt. Graduata & $\pm 1 grado $ \\
+Metro & $\pm 1 mm $\\
+\end{tabular}
+\end{center}
+
+
+Durante l'esperimento è stato impostato sulla modalità a singolo raggio luminoso per le prime due parti e successivamente sulla modalità oggetto per la terza e ultima parte. 
+Questo proiettore, insieme alla piattaforma girevole graduata, alle lenti ed a uno schermo bianco, può scorrere liberamente lungo una rotaia, permettendo di modificare le distanze tra gli oggetti a piacimento.
+%Scherma dell'esperimento qui
+
+\section{Reversibilità del cammino luminoso}
+\subsection{Raccolta dati}
+Tutte le misure seguenti sono espresse in gradi.
+
+
+\begin{table}
+\center
+\begin{tabular}{c|c||c|c}
+ \multicolumn{2}{c}{\textit{Faccia piana}} &
+\multicolumn{2}{c}{\textit{Faccia curva}} \\
+$\theta_{incidenza} $ & $\theta_{rifrazione} $ &$\theta_{incidenza} $ & $\theta_{rifrazione} $\\
+\midrule
+ 10 & 7 & 7 & 10 \\
+15 & 10 & &\\
+20 & \textbf{13.5} & 13.5 & 20\\ 
+25 & \textbf{16.5} & & \\
+30 & 20 & 30 & 20\\
+40 & 26 & 26 & 40\\
+35 & 23 & &\\
+45&  \textbf{28.5} & & \\
+\end{tabular}
+\caption*{Misure in gradi}
+\end{table}
+
+\subsection{Analisi dei dati}
+Raccolti i valori degli angoli di incidenza e dei corrispondenti angoli di rifrazione, possiamo calcolare la miglior stima di $n$.
+La legge di Snell esprime la relazione che lega gli indici di rifrazione dei due materiali attraversati dal raggio luminoso, e i seni degli angoli di incidenza e rifrazione:
+
+\begin{center}
+$n_1 sin\theta_1 = n_2 sin\theta_2$
+\end{center}
+
+Poiché $n_a \simeq1 $ ( indice di rifrazione dell'aria ), si ricava:
+
+$$n_2 = \frac{sin\theta_1}{sin\theta_2}$$
+
+Nell'elaborazione dei dati, abbiamo selezionato solo le coppie di misure cui corrispondesse un errore relativo percentuale minore del 6\%, al fine di avere una stima più precisa del valore vero di $n$.
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\textbf{$\theta_1$} & 25 & 30 & 40 & 35 & 45\\
+\midrule
+\textbf{$\theta_2$} & 16.5 & 20 & 26 & 23 & 28.5\\
+\midrule
+\textbf{$n_i$} (*) & 1.489 & 1.462 & 1.468 & 1.468 & 1.482\\
+\end{tabular}\\
+
+\end{center}
+(*) in questo caso abbiamo tenuto un numero superiore di cifre significative, in quanto si tratta di calcoli intermedi 
+%Ripensare alle cifre significative
+
+$$\overline{n} = \frac{\displaystyle\sum\limits_{i=1}^N n_i}{N} = 1.474 $$
+
+$$\sigma_n = \sqrt{\frac{\sum_{i=1}^N n_i}{N-1}} = 0.01$$
+
+$$\sigma_{\overline{n}} = \frac{\sigma_n}{\sqrt{N}} = 0.004$$
+
+$$n_{best} = 1.474  \pm 0.004 $$
+
+%Cifre significative incertezza diverse da cifre significative misura!
+
+\section{Misura dell'angolo di deviazione minima}
+\subsection{Raccolta dati}
+
+L'angolo di deviazione minima ($\delta_{min}$) è il più piccolo angolo misurato facendo incidere un fascio di luce su una faccia di prisma (con inclinazione variabile) e misurando l'ampiezza dell'angolo rifratto. Nel nostro esperimento abbiamo utilizzato due prismi: uno con base un triangolo equilatero e l'altro un trapezio rettangolo.
+
+In tabella sono riportati i valori trovati per ogni misurazione dell'angolo rifratto. Per aumentare il livello di precisione, abbiamo raccolto i dati relativi agli angoli di deviazione minima per ogni faccia di prisma a base triangolare, identificando ogni misurazione con il numero dello spigolo compreso tra le facce colpite e il verso di percorrenza della luce.
+
+Per ovvie ragioni geometriche, nel caso del prisma a base trapezoidale (è presente un solo angolo acuto, di 45 gradi) è stato impossibile effettuare misure riferite a vari vertici.
+
+\begin{table}
+\center
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c | c | c|}
+\hline
+Spigolo & $\delta_{min}$ (andata) & $\delta_{min}$ (ritorno)\\
+\hline
+\multicolumn{3}{|c|}{\textit{Prisma a base triangolare}} \\
+\hline
+1 & 41 & 31\\
+2 & 43 & 39\\
+3 & 41 & 41\\
+\hline
+\multicolumn{3}{|c|}{\textit{Prisma a base trapezoidale}} \\
+\hline
+1 & 28 & 21\\
+\hline
+\end{tabular}
+\end{table}
+
+$\overline{\delta}_{min} = \frac{\displaystyle\sum\limits_{i=1}^6 \delta_i}{6} = 1.52$
+
+%Angolo deviazione minima, immagine
+\subsection{Analisi dei dati}
+
+\section{Lenti sottili}
+\subsection{Raccolta dati}
+Nell'ultima parte dell'esperimento, si verifica la validità della legge dei punti coniugati,
+$$ \frac{1}{f} = \frac{1}{q} + \frac{1}{p} $$
+\textit{p: distanza sorgente-lente}
+\textit{q: distanza lente-schermo}
+\textit{d: diametro circonferenza proiettata}
+
+In tabella sono riportati sulla destra le misure effettuate con lente di focale $f=100 mm$, a sinistra con lente di focale $f=200mm$. Tutti i valori sono in cm.
+
+\begin{center}
+\begin{tabular}{*{3}{c|}*{3}{|c}}
+p & q &d &p &q&d\\
+\midrule
+13.5 & 36.5 & 5.5 & 73.4 & 26.6 & 0.7\\
+36.2 & 13.8 & 0.8 & 26.4 & 73.6 & 5.5\\
+\midrule
+18.0 & 22.0 & 2.5 & 61.5 & 28.5 & 0.9\\
+22.0 & 18.0 & 2.1 & 28.1 & 61.9 & 4.8\\
+\end{tabular}
+\end{center}
+
+Inserire propagazione degli errori. 
+\subsection{Analisi dei dati}
+Per verificare la validità, rappresentare su un grafico i punti ($\frac{1}{p};\frac{1}{q})$ e verificare che i punti sono disposti lungo una retta. 
+Calcolo l'incertezza $\sigma_{q}$ e $\sigma_{p}$, tramite la Dev. Std. 
+
+%Grafico delle due rette
+
+
+\section{Conclusioni}
+
+
+
+
+
+
+
+\chapter*{Appendice}
+\section*{Metodo di analisi dei dati informatizzato}
+Per l'analisi dei dati sperimentali si è fatto largo uso di strumenti informatici ausiliari.
+In particolare, è stata usata l'applicazione DataStudio per la raccolta di dati da sensori elettronici, ed occasionalmente per l'interpolazione dei dati.
+Per quanto riguarda l'analisi degli errori, si è preferita una soluzione costruita tramite il pacchetto software open source "Sage", distribuito sotto i termini della GNU General Public License.
+
+Questo strumento utilizza il linguaggio di programmazione Python, e alcune librerie esterne. Di seguito viene allegato e commentato il programma principale, scritto da noi.
+
+\begin{lstlisting}
+reset()
+
+format = "png"
+dpis = 90
+
+import numpy as np
+import matplotlib.pyplot as plt
+\end{lstlisting}
+
+Questa sezione è un preambolo: vengono importate le librerie principali, viene impostato il formato di output desiderato (in questo caso "png", comodo per lo sviluppo) e la risoluzione di questo output.
+
+\begin{lstlisting}
+class Analyzer:
+    uuid = "" # internally used
+    caption = "" # caption for the histogram/plot
+    color = '#50e300' # histogram color
+    nOfBins = 5; # number of bins (default: 5)
+    data = [] # array with data. if you're using integer values,
+    		  # make sure at least one is a float.
+    x = "" # x-axis label, latex syntax
+    y = "" # y-axis label, latex syntax
+    
+    plotText = "" # optional: print this text on the plot - latex syntax
+    xUnitOfMeasure = "" # optional: unit of measure of x
+    
+\end{lstlisting}
+
+Questa è la classe base: si occupa di disegnare il grafico e di fornire l'analisi statistica di base
+
+\begin{lstlisting}
+    def setTitle(self, caption):
+        self.caption = caption
+        self.uuid = caption.replace('\\', '').replace(' ', '')
+        
+    # Note: make sure xUnitOfMeasure is set before calling this
+    def quickPrepare(self, list):
+        m = self.xUnitOfMeasure
+        self.y = "f(k)/\\Delta k"
+        self.data = list['data']
+        self.setTitle(d['uuid'])
+        if('bins' in d):
+            self.nOfBins = d['bins']
+        self.plotText = '\mu = %.5f %s;\ \sigma = %.5f %s;'\
+                        % (mean(self.data), m, std(self.data), m)
+        
+    def plotGauss(self):
+        a = self.data
+        
+        plt.clf()
+        mu = mean(a)
+        sigma = std(a)
+        n, bins, patches = plt.hist(a, self.nOfBins, normed=1, facecolor=self.color, alpha=0.75)
+        
+        x = np.arange(min(bins)-10*sigma, max(bins)+10*sigma, 0.02*(max(bins)-min(bins)));
+        y = 1/(sigma*np.sqrt(2*np.pi)) * np.exp( -((x-mu)^2 / (2* (sigma^2) )) );
+        l = plt.plot(x, y, 'k--', linewidth=1)
+        
+        plt.xlabel(r"$"+self.x+"$")
+        plt.ylabel(r"$"+self.y+"$")
+        
+        plt.title(r"$"+self.caption.replace(' ', '\\ ')+"$")
+        plt.axis([mu-3*sigma, mu+3*sigma, 0, 3/(sigma*np.sqrt(2*np.pi))])
+        
+        plt.annotate(r"$"+self.plotText+"$", xy=(0.075,0.85), xycoords='axes fraction')
+        
+        plt.grid(True)
+        plt.savefig(self.uuid+"."+format, dpi=dpis)
+        
+    def statAnalysis(self):
+        stderr = "%.5f" % (std(self.data)/np.sqrt(len(self.data)))
+        media = "%.5f" % mean(self.data)
+        stddev = "%.5f" % std(self.data)
+        print "=== "+self.caption+" ==="
+        print "Media: "+ media +" - Std. Dev.: "+ stddev
+        print "Errore della media: "+ stderr
+\end{lstlisting}

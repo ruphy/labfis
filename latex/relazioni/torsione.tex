@@ -1,0 +1,242 @@
+
+\chapter{Pendolo a torsione}
+
+6 Aprile 2011
+\section{Introduzione}
+
+
+\subsection{Oggetto della ricerca}
+L'esperienza si prefissa l'obiettivo di misura le costanti di torsione $c$ di tre fili di sezione differente. 
+
+
+\subsection{Metodo}
+L'esperienza si compone di tre differenti fasi.
+\begin{itemize}
+\item Misura sperimentale dello spostamento angolare a seguito del momento della forza peso, al fine di calcolarne il momento d'inerzia 
+\item Misura sperimentale del periodo di un pendolo di torsione, al fine di calcolare la costante di torsione dei fili
+\item Misura della costante $c$ di torsione tramite l'instaurazione di un equilibrio tra il momento elastico e il momento della forza peso, e confronto con il valore teorico di $c$
+\end{itemize}
+
+\subsection{ Strumentazione e dati geometrici}
+
+Nell'esperimento verrà utilizzato un pendolo di torsione strutturato nel seguente modo:
+
+
+Micrometro: $ \pm 1 \mu m$
+Metro: $\pm 1 mm$
+Sensore di rotazione: $\pm 0.09$ gradi
+
+\begin{tabular}{ll}
+Masse puntiformi: & 0.074 kg\\
+Lunghezza sbarra: & 0.38 m\\
+Massa Sbarra: & 0.2563 kg\\
+Raggio Sbarra: & 0.0045 m\\
+
+\midrule
+
+Massa anello: & 0.46927 kg\\
+Raggio interno: & 0.0265 m\\
+Raggio esterno: & 0.0355 m\\
+
+\midrule
+
+Supporto & 0.0035 m\\
+
+\midrule
+
+Massa disco: & 0.12055 kg\\
+Raggio disco: & 0.0475 m\\
+Diametro carrucola: & 29 mm\\
+
+\end{tabular}
+
+
+\section{Raccolta dei dati}
+
+In primis sono stati raccolti i dati relativi alle caratteristiche geometriche dei tre fili in esame:
+
+\begin{tabular}{l|l|l|l}
+
+ & Filo A & Filo B & Filo C \\
+\midrule
+Diametro (mm) & 1.750 & 1.175 & 0.880 \\
+
+Lunghezza (cm) & 41.3 &  43 & 33.5 \\
+\midrule
+\end{tabular}
+
+\subsection{Misura dei momenti d'inerzia}
+
+In questa fase si provvederà a ricavare  sperimentalmente i momenti d'inerzia dei seguenti corpi:
+\begin{itemize}
+\item Disco 
+\item Anello
+\item Sbarra cilindrica omogenea, con due masse uguali, scorrevoli su di essa, poste equidistanti dall’asse di rotazione
+\end{itemize}
+
+Si è utilizzato un sistema di due pulleggie e un sensore di rotazione.
+Il sensore di rotazione fornisce la posizione angolare in funzione del tempo. 
+
+
+
+- Grafico angolo/tempo cadute
+- Grafico accelerazione/tempo cadute
+- Calcolo momenti da dati sperimentali:
+
+
+
+
+
+\subsection{Pendolo di torsione}
+
+Da inserire:
+- Grafico (isto+gaussiana) dei Periodi
+- Grafico spazio/tempo dei Periodi
+
+
+Abbiamo ricavato i seguenti periodi per ogni filo:
+\subsubsection{Filo A}
+
+\begin{verbatim}
+= Period (in s) =
+Mean = 0.644
+
+String preformatted for GNU Octave:
+values = [ 0.65 0.65 0.65 0.625 0.65 0.675 0.65 0.625
+0.65 0.65 0.65 0.625 0.65 0.65 0.625 0.65
+0.65 0.65 0.625 0.675 0.625 0.65 0.625 0.65 0.65 0.65
+0.65 0.625 0.65 0.675 0.625 0.65 0.65 0.625
+0.625 0.675 0.65 0.65 0.625 0.65 0.625 0.65 0.625 0.65
+0.65 0.625 0.65 0.65 0.65 0.625]
+
+
+\end{verbatim}
+
+
+Media = 0.644
+
+\subsubsection{Filo B}
+Periodo di oscillazione (s):
+
+\begin{center}
+\begin{tabular}{llllllll}
+2.4   & 2.4   & 2.425 & 2.4  & 2.4   & 2.425 & 2.4  & 2.4 \\
+2.425 & 2.425 & 2.425 & 2.45 & 2.45  & 2.5   & 2.5  & 2.45 \\
+\end{tabular}
+\end{center}
+Media = 2.43
+
+\subsubsection{Filo C}
+
+\begin{verbatim}
+= Period (in s) =
+Mean = 3.844
+
+String preformatted for GNU Octave:
+values = [ 3.875 3.9 3.9 3.875 3.9 3.875 3.875
+3.875 3.875 3.85 3.875 3.85 3.85 3.85 3.825
+3.825 3.825 3.8 3.8 3.75 3.775 3.75]
+\end{verbatim}
+
+\subsection{ Misura di equilibrio}
+
+
+\subsubsection{Filo A,B,C}
+\begin{tabular}{l|l|l|l}
+
+\multicolumn{2}{|c|}{ciao}\\
+
+\midrule
+& A & B & C \\
+50g & 4.0 & 12.0 & 31.0 \\
+100g & 7.0 & 23.0 & 61.0 \\
+200g & 13.0 & 47.0 & 126.0 \\
+\midrule
+
+
+\end{tabular}
+
+\section{Analisi dei dati}
+
+\subsection{Misura dei momenti d'inerzia}
+
+Acquisiti i dati della posizione angolare in funzione del tempo, è possibile calcolare l'accelerazione angolare del sistema. A questo punto, si può calcolare $I$ nel seguente modo:
+$$ bF_p = I\alpha $$
+La forza peso ($F_p$) è nota, così come il braccio ($b$) e, dall'elaborazione dei dati sperimentali, possiamo calcolare $\alpha$.
+
+seguenti corpi, elencati con i rispettivi momenti teorici:
+$$ \frac{1}{2} m R^2 $$
+$$ \frac{1}{2} m (R^2_1 + R^2_2) $$
+$$ \frac{1}{12} m L^2 + 2 \mu D^2  $$
+
+Grafici
+
+
+Questi dati vanno confrontati con i momenti d'inerzia calcolati partendo dai dati geometrici dei corpi
+
+
+$$ I_sbarra = 0.00844 $$
+$$ I_disco = 0.00013 $$
+$$ I_anello = 0.00046 $$
+
+\subsection{Pendolo di torsione}
+
+
+Questo ci permetterà di calcolare nella seconda parte la costante di torsione $c$ sfruttando la seguente eguaglianza:
+
+$$ c = 4\pi^2\frac{I}{T^2} $$
+
+
+$$ T = 2\pi \sqrt{\frac{I}{c}}$$
+
+
+
+
+\subsection{Misura di equilibrio}
+
+$$ c = G \frac{\pi}{2}\frac{r^4}{l} $$
+
+dove $r$ e $l$ sono rispettivamente il raggio e la lunghezza del filo, $I$ è il momento d'inerzia, $T$ il periodo, e $G$ è il modulo di rigidità o di scorrimento ed è una proprietà specifica del materiale di cui il filo è realizzato.
+
+Ponendo
+$$ M_{peso} = bmg = c\theta $$
+
+dove $b$ è il braccio di applicazione della forza peso, ovvero il raggio della carrucola.
+I valori di c calcolati dono dunque stati (in $N\cdot m/rad$):
+
+\begin{center}
+\begin{tabular}{l|lll}
+Peso & Filo A & Filo B & Filo C \\
+\midrule
+50g & 0.1019 & 0.0340 & 0.0135 \\
+100g & 0.1164 & 0.0354 & 0.0134 \\
+200g & 0.1254 & 0.0347 & 0.0129 \\
+\midrule
+Media & & & \\
+\end{tabular}
+\end{center}
+
+Non siamo riusciti a trovare i valori di G tabulati in quanto non conoscevamo il materiale in cui era costruito, quindi abbiamo cercato di arrivare a una migliore stima per riconoscere il materiale del filo. Abbiamo utilizzato un valore medio di $c$ per calcolare $G$ secondo la seguente formula:
+
+$$ G = \frac{2cl}{\pi r^4} $$
+
+I valori calcolati sono stati:
+\begin{center}
+\begin{tabular}{lll}
+Filo A & Filo B & Filo C \\
+\midrule
+49 GPa & 78 GPa & 73 GPa \\
+\end{tabular}
+\end{center}
+
+Da cui abbiamo dedotto che il filo A fosse in titanio, e i fili B e C in acciaio.
+I dati tabulati sono i seguenti
+\begin{center}
+\begin{tabular}{ll}
+Acciaio & Titanio \\
+\midrule
+41 GPa & 78 GPa \\
+\end{tabular}
+\end{center}
+
+\section{Conclusioni}
