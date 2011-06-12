@@ -1,17 +1,48 @@
-\chapter{Pendolo di Kater}
-\subsection{Scopo dell'esperimento}
-Misura di g
-\subsection{Metodo}
-\subsection{Strumenti}
-Pendolo di Kater (struttura definita in seguito)
-$d(m_a,c_1)=15.4 cm$
-Cronometro digitale con fotocellula a precisione $\pm 0.1 \cdot 10^{-3}\ s$ 
-\section{Raccolta Dati}
+\chapter{Pendolo di Kater e caduta libera}
+\section{Introduzione}
 
+L'obiettivo dell'esperimento è misurare l'accelerazione gravitazionale $g$ attraverso due dei possibili metodi e confrontarli. 
+
+
+Cronometro digitale con fotocellula a precisione $\pm 0.1 \cdot 10^{-3}\ s$ 
+
+\section{Pendolo di Kater}
+
+\subsection{Strumenti}
+Il pendolo di Kater è un pendolo fisico che può essere messo in oscillazione da due punti  $c_1,c_2$ non coincidenti con il suo baricentro $G$. Il pendolo è costituito da un'asta, due masse $m_a = 1400g, m_b=1000g$ mobili e due coltelli posizionato nei punti $c_1,c_2$ che ne permettono l'oscillazione. 
+Il periodo del pendolo dipende dal punto di oscillazione:
+
+$$ T_1 = 2 \pi \sqrt{\frac{L_1}{g}} = 2 \pi \sqrt{\frac{I_1}{m_a gh_1}}$$
+
+
+$$ T_2 = 2 \pi \sqrt{\frac{L_2}{g}} = 2 \pi \sqrt{\frac{I_2}{m_b gh_2}}$$
+
+dove $L_i$ la lunghezza ridotta del pendolo, $I_i$ il momenti d'inerzia del pendolo appeso per il punto $i-esimo$  e $h_i$, la distanza del punto $i$ dal baricentro. 
+\\
+Se si individuano i due punti nel quale il periodo $T_1 = T_2$ allora l'equazione si riduce a:
+
+$$ T = \ 2 \pi \sqrt{\frac{D}{g}}$$
+\\
+La distanza $D= h_1 + h_2 $  è nota e nel nostro caso $ D= 99.4 cm$. Misurando quindi il periodo $T$, possiamo calcolare $g$. 
+\subsection{Metodo sperimentale}
+\begin{itemize}
+
+\item Si pone in oscillazione il pendolo dal coltello $c_1$ e si misura $T_1$, e si ripete l'operazione per il coltello $c_2$, misurando $T_2$. 
+\item Mantenendo fissa la massa $m_a$ ad una distanza $d = 15.4cm$ da $c_1$,  si allonta o si avvicina la massa $m_b$ . Successivamente ripetere il punto precedente. 
+\item La procedura viene ripetuta fino a trovare la posizione nel quale $T_1 \simeq T_2$. 
+\item A questo punto si costruisce un grafico in cui si riporta il periodo $T_1$ e$ T_2 $ in funzione della distanza $x$ di $m_b$ da un coltello. 
+\item Per diminuire l'incertezza nella misura del periodo, abbiamo misurato il tempo totale di 10 oscillazioni. Dividendo il tempo totale per N, numero oscillazioni, si ottiene il periodo medio. 
+
+\end{itemize}
+
+\subsection{Dati}
+Nella tabella sono raccolti tutti i periodi $T_1,T_2$ misurati in secondi. \\
+\textit{Nota:} $d$ è la distanza tra il coltello $c1$ e la massa $m_b$. 
+In grassetto è evidenziato il punto di sospensione del pendolo a cui sono riferiti i periodi scritti di seguiti. 
 \begin{center}
-\begin{tabular}{*{5}{|c}|}
-\toprule
-\textbf{$d(c_1)=15cm$} & \textbf{$d(c_1)=17.9cm$} & \textbf{$d(c_1)=84.4cm$}& \textbf{$d(c_1)=81.3cm$}& \textbf{$d(c_1)=12cm$}\\
+\begin{tabular}{*{5}{c}}
+
+\textbf{$15cm$} & \textbf{$17.9cm$} & \textbf{$84.4cm$}& \textbf{$81.3cm$}& \textbf{$12cm$}\\
 \midrule
  \textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}&\textbf{Coltello1}\\
  1.9809 & 1.9211 & 1.9934 & 1.9735 & 2.0040\\
@@ -39,13 +70,14 @@ Cronometro digitale con fotocellula a precisione $\pm 0.1 \cdot 10^{-3}\ s$
 \bottomrule
 \end{tabular}
 \end{center}
+\subsection{Analisi}
+Possiamo ora iniziare l'analisi dei dati. Innanzitutto, calcoliamo il valore medio $T$ e l'incertezza associata alla distanza $d_i$.
 
-Abbiamo ricavato i seguenti valore medi e dev.standard 
 
 \begin{center}
 \begin{tabular}{c   c}
-\begin{tabular}{|c|c|c|}
-$d(m_b,c_1)$ & Periodo in c1 & $\sigma$ \\
+\begin{tabular}{c|c|c}
+$d$ & $T_1(s)$ & $\sigma_{t_1}$ \\
 \midrule
 6.9 & 2.1108 &\\
 11.7 & 2.0075 &\\
@@ -57,8 +89,8 @@ $d(m_b,c_1)$ & Periodo in c1 & $\sigma$ \\
 84.4 & 1.9935&\\
 \end{tabular}
 &
-\begin{tabular}{|c|c|c|}
-$d(m_b,c_1)$ & Periodo in c2 & $\sigma$ \\
+\begin{tabular}{c|c|c}
+$d$ & $T_2(s)$ & $\sigma_{t_2}$ \\
 \midrule
 6.9 & 2.1108 &\\
 11.7 & 2.0075 &\\
@@ -76,7 +108,6 @@ $\pm\sigma$
 
 \section{Caduta libera}
 
-\subsection{Descrizione dell'esperimento}
 
 \subsection{Raccolta dati}
 Tutti i valori riportati in tabella sono in millisecondi.
@@ -123,3 +154,4 @@ $h$ (m) & $g$ (m/s$^2$) & $g_c$ (m/s$^2$) & $\Delta g/g$ & $\Delta g_c/g$\\
 \end{center}
 
 
+\section{Conclusioni}
