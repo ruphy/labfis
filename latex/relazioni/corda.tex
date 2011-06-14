@@ -4,15 +4,28 @@
 
 \section{Introduzione}
 
+Obiettivo di questo esperimento è lo studio della propagazione di onde elastiche su una corda sotto l'azione di una forzante con andamento sinuisoidale. Si studi la dipendenza della frequenza dell'onda stazionaria, in funzione della lunghezza ,della massa lineare della corda e dalla tensione applicata su di essa. 
+\section{Strumenti}
+
 \section{Ricerca delle armoniche}
 
-\subsection{Raccolta dati}
+Nella prima parte dell'esperienza, dopo aver trovato la frequenza di risonanza, abbiamo misurato le frequenze relative alle prime cinque armoniche di una corda vibrante di lunghezza $=111 cm$ e peso $5.21 g$ posta sotto una tensione $T$. La lunghezza $l$ è la distanza tra i punti di sospensione della corda: il primo coincidente nel punto di applicazione della forzante, il secondo è il punto di tangenza della carrucola.  
+\\
 
-Nella prima parte dell'esperienza, dopo aver trovato la frequenza di risonanza, abbiamo misurato le frequenze relative alle prime cinque armoniche di una corda vibrante di lunghezza 111 cm e peso 5.21 g. Abbiamo ripetuto la misurazione sottoponendo la corda a quattro differenti forze di tensione (ottenute appendendo un peso ad una delle estremità della corda, come illustrato in figura)
-[ref figura]\\
+Abbiamo ripetuto la misurazione sottoponendo la corda a quattro differenti forze di tensione (ottenute appendendo un peso ad una delle estremità della corda, come illustrato in figura) e per due corde di masse lineari $\mu$ differenti. 
+\\
+Nel seguente grafico, mostriamo la relazione tra la frequenza $\nu$ e il numero di armonica $N$. La relazione è lineare ed è la seguente equazione:
+$$ \nu_n = 16.1n + 0.31 $$ 
+\\
+con $A= 0.31$, $\sigma_A=  0.93$ e $B=16.1, \sigma_B = 0.28 $ ricavati con il metodo dei minimi quadrati. 
 
 \begin{center}
 
+\includegraphics[scale=0.5]{../grafici/corda_1armonica}
+\end{center}
+Questo grafico è stato ricavato dalla corda A sottoposta ad una tensione $\tau=g\cdot250g$. Di seguito tutti i valori della frequenza di risonanza in funzione del numero di armonica e della tensione $\tau$ per valori crescenti della massa.
+\begin{center}
+\begin{tabular}{c   |  c}
 \begin{tabular}{ c | c | c | c | c | c }
 Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 \midrule
@@ -21,8 +34,7 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 350 & 19.6 & 37.8 & 57.4 & 76.3 & 95.0\\
 250 & 16.1 & 33.1 & 48.7 & 63.4 & 81.3 \\
 \end{tabular}
-\\
-
+&
 \begin{tabular}{ c | c | c | c | c | c }
 Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 \midrule
@@ -31,9 +43,11 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 450 & 13.1 & 25.4 & 38.9 & 51.7 & 64.2\\
 350 & 10.9 & 22.8 & 35.2 & 46.9 & 58.3\\
 \end{tabular}
+\\
+\end{tabular}
 \end{center}
 
-
+\section{Dipendenza tra frequenza e lunghezza}
 
 Velocità di propagazione di un'onda elastica in un mezzo materiale:
 \begin{center}
@@ -90,3 +104,5 @@ Inserendo questi dati su di un grafico, e interpolando la curva con Sage, trovia
 \includegraphics[scale=0.75]{"../grafici/CordaPrimaArmonica"}
 
 Nota: $\rho$ è lasciato parametro libero, mentre invece $\tau$ è pari a 10.3 N, dato da un peso di 1.050 Kg sospeso a un'estremità della corda.
+
+\section{Dipendenza tra frequenza e massa lineare}
