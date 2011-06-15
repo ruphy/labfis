@@ -1,10 +1,8 @@
-
-
 \chapter{Corda Vibrante}
 
 \section{Introduzione}
 
-Obiettivo di questo esperimento è lo studio della propagazione di onde elastiche su una corda \textbf{fissata agli estremi}, sotto l'azione di una forzante con andamento sinusoidale. \textbf{Verifichiamo} la dipendenza della frequenza dell'onda ($\nu_n$) \textbf{dalla lunghezza della corda, dalla sua massa lineare ($\mu$)} e dalla tensione ($T$) applicata su di essa.
+Obiettivo di questo esperimento è lo studio della propagazione di onde elastiche su una corda \textbf{fissata ad un estremo}, sotto l'azione di una forzante con andamento sinusoidale. \textbf{Verifichiamo} la dipendenza della frequenza dell'onda ($\nu_n$) \textbf{dalla lunghezza della corda, dalla sua massa lineare ($\mu$)} e dalla tensione ($T$) applicata su di essa.
 \textbf{Tali grandezze sono infatti legate dalle seguenti relazioni:}
 \begin{center}
 \begin{tabular}{c c c}
@@ -12,10 +10,12 @@ $
 v= \sqrt{\frac{T}{\mu}} 
 $
 &
+\hspace{1cm}
 $
 v= \nu_{n} \lambda_n
 $ 
 &
+\hspace{1cm}
 $
 \lambda_n= \frac{2L}{n} 
 $
@@ -29,30 +29,33 @@ da cui:
 \nu_n=\frac{n}{2L}\sqrt{\frac{T}{\mu}}
 \end{equation}
 
+con $n$ numero intero, al cui variare corrispondono differenti armoniche.
+
 
 \section{Strumenti}
 
+La strumentazione di cui ci siamo serviti si componeva di due corde:\\
+
+\begin{tabular}{c c c}
+$L_A= 2.46 m$ & \hspace{1cm} $m_A=5.21\cdot10^{-3} kg$ & \hspace{1cm} $\mu_A= 2.12\cdot10^{-3} kg/m$\\
+$L_B= 2.50 m$ & \hspace{1cm} $m_B=1.63\cdot10^{-2} kg$ & \hspace{1cm} $\mu_B= 6.52\cdot10^{-3} kg/m$\\
+\end{tabular} 
+\\
+
+La forzante è data da un oscillatore elettromeccanico, mentre la tensione è esercitata da pesetti appesi all'estremità libera della corda, sospesi attraverso una carrucola (come illustrato in \textbf{figura}). 
+ 
+
 \section{Ricerca delle armoniche}
 
-Nella prima parte dell'esperienza, dopo aver trovato la frequenza di risonanza, abbiamo misurato le frequenze relative alle prime cinque armoniche di una corda vibrante di lunghezza $=111 cm$ e peso $5.21 g$ posta sotto una tensione $T$. La lunghezza $l$ è la distanza tra i punti di sospensione della corda: il primo coincidente nel punto di applicazione della forzante, il secondo è il punto di tangenza della carrucola.  
+Nella prima parte dell'esperienza abbiamo verificato che le armoniche superiori sono date da multipli interi della frequenza fondamentale. A tal fine, dopo aver trovato la frequenza di risonanza \textbf{corrispondente ad $n=1$ (ossia la fondamentale)}, facendo variare la frequenza dell'oscillatore elettromeccanico e cercando il punto in cui la corda presentava i nodi alle due estremità e un grande ventre al centro, abbiamo misurato le frequenze relative alle prime cinque armoniche, cui corrispondono le configurazioni descritte in \textbf{figura}. 
 \\
 
-Abbiamo ripetuto la misurazione sottoponendo la corda a quattro differenti forze di tensione (ottenute appendendo un peso ad una delle estremità della corda, come illustrato in figura) e per due corde di masse lineari $\mu$ differenti. 
+Abbiamo ripetuto la misurazione sottoponendo la corda a quattro differenti forze di tensione, e successivamente abbiamo ripetuto l'esperienza per l'altra corda, di massa lineare differente. \\
+In tabella sono riportati i valori delle frequenze di risonanza registrate dall'oscillatore elettromeccanico: in verticale si può leggere la dipendenza dalla variazione di tensione per valori crescenti delle masse appese, in orizzontale dal numero di armonica.
 \\
-Nel seguente grafico, mostriamo la relazione tra la frequenza $\nu$ e il numero di armonica $N$. La relazione è lineare ed è la seguente equazione:
-$$ \nu_n = 16.1n + 0.31 $$ 
-\\
-con $A= 0.31$, $\sigma_A=  0.93$ e $B=16.1, \sigma_B = 0.28 $ ricavati con il metodo dei minimi quadrati. 
 
 \begin{center}
-
-\includegraphics[scale=0.5]{../grafici/corda_1armonica}
-\end{center}
-Questo grafico è stato ricavato dalla corda A sottoposta ad una tensione $\tau=g\cdot250g$. Di seguito tutti i valori della frequenza di risonanza in funzione del numero di armonica e della tensione $\tau$ per valori crescenti della massa.
-
-
-\begin{center}
-\begin{tabular}{c   |  c}
+\begin{tabular}{c     c}
 \begin{tabular}{ c | c | c | c | c | c }
 Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 \midrule
@@ -62,6 +65,7 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 250 & 16.1 & 33.1 & 48.7 & 63.4 & 81.3 \\
 \end{tabular}
 &
+\hspace{2cm}
 \begin{tabular}{ c | c | c | c | c | c }
 Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 \midrule
@@ -73,6 +77,44 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 
 \end{tabular}
 \end{center}
+
+
+Nel seguente grafico mostriamo la relazione tra la frequenza $\nu$ e il numero di armonica $n$. Per rendere più leggibile il grafico ci siamo limitati a rappresentare tale relazione per la corda A sottoposta ad una tensione $T=(0.250\ kg)(9.81\ m/s^2)$. Come ci si aspettava si tratta di una relazione lineare, in accordo con la \textbf{1.1}
+
+%Grafico con i punti.
+
+Abbiamo dunque interpolato i dati con la \textbf{1.1}, utilizzando il metodo dei minimi quadrati, nel caso di una retta passante per l'origine.
+
+\begin{center}
+\begin{tabular}{c c}
+$m=\frac{\displaystyle\sum{x_i y_i}}{\displaystyle\sum{x_i^2}}$ & \hspace{2cm} $\sigma_m=\frac{\displaystyle\sigma_y}{\sqrt{\displaystyle\sum{x_i^2}}}$
+\end{tabular}
+\end{center}
+
+Teniamo come variabili indipendenti le $n_i$, le $y_i$ sono ovviamente le frequenze corrispondenti (l'incertezza associata è stata ricavata sperimentalmente e vale $\pm0.5\ Hz$), mentre i parametri da interpolare sono $m=\frac{1}{2l}\sqrt{\frac{T}{\mu}}$ (coefficiente angolare della retta).
+$l=1.11\pm0.01\ m$ \footnote{In questo caso l'incertezza sulla lunghezza è stata stimata di un centimetro nonostante quella dello strumento fosse solo di 0.001 m, imputando tale incertezza ad eventuali errori degli sperimentatori: la misurazione infatti richiedeva di prendere come estremo il punto di tangenza con la carrucola, un'operazione in cui era difficile essere veramente accurati.}
+è la distanza tra i punti di sospensione della corda: il primo coincide con il punto di applicazione della forzante, il secondo è dato dal punto di tangenza con la carrucola.  
+
+Dall'interpolazione ricaviamo: $m=16.1\pm0.07$ Dunque, moltiplicando $m$ per $2l=2.22\pm0.02\ m$ e propagando l'errore:
+$$\sigma_v=\sqrt{\left(\frac{\sigma_m}{m}\right)^2+\left(\frac{\sigma_l}{l}\right)^2}=0.35$$
+otteniamo $$v=35.7\pm0.35\ m/s$$ 
+Confrontiamo il valore trovato con quello ottenuto dall'equazione:
+$$v=\sqrt{\frac{T}{\mu}}=\sqrt{\frac{2.45\ N}{2.12 \cdot10^{-3}\ kg/m}}=34.0\ m/s$$
+
+L'errore è:
+$$4\% \leq \frac{\delta_v}{v} \leq 5\% $$
+
+
+
+
+
+
+\begin{center}
+
+\includegraphics[scale=0.5]{../grafici/corda_1armonica}
+\end{center}
+
+
 
 
 
@@ -137,3 +179,7 @@ Inserendo questi dati su di un grafico, e interpolando la curva con Sage, trovia
 Nota: $\rho$ è lasciato parametro libero, mentre invece $\tau$ è pari a 10.3 N, dato da un peso di 1.050 Kg sospeso a un'estremità della corda.
 
 \section{Dipendenza tra frequenza e massa lineare}
+
+
+
+
