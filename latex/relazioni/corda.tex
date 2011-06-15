@@ -146,33 +146,35 @@ Tensione $N$ & Frequenza $Hz$ \\
 \end{tabular}
 \end{center}
 
-Essendo il numero dei dati troppo ridotto per essere interpolato con successo dalla curva corrispondente ($1.1$), consideriamo un'interpolazione lineare di tipo $y = mx$ dove   $y= \nu^2$ e $x = \tau$.
+Essendo il numero dei dati troppo ridotto per essere interpolato con successo dalla curva corrispondente ($1.1$), consideriamo una interpolazione lineare di tipo $y = A + Bx$ dove   $y= \nu^2$ e $x = \tau$.
 \\
-Utilizziamo il metodo dei minimi quadrati, ottenendo per la\textbf{ corda A} $m_A = 403.95$ con incertezza $\sigma_m =0.03$ e per la \textbf{corda B} $m_B=143.0$ con incertezza $\sigma_m$.  Di seguito il grafico che rappresenta la relazione tra $\nu^2$ e $\tau$.
+Utilizziamo il metodo dei minimi quadrati, ottenendo:
+
+\begin{tabular}{c|c}
+Corda A&Corda  B\\
+\midrule
+$A:$ & $A:$\\
+$\sigma_A:$ & $\sigma_A:$\\
+$B:$ & $B:$\\
+$\sigma_B:$ & $\sigma_B:$\\
+\end{tabular}
+
+ Di seguito il grafico che rappresenta la relazione tra $\nu^2$ e $\tau$.
 
 \begin{center}
 \includegraphics[scale=0.5]{../grafici/corda_tensione}
 \end{center}
 
+Notiamo innanzitutto che la legge fisica, quando è linearizzata, è una funzione $y=mx$, che quindi deve passare l'origine. Si osservi infatti come $A$ per la corda B ha un valore trascurabile rispetto al valore delle $y$, e quindi può essere approssimato a zero. 
+Questa discordanza è confermata anche nel calcolo del $\chi^2$ che per entrambe le funzioni della corda A da valori svariati ordini di grandezza superiori al numero delle misure. 
+Siamo portati a rigettare queste misure. Consideriamo ora tutti le misure di tutte le armoniche per la corda A e interpoliamo i dati con funzioni lineari.
+
+
+
 
 
 \section{Dipendenza dalla lunghezza}
-Sempre dall'equazione $1.1$, si deduce la proporzionalità inversa tra la frequenza $\nu$ e la lunghezza $l$. 
-Corda A,550g
-
-\begin{center}
-
-
-\begin{tabular}{c|c}
-L($cm$) & $\nu (Hz) $ \\
-\midrule
-105 & 24.6\\
-111 & 23.7\\
-116.5 & 22.8 \\
-122.5 & 20.9 \\
-131.5 & 20.1 \\
-\end{tabular}
-\end{center}
+Sempre dall'equazione $1.1$, si deduce la proporzionalità inversa tra la frequenza $\nu$ e la lunghezza $l$. Abbiamo un sufficiente numero di dati per utilizzare la curva corrispondente. 
 
 In tabella sono riportati i dati della frequenza delle prima armonica, 
 Corda B,1050g
@@ -203,5 +205,19 @@ Inserendo questi dati su di un grafico, e interpolando la curva con Sage, trovia
 
 Nota: $\rho$ è lasciato parametro libero, mentre invece $\tau$ è pari a 10.3 N, dato da un peso di 1.050 Kg sospeso a un'estremità della corda.
 
-\section{Dipendenza tra frequenza e massa lineare}
+
+\begin{center}
+
+
+\begin{tabular}{c|c}
+L($cm$) & $\nu (Hz) $ \\
+\midrule
+105 & 24.6\\
+111 & 23.7\\
+116.5 & 22.8 \\
+122.5 & 20.9 \\
+131.5 & 20.1 \\
+\end{tabular}
+\end{center}
+
 
