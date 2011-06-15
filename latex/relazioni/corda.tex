@@ -97,16 +97,15 @@ Teniamo come variabili indipendenti le $n_i$, le $y_i$ sono ovviamente le freque
 $l=1.11\pm0.01\ m$ \footnote{In questo caso l'incertezza sulla lunghezza è stata stimata di un centimetro nonostante quella dello strumento fosse solo di 0.001 m, imputando tale incertezza ad eventuali errori degli sperimentatori: la misurazione infatti richiedeva di prendere come estremo il punto di tangenza con la carrucola, un'operazione in cui era difficile essere veramente accurati.}
 è la distanza tra i punti di sospensione della corda: il primo coincide con il punto di applicazione della forzante, il secondo è dato dal punto di tangenza con la carrucola.  
 
-Dall'interpolazione ricaviamo: $m=16.1\pm0.07$ Dunque, moltiplicando $m$ per $2l=2.22\pm0.02\ m$ e propagando l'errore:
+Dall'interpolazione ricaviamo: $m=16.1\pm0.1$ Dunque, moltiplicando $m$ per $2l=2.22\pm0.02\ m$ e propagando l'errore:
 $$\sigma_v=\sqrt{\left(\frac{\sigma_m}{m}\right)^2+\left(\frac{\sigma_l}{l}\right)^2}=0.35$$
 otteniamo $$v=35.7\pm0.35\ m/s$$ 
+Calcoliamo il  $\chi$ e otteniamo un valore di $0.8$. La funzione è perfettamente in accordo.  
 Confrontiamo il valore trovato con quello ottenuto dall'equazione:
 $$v=\sqrt{\frac{T}{\mu}}=\sqrt{\frac{2.45\ N}{2.12 \cdot10^{-3}\ kg/m}}=34.0\ m/s$$
 
 L'errore è:
 $$4\% \leq \frac{\delta_v}{v} \leq 5\% $$
-
-
 
 
 
@@ -132,8 +131,7 @@ Tensione $N$ & Frequenza $Hz$ \\
 4.41 &42.6\\
 5.39 &45.6\\
 \end{tabular}
-&\textbf{
-Corda B}
+&\textbf{Corda B}
 \begin{tabular}{c|c}
 Tensione $N$ & Frequenza $Hz$ \\
 \midrule
@@ -147,18 +145,20 @@ Tensione $N$ & Frequenza $Hz$ \\
 \end{center}
 
 
+ Di seguito il grafico che rappresenta la relazione tra $\nu^2$ e $\tau$.
 \begin{center}
 \includegraphics[scale=0.5]{../grafici/corda_tensione}
 \end{center}
 
-Notiamo innanzitutto che la legge fisica, quando è linearizzata, è una funzione $y=mx$, che quindi deve passare l'origine. Si osservi infatti come $A$ per la corda B ha un valore trascurabile rispetto al valore delle $y$, e quindi può essere approssimato a zero. 
-Questa discordanza è confermata anche nel calcolo del $\chi^2$ che per entrambe le funzioni della corda A da valori svariati ordini di grandezza superiori al numero delle misure. 
-Siamo portati a rigettare queste misure. Consideriamo ora tutti le misure di tutte le armoniche per la corda A e interpoliamo i dati con funzioni lineari.
+Si può chiaramente vedere la dipendenza lineare, tra $\nu^2$ e $\tau$. 
+
 
 \section{Dipendenza dalla lunghezza}
 L'ultima analisi riguarda la dipendeza di $\nu_n$ dalla lunghezza della corda, per una data tensione fissata. Essa è ancora una conseguenza della $1.1$, dalla quale si deduce che le due grandezze sono legate da proporzionalità inversa.\\
  
 Di seguito sono riportati in tabella i valori raccolti per la prima armonica, per le corde A e B; sono stati scelti valori differenti per le due tensioni in quanto la corda a massa lineare maggiore aveva una risposta poco significativa quando soggetta alla tensione che si era usata per la corda A.\\
+
+\begin{center}
 
 
 \begin{tabular}{c c}
