@@ -98,7 +98,7 @@ Scegliendo poi di considerare la posizione $d$ in funzione delle differenze di p
 \end{center}
 Il valore così trovato è $d = 13.35 \pm 0.22\ cm$
 
-Trovato il valore $d$, non riuscendo a fare aggiustamenti estremamente precisi alla posizione delle masse, abbiamo preferito calcolare un valore plausibile per il periodo di oscillazione estapolandolo dai valori già trovati. In questo caso abbiamo usato l'interpolazione dei dati di $T_2$ con una retta, in quanto l'interpolazione è migliore rispetto a $T_1$ ($P(\tilde{\chi}^2 \geq \tilde{\chi_0}^2) \geq 11\%$).
+Trovato il valore $d$, non riuscendo a fare aggiustamenti estremamente precisi alla posizione delle masse, abbiamo preferito calcolare un valore plausibile per il periodo di oscillazione estapolandolo dai valori già trovati. In questo caso abbiamo usato l'interpolazione dei dati di $T_2$ con una retta, in quanto l'interpolazione è migliore rispetto a quella ottenibile interpolando i dati di $T_1$ (e per quanto riguarda $T_2$: $P(\tilde{\chi}^2 \geq \tilde{\chi_0}^2) \geq 11\%$).
 In rosso il punto di intersezione trovato, $T^2_0$.
 
 \begin{center}
@@ -111,18 +111,18 @@ $$g = 9.80 \pm 0.07\ m/s^2$$
 
 Vale la pena di spendere qualche parola sul nostro metodo di calcolo delle incertezze qui proposte.
 
-Per calcolare le incertezze su $d$, abbiamo stimato le nostre incertezze di misura della distanza delle massa mobile dal coltello (in 0.5 cm), e utilizzato la normale equazione per il calcolo dell'incertezza di una regressione lineare sull'intercetta.
-Una volta calcolato questo termine ($\sigma_d = 0.2246\ cm$) abbiamo considerato, utilizzando il calcolo dell'incertezza a posteriori, l'incertezza nell'interpolazione di $T_2$. A questo punto è evidente che, chiamando $\sigma_m$ l'incertezza sul coefficiente angolare della retta e $\sigma_q$ quello sull'intercetta:
+Per calcolare le incertezze su $d$, abbiamo stimato l'errore associato alla misura della distanza della massa mobile dal coltello (in 0.5 cm); abbiamo invece considerato trascurabili le incertezze sulla misura dei tempi, e successivamente abbiamo applicato la normale equazione per il calcolo dell'incertezza in una regressione lineare.
+Una volta calcolato questo termine ($\sigma_d = 0.2246\ cm$) abbiamo considerato, utilizzando la stima delle incertezze a posteriori, l'incertezza nell'interpolazione di $T_2$. A questo punto è evidente che, chiamando $\sigma_m$ l'errore sul coefficiente angolare della retta e $\sigma_q$ quello sull'intercetta:
 $$T^2_{0\ max} = (m+\sigma_m)(d-\sigma_d) + \sigma_q = 4.03151\ s^2$$
 $$T^2_{0\ min} = (m-\sigma_m)(d+\sigma_d) - \sigma_q = 3.97081\ s^2$$
 da cui chiaramente si ricava $g_{max}$, $g_{min}$ e dunque:
-$$\frac{\Delta (T_0^2)}{2} = 0.0303\ s^2$$
-$$\frac{\Delta g}{2} = 0.0743\ m/s^2 $$
+$$\frac{\Delta (T_0^2)}{2} = \sigma_{T_0^2} = 0.0303\ s^2$$
+$$\frac{\Delta g}{2} = \sigma_g = 0.0743\ m/s^2 $$
 
-procedendo poi ad un'ovvia riduzione delle cifre significative a seconda dei dati originali. Bisogna notare che la misura di $g$ è particolarmente vicina al valore generalmente accettato, specialmente per quanto riguarda il valore medio.
+procedendo poi ad un'ovvia riduzione delle cifre significative a seconda dei dati originali. Abbiamo utilizzato questo metodo per trovare l'intervallo più ampio entro il quale poteva essere compresa la nostra misura, non avendo a nostra disposizione metodi più accurati. Bisogna notare che, nonostante ciò, la misura di $g$ è particolarmente vicina al valore generalmente accettato, specialmente per quanto riguarda il valore medio.
 
 Infatti, considerando $g=9.81\ m/s^2$, ovvero la media dell'accelerazione di gravità sulla superficie terrestre:
-$$\frac{\Delta g}{g} \simeq 0.76\% $$
+$$\frac{\sigma_g}{g} \simeq 0.76\% $$
 
 
 \section{Caduta libera}
