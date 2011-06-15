@@ -4,7 +4,32 @@
 
 \section{Introduzione}
 
-Obiettivo di questo esperimento è lo studio della propagazione di onde elastiche su una corda sotto l'azione di una forzante con andamento sinuisoidale. Si studi la dipendenza della frequenza dell'onda stazionaria, in funzione della lunghezza ,della massa lineare della corda e dalla tensione applicata su di essa. 
+Obiettivo di questo esperimento è lo studio della propagazione di onde elastiche su una corda \textbf{fissata agli estremi}, sotto l'azione di una forzante con andamento sinusoidale. \textbf{Verifichiamo} la dipendenza della frequenza dell'onda ($\nu_n$) \textbf{dalla lunghezza della corda, dalla sua massa lineare ($\mu$)} e dalla tensione ($T$) applicata su di essa.
+\textbf{Tali grandezze sono infatti legate dalle seguenti relazioni:}
+\begin{center}
+\begin{tabular}{c c c}
+$
+v= \sqrt{\frac{T}{\mu}} 
+$
+&
+$
+v= \nu_{n} \lambda_n
+$ 
+&
+$
+\lambda_n= \frac{2L}{n} 
+$
+\\
+\end{tabular}
+\end{center}
+
+da cui:
+
+\begin{equation}
+\nu_n=\frac{n}{2L}\sqrt{\frac{T}{\mu}}
+\end{equation}
+
+
 \section{Strumenti}
 
 \section{Ricerca delle armoniche}
@@ -24,6 +49,8 @@ con $A= 0.31$, $\sigma_A=  0.93$ e $B=16.1, \sigma_B = 0.28 $ ricavati con il me
 \includegraphics[scale=0.5]{../grafici/corda_1armonica}
 \end{center}
 Questo grafico è stato ricavato dalla corda A sottoposta ad una tensione $\tau=g\cdot250g$. Di seguito tutti i valori della frequenza di risonanza in funzione del numero di armonica e della tensione $\tau$ per valori crescenti della massa.
+
+
 \begin{center}
 \begin{tabular}{c   |  c}
 \begin{tabular}{ c | c | c | c | c | c }
@@ -43,9 +70,26 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 450 & 13.1 & 25.4 & 38.9 & 51.7 & 64.2\\
 350 & 10.9 & 22.8 & 35.2 & 46.9 & 58.3\\
 \end{tabular}
-\\
+
 \end{tabular}
 \end{center}
+
+
+
+\includegraphics[scale=0.75]{../grafici/corda_tensione}
+
+
+\begin{equation}
+v=\sqrt{\frac{\tau}{\mu}}
+\end{equation}
+
+Le frequenze delle armoniche di ordine superiore sono date dall'equazione:
+\begin{equation}
+\nu=\frac{n}{2L}\sqrt{\frac{\tau}{\pi\rho}}
+\end{equation}
+
+dove L è la distanza tra i due punti di sospensione, $n\in \mathbb{N}$ è il numero dell'armonica, $\rho$ la densità della corda e $\tau$ la tensione.
+
 
 \section{Dipendenza tra frequenza e lunghezza}
 
@@ -64,20 +108,7 @@ L($cm$) & $\nu (Hz) $ \\
 \end{tabular}
 \end{center}
 
-\begin{equation}
-v=\sqrt{\frac{\tau}{\mu}}
-\end{equation}
-
-scegliendo come $\tau$ la tensione e come $\mu$ la massa per unità di lunghezza della corda\\
-
-Le frequenze delle armoniche di ordine superiore sono date dall'equazione:
-\begin{equation}
-\nu=\frac{n}{2L}\sqrt{\frac{\tau}{\pi\rho}}
-\end{equation}
-
-dove L è la distanza tra i due punti di sospensione, $n\in \mathbb{N}$ è il numero dell'armonica, $\rho$ la densità della corda e $\tau$ la tensione.
-
-In tabella sono riportati i dati della frequenza a cui è stata trovata la prima armonica.
+In tabella sono riportati i dati della frequenza delle prima armonica:
 
 \begin{center}
 \begin{tabular}{|c|c|}
