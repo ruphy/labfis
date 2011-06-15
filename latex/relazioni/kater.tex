@@ -74,16 +74,33 @@ $\sigma$ & 0.0003 & 0.0009 & 0.0009 & 0.0015 & 0.0017 & 0.0005 & 0.0005\\
 \end{center}
 
 \subsection{Analisi}
-Per semplicita!!, abbiamo deciso di concentrarci specialmente sul primo punto di intersezione tra le due curve, ottenuto inserendo in un grafico.
-
+I periodi $T_1$ e $T_2$ sono ovviamente funzione di $d$, essendo funzione dei momenti d'inerzia e della posizione del baricentro. I valori che ci interessano sono quelli in cui $T_1(d) = T_2(d)$.
+L'equazione ha tre soluzioni, ma per semplicita!!, abbiamo deciso di concentrarci sulla prima, avendo cura di non considerare il caso banale $h_1=h_2$. Di seguito il grafico il quadrato del periodo in funzione di $d$ ($T_2$ in verde, $T_1$ in nero).
 
 \begin{center}
 \includegraphics[scale=0.60]{../grafici/kater/kater-punti-raw.png}
 \end{center}
 
+La spezzata ha il solo scopo di collegare i punti al fine di rendere piu!! leggibili i dati sperimentali.\\
 
+Per ricercare il miglior punto di intersezione minimizzando l'errore, abbiamo deciso di considerare le misurazioni dei periodi delle cinque distanze piu!! vicine al valore che sembrava maggiormente plausibile (in questo caso abbiamo scelto 13.5 cm) e abbiamo calcolato, per ognuna di queste, le differenze tra i periodi $T_1$ e $T_2$.
+
+Scegliendo poi di considerare la posizione $d$ in funzione delle differenze di periodo, possiamo interpolare questi dati con una retta, e l'intercetta cosi!! trovata sara!! ovviamente il valore cercato di $d$ tale che $T_1 = T_2$.
+
+\begin{center}
+\includegraphics[scale=0.60]{../grafici/kater/intercetta.png}
+\end{center}
+Il valore cosi!! trovato e!! $d = 13.35\ cm$
+
+Trovato il valore $d$, non riuscendo a fare aggiustamenti estremamente precisi alla posizione delle masse, abbiamo preferito calcolare un valore plausibile per il periodo di oscillazione interpolando i valori gia!! trovati. In questo caso abbiamo usato l'interpolazione dei dati di $T_2$ con una retta, in quanto la retta interpolata approssima molto meglio i punti ($P(\tilde{\chi}^2 \geq \tilde{\chi_0}^2) \geq 11\%$). In rosso il punto di intersezione trovato.
+
+\begin{center}
+\includegraphics[scale=0.70]{../grafici/kater/intersezione.png}
+\end{center}
+
+Periodo: 2.00034658011
+g = 9.8070 errore = -0.00030642
 \section{Caduta libera}
-
 
 \subsection{Raccolta dati}
 Tutti i valori riportati in tabella sono in millisecondi.
@@ -106,12 +123,12 @@ Tutti i valori riportati in tabella sono in millisecondi.
 \includegraphics[scale=0.75]{../grafici/20cm.png}
 $$\sigma_{\bar{x}} = 0.430\ ms$$
 $$\mathrm{Stima\ di\ g} = 10.10\ m/s^2$$
-$$\mathrm{Stima\ (corretta)\ di\ g} = 9.80\ m/s^2 $$
+$$\mathrm{Stima\ (con\ corr.)\ di\ g} = 9.80\ m/s^2 $$
 $$\frac{\Delta g_c}{g} = 0.00072$$
 \includegraphics[scale=0.75]{../grafici/90cm.png}
 $$\sigma_{\bar{x}} = 0.296\ ms $$
 $$\mathrm{Stima\ di\ g} = 10.02\ m/s^2$$
-$$\mathrm{Stima\ (corretta)\ di\ g} = 9.88\ m/s^2 $$
+$$\mathrm{Stima\ (con\ corr.)\ di\ g} = 9.88\ m/s^2 $$
 $$\frac{\Delta g_c}{g} = 0.00707$$
 \end{center}
 
