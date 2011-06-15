@@ -4,7 +4,31 @@
 
 \section{Introduzione}
 
-Obiettivo di questo esperimento è lo studio della propagazione di onde elastiche su una corda sotto l'azione di una forzante con andamento sinusoidale. Verifichiamo la dipendenza della frequenza dell'onda stazionaria in funzione della lunghezza, della massa lineare, della corda e dalla tensione applicata su di essa. 
+Obiettivo di questo esperimento è lo studio della propagazione di onde elastiche su una corda \textbf{fissata agli estremi}, sotto l'azione di una forzante con andamento sinusoidale. \textbf{Verifichiamo} la dipendenza della frequenza dell'onda ($\nu_n$) \textbf{dalla lunghezza della corda, dalla sua massa lineare ($\mu$)} e dalla tensione ($T$) applicata su di essa.
+\textbf{Tali grandezze sono infatti legate dalle seguenti relazioni:}
+\begin{center}
+\begin{tabular}{c c c}
+$
+v= \sqrt{\frac{T}{\mu}} 
+$
+&
+$
+v= \nu_{n} \lambda_n
+$ 
+&
+$
+\lambda_n= \frac{2L}{n} 
+$
+\\
+\end{tabular}
+\end{center}
+
+da cui:
+
+\begin{equation}
+\nu_n=\frac{n}{2L}\sqrt{\frac{T}{\mu}}
+\end{equation}
+
 
 \section{Strumenti}
 
@@ -45,11 +69,28 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 450 & 13.1 & 25.4 & 38.9 & 51.7 & 64.2\\
 350 & 10.9 & 22.8 & 35.2 & 46.9 & 58.3\\
 \end{tabular}
-\\
+
 \end{tabular}
 \end{center}
 \section{Tensione e frequenza}
 L'equazione $1$ mette in relazione la frequenza con la tensione. La relazione prevista è 
+
+\includegraphics[scale=0.75]{../grafici/corda_tensione}
+
+
+\begin{equation}
+v=\sqrt{\frac{\tau}{\mu}}
+\end{equation}
+
+Le frequenze delle armoniche di ordine superiore sono date dall'equazione:
+\begin{equation}
+\nu=\frac{n}{2L}\sqrt{\frac{\tau}{\pi\rho}}
+\end{equation}
+
+dove L è la distanza tra i due punti di sospensione, $n\in \mathbb{N}$ è il numero dell'armonica, $\rho$ la densità della corda e $\tau$ la tensione.
+
+
+
 
 \includegraphics[scale=0.75]{../grafici/corda_tensione}
 
