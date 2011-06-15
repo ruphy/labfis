@@ -36,9 +36,9 @@ con $n$ numero intero, al cui variare corrispondono differenti armoniche.
 
 La strumentazione di cui ci siamo serviti si componeva di due corde:\\
 
-\begin{tabular}{c c c}
-$L_A= 2.46 m$ & \hspace{1cm} $m_A=5.21\cdot10^{-3} kg$ & \hspace{1cm} $\mu_A= 2.12\cdot10^{-3} kg/m$\\
-$L_B= 2.50 m$ & \hspace{1cm} $m_B=1.63\cdot10^{-2} kg$ & \hspace{1cm} $\mu_B= 6.52\cdot10^{-3} kg/m$\\
+\begin{tabular}{c c c c}
+\textbf{Corda A} & \hspace{1cm} $L_A= 2.46\ m$ & \hspace{1cm} $m_A=5.21\cdot10^{-3}\ kg$ & \hspace{1cm} $\mu_A= 2.12\cdot10^{-3}\ kg/m$\\
+\textbf{Corda B} & \hspace{1cm} $L_B= 2.50\ m$ & \hspace{1cm} $m_B=1.63\cdot10^{-2}\ kg$ & \hspace{1cm} $\mu_B= 6.52\cdot10^{-3}\ kg/m$\\
 \end{tabular} 
 \\
 
@@ -66,7 +66,7 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 250 & 16.1 & 33.1 & 48.7 & 63.4 & 81.3 \\
 \end{tabular}
 &
-\hspace{2cm}
+\hspace{1cm}
 \textbf{Corda B}
 \begin{tabular}{ c | c | c | c | c | c }
 Massa($g$) & 1 & 2 & 3 & 4 & 5\\
@@ -118,7 +118,7 @@ $$4\% \leq \frac{\delta_v}{v} \leq 5\% $$
 
 
 \section{Dipendenza dalla tensione}
-Dall'equazione $1.1$ si deduce la dipendenza quadratica tra la tensione $\tau$ e la frequenza $\nu$. 
+Dall'equazione $1.1$ si deduce la dipendenza quadratica tra la tensione $T$ e la frequenza $\nu$. 
 Verifichiamo questa dipendenza utilizzando i dati della seconda armonica misurati precedentemente. 
 \begin{center}
 \begin{tabular}{c | c}
@@ -146,9 +146,9 @@ Tensione $N$ & Frequenza $Hz$ \\
 \end{tabular}
 \end{center}
 
-Essendo il numero dei dati troppo ridotto per essere interpolato con successo dalla curva corrispondente ($1.1$), consideriamo un'interpolazione lineare di tipo $y = mx$ dove   $y= \nu^2$ e $x = \tau$.
+Essendo il numero dei dati troppo ridotto per essere interpolato con successo dalla curva corrispondente ($1.1$), consideriamo un'interpolazione lineare di tipo $y = mx$ dove   $y= \nu^2$ e $x = T$.
 \\
-Utilizziamo il metodo dei minimi quadrati, ottenendo per la\textbf{ corda A} $m_A = 403.95$ con incertezza $\sigma_m =0.03$ e per la \textbf{corda B} $m_B=143.0$ con incertezza $\sigma_m$.  Di seguito il grafico che rappresenta la relazione tra $\nu^2$ e $\tau$.
+Utilizziamo il metodo dei minimi quadrati, ottenendo per la\textbf{ corda A} $m_A = 403.95$ con incertezza $\sigma_m =0.03$ e per la \textbf{corda B} $m_B=143.0$ con incertezza $\sigma_m$.  Di seguito il grafico che rappresenta la relazione tra $\nu^2$ e $T$.
 
 \begin{center}
 \includegraphics[scale=0.5]{../grafici/corda_tensione}
@@ -157,30 +157,33 @@ Utilizziamo il metodo dei minimi quadrati, ottenendo per la\textbf{ corda A} $m_
 
 
 \section{Dipendenza dalla lunghezza}
-Sempre dall'equazione $1.1$, si deduce la proporzionalità inversa tra la frequenza $\nu$ e la lunghezza $l$. 
-Corda A,550g
+L'ultima analisi riguarda la dipendeza di $\nu_n$ dalla lunghezza della corda, per una data tensione fissata. Essa è ancora una conseguenza della $1.1$, dalla quale si deduce che le due grandezze sono legate da proporzionalità inversa.\\
+ 
+Di seguito sono riportati in tabella i valori raccolti per la prima armonica, per le corde A e B; sono stati scelti valori differenti per le due tensioni in quanto la corda a massa lineare maggiore aveva una risposta poco significativa quando soggetta alla tensione che si era usata per la corda A.\\
 
 \begin{center}
 
+\begin{tabular}{c c}
 
-\begin{tabular}{c|c}
-L($cm$) & $\nu (Hz) $ \\
-\midrule
-105 & 24.6\\
-111 & 23.7\\
-116.5 & 22.8 \\
-122.5 & 20.9 \\
-131.5 & 20.1 \\
-\end{tabular}
-\end{center}
-
-In tabella sono riportati i dati della frequenza delle prima armonica, 
-Corda B,1050g
-
-\begin{center}
+\textbf{Corda A},  $T=5.40\ N$ & \hspace{3cm} \textbf{Corda B},  $T=10.3\ N$\\
+\\
 \begin{tabular}{|c|c|}
 \toprule
-Lunghezza (m) & Frequenza (Hz) \\
+L($m$) & $\nu (Hz) $ \\
+\midrule
+1.05 & 24.6\\
+1.11 & 23.7\\
+1.17 & 22.8 \\
+1.23 & 20.9 \\
+1.32 & 20.1 \\
+\bottomrule
+\end{tabular}
+ 
+& \hspace{3cm}
+
+\begin{tabular}{|c|c|}
+\toprule
+L($m$) & $\nu (Hz) $ \\
 \midrule
 1.10 & 19.33 \\
 1.15 & 18.25 \\
@@ -195,13 +198,17 @@ Lunghezza (m) & Frequenza (Hz) \\
 0.50 & 42.67 \\
 \bottomrule
 \end{tabular}
+
+\end{tabular}
+
 \end{center}
 
-Inserendo questi dati su di un grafico, e interpolando la curva con Sage, troviamo il seguente grafico.
+
+
+Il grafico seguente illustra il comportamento della corda B.
 
 \includegraphics[scale=0.75]{"../grafici/CordaPrimaArmonica"}
 
-Nota: $\rho$ è lasciato parametro libero, mentre invece $\tau$ è pari a 10.3 N, dato da un peso di 1.050 Kg sospeso a un'estremità della corda.
+Nota: $\rho$ è lasciato parametro libero, mentre $T$ è pari a 10.3 N, dato da un peso di 1.050 Kg sospeso a un'estremità della corda.
 
-\section{Dipendenza tra frequenza e massa lineare}
 
