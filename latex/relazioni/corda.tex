@@ -215,14 +215,16 @@ Abbiamo verificato l'equazione 1.1, mostrando la dipendenza della frequenza dall
 
 
 
-
-\chapter*{Appendice}
-\section*{Metodo di analisi dei dati informatizzato}
+\addappheadtotoc
+\appendix{Appendice}
+\chapter{Metodo di analisi dei dati informatizzato}
 Per l'analisi dei dati sperimentali si è fatto largo uso di strumenti informatici ausiliari.
 In particolare, è stata usata l'applicazione DataStudio per la raccolta di dati da sensori elettronici, ed occasionalmente per l'interpolazione dei dati.
 Per quanto riguarda l'analisi degli errori, si è preferita una soluzione costruita tramite il pacchetto software open source "Sage", distribuito sotto i termini della GNU General Public License.
 
-Questo strumento utilizza il linguaggio di programmazione Python, e alcune librerie esterne. Di seguito viene allegato e commentato il programma principale, scritto da noi.
+Questo strumento utilizza il linguaggio di programmazione Python, e alcune librerie esterne. Di seguito vengono allegati e commentati estratti del programma principale, scritto da noi.
+
+\section{Elaborazione Gaussiana}
 
 \begin{lstlisting}
 reset()
@@ -269,7 +271,12 @@ Questa è la classe base: si occupa di disegnare il grafico e di fornire l'anali
             self.nOfBins = d['bins']
         self.plotText = '\mu = %.5f %s;\ \sigma = %.5f %s;'\
                         % (mean(self.data), m, std(self.data), m)
-        
+                        
+\end{lstlisting}
+
+Due funzioni di comodo per evitare di riscrivere alcune banali righe di codice ogni volta.
+
+\begin{lstlisting}      
     def plotGauss(self):
         a = self.data
         
@@ -293,6 +300,11 @@ Questa è la classe base: si occupa di disegnare il grafico e di fornire l'anali
         plt.grid(True)
         plt.savefig(self.uuid+"."+format, dpi=dpis)
         
+\end{lstlisting}
+
+La funzione più importante: crea un istogramma normalizzato, lo interpola con una funzione di densità di probabilità di Gauss, e lo disegna, aggiungendo le diciture corrette sugli assi, e aggiungendo al grafico il valore medio della distribuzione e la sua deviazione standard.
+
+\begin{lstlisting}
     def statAnalysis(self):
         stderr = "%.5f" % (std(self.data)/np.sqrt(len(self.data)))
         media = "%.5f" % mean(self.data)
@@ -301,3 +313,53 @@ Questa è la classe base: si occupa di disegnare il grafico e di fornire l'anali
         print "Media: "+ media +" - Std. Dev.: "+ stddev
         print "Errore della media: "+ stderr
 \end{lstlisting}
+
+Quest'altra funzione si occupa di creare e stampare una analisi statistica di base: media, deviazione standard e errore della media.
+\\
+\\
+\subsection{Utilizzo}
+All'interno del codice sorgente, per utilizzare la seguente classe, dovremmo fare qualcosa del genere:
+
+\begin{lstlisting}
+data = [
+{'uuid': "Istogramma 1", 'bins': 10, 'data': [dato1, dato2, ...]},
+{'uuid': "Istogramma 2", 'data': [dato1, dato2, ...]},
+...
+]
+\end{lstlisting}
+
+Bisognerà creare un vettore che contenga i dati in questo formato:
+\begin{itemize}
+ \item uuid: Un titolo per l'istogramma
+ \item data: Un vettore per i dati, numeri di qualsiasi tipo
+ \item bins: (opzionale) Il numero di intervalli da considerare per disegnare l'istogramma
+\end{itemize}
+
+\begin{lstlisting}
+for d in data:
+    a = Analyzer()
+    a.xUnitOfMeasure = 's'
+    a.quickPrepare(d)
+    a.x = "Tempi\ (s)"
+    a.statAnalysis()
+    a.plotGauss()
+\end{lstlisting}
+
+A questo punto bisogna iterare su ognuna di questi elementi del vettore, e per ognuno di questi:
+\begin{itemize}
+ \item Creeremo un oggetto di tipo Analyzer, per analizzare i dati
+ \item Imposteremo alcune proprietà tipiche di questo esperimento (come ad esempio l'unità di misura dei dati di input, il nome delle ascisse, ...)
+ \item Chiediamo al programma di fare un'analisi statistica
+ \item Chiediamo al programma di disegnare l'istogramma
+\end{itemize}
+
+L'output sarà qualcosa del genere:
+       
+\begin{verbatim}
+=== Caduta di una sferetta di raggio 6 mm ===
+Media: 1.56410 - Std. Dev.: 0.09964
+Errore della media: 0.00996
+\end{verbatim}
+
+\includegraphics[scale=0.75]{../grafici/esempio/Cadutadiunasferettadiraggio6mm.png}
+
