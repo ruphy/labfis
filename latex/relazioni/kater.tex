@@ -46,7 +46,7 @@ Infatti, le due equazioni forniscono valori che differiscono solo per lo $0.04\%
 
 
 \subsection{Dati}
-Nella tabella sono raccolti tutti i periodi $T_1,T_2$ misurati in secondi. $d$ è la distanza tra il coltello $c_1$ e la massa $m_a$. \footnote{In tabella sono state riportate tutte le cifre significative che venivano lette nella fotocellula}
+Nella tabella sono raccolti tutti i periodi $T_1,T_2$ misurati in secondi. $d$ è la distanza tra il coltello $c_1$ e la massa $m_a$.\footnote{In tabella sono state riportate tutte le cifre significative che venivano lette dal cronometro}
 \begin{center}
 \begin{tabular}{*{8}{c}}
 $d$& $6.9\ cm$ & $11.7\ cm$ & $13.5\ cm$  & $15.0\ cm$ & $17.9\ cm$ & $85.0\ cm$ & $81.9\ cm$ \\
@@ -95,9 +95,9 @@ L'equazione ha tre soluzioni, ma per semplicità, abbiamo deciso di concentrarci
 
 \begin{center}
 \includegraphics[scale=0.60]{../grafici/kater/kater-punti-raw.png}
-\end{center}
 
-\textit{La spezzata ha il solo scopo di collegare i punti al fine di rendere più leggibili i dati sperimentali.}\\
+\textit{La spezzata ha il solo scopo di collegare i punti al fine di rendere più leggibili i dati sperimentali.}
+\end{center}
 \\
 Per ricercare il miglior punto di intersezione minimizzando l'errore, abbiamo deciso di considerare le misurazioni dei periodi delle cinque distanze più vicine al valore che sembrava maggiormente plausibile (in questo caso abbiamo scelto 13.5 cm) e abbiamo calcolato, per ognuna di queste, le differenze tra i periodi $T_1$ e $T_2$.\\
 \\
@@ -123,8 +123,8 @@ Per calcolare le incertezza su $d$, abbiamo utilizzato l'equazione per il calcol
 \end{equation}
 e otteniamo $\sigma_d = 0.2246\ cm$. 
 Propaghiamo l'errore così trovato su $g$:
-$$\sigma_g = \frac{4 \pi^2}{T^2} \cdot \sigma_d = 0.23 \ m/s^2$$
-$$ g = 9.80 \pm 0.23 \ m/s^2 $$
+$$\sigma_g = \frac{4 \pi^2}{T^2} \cdot \sigma_d = 0.022 \ m/s^2$$
+$$ g = 9.807 \pm 0.022 \ m/s^2 $$
 Considerando $g=9.81\ m/s^2$, ovvero la media dell'accelerazione di gravità sulla superficie terrestre:
 $$\frac{g_{oss} - g_{teo}}{g_{teo}} \simeq 0.1\% $$
 
@@ -160,7 +160,7 @@ Tutti i valori riportati in tabella sono in millisecondi.
 
 \begin{center}
 \includegraphics[scale=0.70]{../grafici/20cm.png}
-$$\sigma_g = |\frac{-4y}{t^3}|\sigma_t = 0.23\  m/s^2$$
+$$\sigma_g = \left|\frac{-4y}{t^3}\right|\sigma_t = 0.23\  m/s^2$$
 $$\sigma_{\bar{t}} = 0.430\ ms$$
 $$\mathrm{Stima\ di\ g} = 10.10\ m/s^2$$
 $$\mathrm{Stima\ (con\ corr.)\ di\ g} = 9.80\ m/s^2 $$
@@ -194,9 +194,3 @@ Nota: abbiamo trascurato la forza di attrito viscoso dell'aria e la forza di arc
 Il metodo di misura dell'accelerazione di gravità attraverso il pendolo di Kater si è rivelato essere molto più preciso di quello tramite caduta libera, nonostante le possibili incertezze introdotte da misure particolarmente incerte come la distanza della massa mobile dal primo coltello. Potendo effettuare le misure con strumenti più precisi, e riuscendo a raccogliere più misurazioni intorno al punto di intersezione tra $T_1$ e $T_2$, probabilmente si sarebbe riusciti a diminuire ulteriormente l'errore. 
 
 Ciò nonostante, conoscendo bene l'apparato sperimentale, saremmo potuti arrivare a risultati simili con l'osservazione della caduta libera di un grave: con la correzione il valore misurato si discosta per un massimo dello 0.7\% dal valore vero.
-
-
-Per ottenere un unico valore di $g$ operiamo una media pesata tra i risultati ottenuti con i due metodi. Indichiamo con $x_a$ e $x_b$ le rispettive misure di $g$ con Kater e con la Caduta Libera, analoghi pedici valgono per i pesi.
-\begin{equation}
-x_{best}=\displaystyle{\frac{\frac{x_a}{\sigma_a^2}+\frac{x_b}{\sigma_b}}{\frac{1}{\sigma_a^2}+\frac{1}{\sigma_b^2}}}=
-\end{equation}
