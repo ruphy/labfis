@@ -3,6 +3,7 @@
 \section{Introduzione}
 
 Obiettivo di questo esperimento è lo studio della propagazione di onde elastiche su una corda fissata ad un estremo, sotto l'azione di una forzante con andamento sinusoidale. Verifichiamo la dipendenza della frequenza dell'onda ($\nu_n$) dalla lunghezza della corda, dalla sua massa lineare ($\mu$) e dalla tensione ($T$) applicata su di essa. Tali grandezze sono infatti legate dalle seguenti relazioni:
+
 \begin{center}
 \begin{tabular}{c c c}
 $
@@ -24,7 +25,7 @@ $
 
 da cui:
 
-\begin{equation}
+\begin{equation}\label{frequenza}
 \nu_n=\frac{n}{2L}\sqrt{\frac{T}{\mu}}
 \end{equation}
 
@@ -37,16 +38,17 @@ La strumentazione di cui ci siamo serviti si componeva di due corde:\\
 
 \begin{tabular}{c c c c}
 \textbf{Corda A} & \hspace{1cm} $L_A= 2.46\ m$ & \hspace{1cm} $m_A=5.21\cdot10^{-3}\ kg$ & \hspace{1cm} $\mu_A= 2.12\cdot10^{-3}\ kg/m$\\
+\\
 \textbf{Corda B} & \hspace{1cm} $L_B= 2.50\ m$ & \hspace{1cm} $m_B=1.63\cdot10^{-2}\ kg$ & \hspace{1cm} $\mu_B= 6.52\cdot10^{-3}\ kg/m$\\
 \end{tabular} 
 \\
 
-La forzante è data da un oscillatore elettromeccanico, mentre la tensione è esercitata da pesetti appesi all'estremità libera della corda, sospesi attraverso una carrucola (come illustrato in \textbf{figura}). 
+La forzante è data da un oscillatore elettromeccanico, mentre la tensione è esercitata da pesetti appesi all'estremità libera della corda, sospesi attraverso una carrucola. 
 L'errore associato alla misura di $L_A$ ed $L_B$ è di $\pm0.001\ m$; quello sulle masse è del tutto trascurabile. 
 
 \section{Ricerca delle armoniche}
 
-Nella prima parte dell'esperienza abbiamo verificato che le armoniche superiori sono date da multipli interi della frequenza fondamentale. A tal fine, dopo aver trovato la frequenza di risonanza \textbf{corrispondente ad $n=1$ (ossia la fondamentale)}, facendo variare la frequenza dell'oscillatore elettromeccanico e cercando il punto in cui la corda presentava i nodi alle due estremità e un grande ventre al centro, abbiamo misurato le frequenze relative alle prime cinque armoniche, cui corrispondono le configurazioni descritte in \textbf{figura}. 
+Nella prima parte dell'esperienza abbiamo verificato che le armoniche superiori sono date da multipli interi della frequenza fondamentale. A tal fine, dopo aver trovato la frequenza di risonanza corrispondente ad $n=1$ (ossia la fondamentale), facendo variare la frequenza dell'oscillatore elettromeccanico e cercando il punto in cui la corda presentava i nodi alle due estremità e un grande ventre al centro, abbiamo misurato le frequenze relative alle prime cinque armoniche. 
 \\
 
 Abbiamo ripetuto la misurazione sottoponendo la corda a quattro differenti forze di tensione, e successivamente abbiamo ripetuto l'esperienza per l'altra corda, di massa lineare differente. \\
@@ -81,11 +83,16 @@ Massa($g$) & 1 & 2 & 3 & 4 & 5\\
 \end{center}
 
 
-Nel seguente grafico mostriamo la relazione tra la frequenza $\nu$ e il numero di armonica $n$. Per rendere più leggibile il grafico ci siamo limitati a rappresentare tale relazione per la corda A sottoposta ad una tensione $T=(0.250\ kg)(9.81\ m/s^2)$. Come ci si aspettava si tratta di una relazione lineare, in accordo con la \textbf{1.1}
+Nel seguente grafico mostriamo la relazione tra la frequenza $\nu$ e il numero di armonica $n$. 
+Per rendere più leggibile il grafico ci siamo limitati a rappresentare tale relazione per la corda A sottoposta ad una tensione $T=(0.250\ kg)(9.81\ m/s^2)$. Come ci si aspettava si tratta di una relazione lineare, in accordo con la \ref{frequenza}
 
-%Grafico con i punti.
 
-Abbiamo dunque interpolato i dati con la \textbf{1.1}, utilizzando il metodo dei minimi quadrati, nel caso di una retta passante per l'origine.
+\begin{center}
+
+\includegraphics[scale=0.5]{../grafici/corda_1armonica}
+\end{center}
+
+Abbiamo dunque interpolato i dati con la \ref{frequenza}, utilizzando il metodo dei minimi quadrati, nel caso di una retta passante per l'origine.
 
 \begin{center}
 \begin{tabular}{c c}
@@ -100,6 +107,7 @@ $l=1.11\pm0.01\ m$ \footnote{In questo caso l'incertezza sulla lunghezza è stat
 Dall'interpolazione ricaviamo: $m=16.1\pm0.1$ Dunque, moltiplicando $m$ per $2l=2.22\pm0.02\ m$ e propagando l'errore:
 $$\sigma_v=\sqrt{\left(\frac{\sigma_m}{m}\right)^2+\left(\frac{\sigma_l}{l}\right)^2}=0.35$$
 otteniamo $$v=35.7\pm0.35\ m/s$$ 
+<<<<<<< HEAD
 Calcoliamo il  $\chi^2$ e otteniamo un valore di $0.8$. La funzione è perfettamente in accordo, in quando il $chi^2 << N$ numero di misure. 
 Confrontiamo il valore trovato con quello ottenuto dall'equazione:
 $$v=\sqrt{\frac{T}{\mu}}=\sqrt{\frac{2.45\ N}{2.12 \cdot10^{-3}\ kg/m}}=34.0\ m/s$$
@@ -107,17 +115,25 @@ $$v=\sqrt{\frac{T}{\mu}}=\sqrt{\frac{2.45\ N}{2.12 \cdot10^{-3}\ kg/m}}=34.0\ m/
 L'errore è:
 $$4\% \leq \frac{\delta_v}{v} \leq 5\% $$
 
+=======
+>>>>>>> 74be4524b17d43c8ef0585d7048f002a93e2d46e
 
+Vogliamo verificare l'accordo tra la legge e la distribuzione dei valori osservati. Operiamo duqnue il test del $\chi^2$, fissando come soglia di accettabilità il 5\%.
 
+\begin{equation}
+\chi^2=\frac{\displaystyle\sum{(y_i-mx_i)^2}}{\sigma_y^2}
+\end{equation} 
+Otteniamo un valore di $0.8$. Dalle tabelle del $\tilde{\chi}^2=\frac{\chi^2}{d}$, con $d$ gradi di libertà (nel nostro caso l'unico parametro calcolato dai dati è m, e dunque abbiamo $d=5-1=4$ e $\tilde{\chi}^2=0.2$), leggiamo il valore della probabilità che il $\chi^2$ sia maggiore o uguale del limite del 5\%. Tale probabilità corrisponde al 94\%. Dunque i dati si adattano perfettamente alla funzione.  \\
 
-\begin{center}
+A questo punto confrontiamo il valore trovato con quello ottenuto dall'equazione:
+$$v=\sqrt{\frac{T}{\mu}}=\sqrt{\frac{2.45\ N}{2.12 \cdot10^{-3}\ kg/m}}=34.0\ m/s$$
 
-\includegraphics[scale=0.5]{../grafici/corda_1armonica}
-\end{center}
+L'errore (discostamento tra valore atteso e valore osservato) risulta essere:
+$$4\% \leq \frac{\delta_v}{v} \leq 5\% $$
 
 
 \section{Dipendenza dalla tensione}
-Dall'equazione $1.1$ si deduce la dipendenza quadratica tra la tensione $T$ e la frequenza $\nu$. 
+Dall'equazione \ref{frequenza} si deduce la dipendenza quadratica tra la tensione $T$ e la frequenza $\nu$. 
 Verifichiamo questa dipendenza utilizzando i dati della seconda armonica misurati precedentemente. 
 \begin{center}
 \begin{tabular}{c | c}
@@ -145,16 +161,15 @@ Tensione $N$ & Frequenza $Hz$ \\
 \end{center}
 
 
- Di seguito il grafico che rappresenta la relazione tra $\nu^2$ e $\tau$.
+ Di seguito il grafico che rappresenta la relazione tra $\nu^2$ e $T$.
 \begin{center}
 \includegraphics[scale=0.5]{../grafici/corda_tensione}
 \end{center}
-
-Si può chiaramente vedere la dipendenza lineare, tra $\nu^2$ e $\tau$. 
+ 
 
 
 \section{Dipendenza dalla lunghezza}
-L'ultima analisi riguarda la dipendeza di $\nu_n$ dalla lunghezza della corda, per una data tensione fissata. Essa è ancora una conseguenza della $1.1$, dalla quale si deduce che le due grandezze sono legate da proporzionalità inversa.\\
+L'ultima analisi riguarda la dipendeza di $\nu_n$ dalla lunghezza della corda, per una data tensione fissata. Essa è ancora una conseguenza della \ref{frequenza}, dalla quale si deduce che le due grandezze sono legate da proporzionalità inversa.\\
  
 Di seguito sono riportati in tabella i valori raccolti per la prima armonica, per le corde A e B; sono stati scelti valori differenti per le due tensioni in quanto la corda a massa lineare maggiore aveva una risposta poco significativa quando soggetta alla tensione che si era usata per la corda A.\\
 
@@ -203,14 +218,14 @@ L($m$) & $\nu (Hz) $ \\
 
 
 
-Il grafico seguente illustra il comportamento della corda B.
+Ci limitiamo a rappresentare nel grafico seguente il comportamento della corda B, di cui si sono raccolti più valori.
 
 \includegraphics[scale=0.75]{"../grafici/CordaPrimaArmonica"}
 
 
 \section{Conclusioni}
 
-Abbiamo verificato l'equazione 1.1, mostrando la dipendenza della frequenza dalla lunghezza, dalla tensione e dalla massa lineare.
+L'esperimento si è rivelato un successo: i dati raccolti concordavano perfettamente con la teoria. Abbiamo verificato l'equazione \ref{frequenza}, mostrando la dipendenza della frequenza dalla lunghezza, dalla tensione e dalla massa lineare. È stato particolarmente interessante poter osservare come da una singola legge si potessero trarre tante analisi.
 
 
 
