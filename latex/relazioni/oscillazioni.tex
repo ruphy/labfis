@@ -1,10 +1,15 @@
 
 \chapter{Oscillazioni smorzate e forzate}
-
-
 \section{Introduzione}
 
 Oggetto di questa ricerca è lo studio delle oscillazioni smorzate e forzate di un pendolo. Studiando il variare delle oscillazioni al variare della frequenza operativa della forzante, si studierà il fenomeno della risonanza.
+
+\begin{wrapfigure}[24]{R}{0.28\textwidth}
+  \begin{center}
+\includegraphics[scale=0.7]{../grafici/oscillazioni-schema.png}
+  \end{center}
+  \caption*{Schema dell'esperimento}
+\end{wrapfigure}
 
 \subsection{Strumenti}
 \begin{center}
@@ -21,15 +26,15 @@ L'attrezzatura utilizza è costituita da un disco metallico fissato ad una puleg
 
 \section{Oscillazioni libere}
 
-Si pone in oscillazione il disco, con il magnete  posizionato lontano e l'oscillatore elettromeccanico spento. Un sensore di posizione misura lo spostamento angolare; il sensore è collegato ad un computer, ed il programma DataStudio traccia in tempo reale il grafico dello spostamento angolare in funzione del tempo. Si interpolano dunque i dati con una funzione sinusoidale per determinare il periodo, e si ricava: $$T=1.47\pm0.02\ s$$ L'errore riportato è quello che il programma stesso attribuisce alla rilevazione, ed è determinato dalla precisione degli strumenti di rilevamento e dall'interpolazione dei dati.\\
+Si pone in oscillazione il disco, con l'oscillatore elettromeccanico spento e il magnete posizionato sufficientemente lontano, in modo da non influenzare il moto della puleggia. Un sensore di posizione misura lo spostamento angolare; il sensore è collegato ad un computer, ed il programma DataStudio traccia in tempo reale il grafico dello spostamento angolare in funzione del tempo. Si interpolano dunque i dati con una funzione sinusoidale per determinare il periodo, e si ricava: $$T=1.47\pm0.02\ s$$ L'errore riportato è quello che il programma stesso attribuisce alla rilevazione, ed è determinato dalla precisione degli strumenti di rilevamento e dall'interpolazione dei dati.\\
 Dal periodo possiamo ricavare il valore della pulsazione $\omega$, dalla relazione:
 \begin{equation}\label{omepe}
 \omega=\frac{2\pi}{T}
 \end{equation}
 e si ottiene:
-$$\omega=4.272\ rad/s$$
-con un errore dato dalla propagazione di quello su T:
-$$\sigma_{\omega}=2\pi\left(|\frac{-1}{T^2}|\right)\sigma_T=0.06\ m/s$$
+$$\omega=4.272 \pm \sigma_\omega\ rad/s$$
+con un errore dato dalla propagazione di quello su $T$:
+$$\sigma_{\omega}= \left|\frac{-2\pi}{T^2}\right| \sigma_T=0.06\ rad/s$$
 \section{Oscillazioni smorzate}
 
 Si avvicina il magnete al disco metallico. Il moto oscillatorio risulterà così smorzato per effetto delle correnti di Focault.
