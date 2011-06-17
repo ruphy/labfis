@@ -1,38 +1,141 @@
 
 \chapter{Molla}
+
 \section{Introduzione}
-\section{Misura statica}
-\subsection*{Molla A}
-La \textbf{molla A} ha una lunghezza a riposo $L=0,430 m$ e di massa $M=4.289g$\\
-\begin{tabular}{c|c|c}
-Massa & Misura L & $\Delta L$ \\
-\midrule
-200 & 0,422 & 0.008\\
-250 & 0,420 & 0.010\\
-300 & 0,418 & 0.012\\
-400 & 0,414 & 0.016\\
-450 & 0,412 & 0.018\\
-500 & 0,410 & 0.020\\
-550 & 0,408 & 0.022\\
-600 & 0,406 & 0.024\\
-650 & 0,404 & 0.026\\
-700 & 0,402 & 0.028\\
+Oggetto di studio è la verifica della legge di Hooke, che lega la deformazione che si manifesta su un corpo soggetto ad una forza elastica e l'intensità della forza stessa:
+\begin{equation}\label{Hooke}
+F_{el}=-kx
+\end{equation}
+Noto il valore della forza (nel nostro caso si tratterà sempre della forza peso $F=Mg$), si può inoltre determinare la costante elastica $k$ caratteristica di ciascuna molla.
+
+\section{Strumenti}
+La strumentazione si compone di un gancio cui si appende la molla di cui si vogliono studiare le caratteristiche, e nel punto corrispondente del tavolo (lungo la perpendicolare) si pone un sensore di posizione che trasmette i dati rilevati (allungamento) al computer, dove sono poi analizzati con il programma DataStudio.\\
+\\
+\begin{tabular}{c c c}
+\textbf{Molla A} & \hspace{1.5cm} $L_A=0.430\ m$ & \hspace{1.5cm} $M_A=4.289\ g$\\
+\\
+\textbf{Molla B} & \hspace{1.5cm} $L_B=0.426\ m$ & \hspace{1.5cm} $M_B=4.029\ g$\\
 \end{tabular}
-\subsection*{Molla B}
-La \textbf{molla B} ha una lunghezza a riposo $L=0,426 m$ e di massa $M=4.029 g$\\
+\\
+\\
+Con $L_A$ ed $L_B$ lunghezze a riposo delle due molle.
+
+\section{Misura statica}
+
+La \ref{Hooke} implica che il rapporto tra l'allungamento della molla e la forza esercitata sia un valore costante:
+$$k=\frac{Mg}{x}$$
+Facendo variare le masse appese, verifichiamo dunque la validità della \ref{Hooke} e successivamente otteniamo il valore di $k_1$ e $k_2$ corrispondenti alle due molle.   
+Di seguito in tabella i valori raccolti per le due molle.\footnote{I valori sono stati raccolti con una frequenza di campionamento di 10 $Hz$}
+
+\begin{center}
+
+\begin{tabular}{c c}
+\textbf{Molla A} & \hspace{2cm} \textbf{Molla B}\\
+\\
 \begin{tabular}{c|c|c}
-Massa & Misura L & $\Delta L$ \\
+Massa ($g$) & Misura L ($m$) & $\Delta L$ ($m$)\\
 \midrule
-200 & 0,424 &\\
-250 & 0,422 & \\
-300 & 0,420 & \\
-400 & 0,416 & \\
-450 &  0,413 & \\
-500 & 0,411 & \\
-550 & 0,409 &\\
-600 & 0,407 &\\
-650 & 0,404 &\\
-700 & 0,402 &\\
+200 & 0.422 & 0.008\\
+250 & 0.420 & 0.010\\
+300 & 0.418 & 0.012\\
+400 & 0.414 & 0.016\\
+450 & 0.412 & 0.018\\
+500 & 0.410 & 0.020\\
+550 & 0.408 & 0.022\\
+600 & 0.406 & 0.024\\
+650 & 0.404 & 0.026\\
+700 & 0.402 & 0.028\\
 \end{tabular}
 
+& \hspace{2cm}
+
+\begin{tabular}{c|c|c}
+Massa ($g$) & Misura L ($m$) & $\Delta L$ ($m$)\\
+\midrule
+200 & 0,424 & 0.002\\
+250 & 0,422 & 0.004\\
+300 & 0,420 & 0.006\\
+400 & 0,416 & 0.001\\
+450 & 0,413 & 0.013\\
+500 & 0,411 & 0.015\\
+550 & 0,409 & 0.017\\
+600 & 0,407 & 0.0019\\
+650 & 0,404 & 0.022\\
+700 & 0,402 & 0.024\\
+\end{tabular}
+
+\end{tabular}
+
+\end{center}
+
+%Grafici
+
 \section{Misura dinamica}
+
+\subsubsection{Procedimento e breve accenno di teoria}
+
+Quando una molla viene spostata dalla propria posizione di equilibrio, essa esercita una forza di richiamo data dalla \ref{Hooke}. Se su di essa agisce anche la forza peso, si ha:
+$$\displaystyle\sum{F}=Mg-kx$$
+Dalla II legge di Newton, dividendo tutto per M ed esprimendo $g$ dalla \ref{Hooke} come $g=\displaystyle{\frac{kx_0}{M}}$, ricaviamo:
+
+\begin{equation}
+\frac{d^2x}{dt^2}+\frac{k}{M}(x-x_0)
+\end{equation}
+
+con $x_0=\displaystyle{\frac{Mg}{k}}$ posizione di equilibrio.\\
+\\
+Tale equazione descrive un moto armonico semplice, la cui legge del moto è data da:
+
+\begin{equation}\label{eqmoto}
+x(t)=x_0+Asin(\omega t+\phi)
+\end{equation} 
+il cui periodo, nel caso di molle con massa non trascurabile, è dato da:
+
+\begin{equation}\label{periodo}
+T=2\pi\sqrt{\frac{M+m/3}{k}}
+\end{equation}  
+
+A questo punto è facile determinare il valore di $k$. Sospendiamo dunque alla molla una massa, e discostatala dalla posizione di equilibrio la lasciamo libera di oscillare. Verifichiamo dal grafico tracciato in tempo relale dal programma DataStudio, sincronizzato alla fotocellula di posizione, che si tratti effettivamente di un moto armonico. Infine dai valori del quadrato del periodo, ottenuti mediante l'interpolazione con una sinusoidale, si ricava il valore di $k$. In questo caso si fa uso di una interpolazione con il metodo dei minimi quadrati, ponendo $x_i=M_i$, $y_i={T_i}^2$ ed $m=\displaystyle{\frac{4\pi^2}{k}}$. 
+
+\subsubsection{Raccolta dati}
+
+\begin{center}
+
+\begin{tabular}{c c}
+\textbf{Molla A} & \hspace{2cm} \textbf{Molla B}\\
+\\
+\begin{tabular}{c | c| c}
+Massa ($g$) & Periodo ($s$) & Pulsazione ($rad/s$)\\
+\midrule
+400 & 0.274 & 22.93\\
+600 & 0.340 & 18.48\\
+800 & 0.374 & 16.80\\
+\end{tabular}
+
+& \hspace{2cm}
+
+\begin{tabular}{c | c | c}
+Massa ($g$) & Periodo ($s$) & Pulsazione ($rad/s$)\\
+\midrule
+500 & 0.312 & 20.14\\
+700 & 0.364 & 17.26\\
+900 & 0.409 & 15.36\\
+\end{tabular}
+
+\end{tabular}
+
+\end{center}
+
+I grafici mostrano la dipendeza lineare tra $T^2$ ed $M$.
+
+Dall'interpolazione ricaviamo:
+\begin{center}
+\begin{tabular}{c c}
+$m_A=0.182$ & \hspace{1cm} $k_A=\displaystyle{\frac{4\pi^2}{m_A}}=216.9\ Nm$ \\
+\\
+$m_B=0.188$ & \hspace{1cm} $k_B=\displaystyle{\frac{4\pi^2}{m_B}}=210.0\ Nm$ \\
+\end{tabular}
+\end{center}
+\section{Moto armonico smorzato}
+
+Fissando il disco di cartone all'estremità oscillante della molla, si aumenta l'effetto frenante dell'aria ($F=-bv$, con $b$ coefficiente di smorzamento).  
