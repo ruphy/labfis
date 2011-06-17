@@ -1,99 +1,157 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 #include <ctype.h>
 #define N 100
 
-struct persona{
+struct persona {
 	char name[30];
 	int  py;
-}persona;
+        struct persona *next;
+	struct persona *prev;
+};
 
-/*Inizializzazione*/
-void init(persona coda*)
-{
-	
-}
 
-/*Funzione di riorganizzazione vettoriale*/
-void check
-{
-}
+typedef struct persona persona;
+
 
 /*Funzione di visualizzazione*/
-void visual(persona coda*,int i*, int f*)
-{
+void visual(persona *head)
+{	
+	persona *aux;
 	
-	while(i
+	aux = head;	
+	if(head!=NULL)
 	{
-
+		while(aux!=NULL)
+		{
+			printf("--------\n Name: %s \n Priority: %d",aux->name,aux->py);
+			aux= aux->next;
+		}
 	}
-	
+	else
+		printf("Coda vuota!");
 }
 /*Funzione di inserimento*/
-void insert(persona coda*,int i*, int f*,char c*)
-{	
-	
-	int	x=0;
-
-	while(c!='\0')
-	{
-		if(isdigit(c))
-			coda[f+1]->py= c-'0';
-		if(coda[f+1].py>4 || coda[f+1].py<0)
-			exit; 
-		else
-			coda[f+1]->name[x]=c;
-		x++;
-	} 
-
-	f++;
-
-	if(f==99)
-		check();
-			
-}
-/*Funzione di uscita*/
-void exit(persona coda*, int i*, int f*);
+void insert(persona *head)
 {
-/*Cancello aumentando la testa aumentando l'indice di uno, verra sovrascritto successivamente */	
-	i++;
+	
+	persona *aux,*old,*new;
+	
+	int numero;
+	char c,name[30];
+	int x,i;
+	
+	x=0;
+	i=0;
+
+	
+	while(x<4)
+        {
+		c=getchar();
+        	
+		if(x==0)
+                	numero = c-'0';
+                else
+                name[x]=c;
+                x++;
+        }       
+	printf("%s,%d",name,numero);
+
+	if(head==NULL)
+	{
+		/*Inizializza coda*/
+		head = (persona*)malloc(sizeof(persona));
+		head->py = numero;
+		printf("Something");
+		for(i=0;i<x+1;i++)
+			head->name[i] = name[i];
+	}
+	else{
+
+		aux = head;
+    
+		while(numero < aux->py )
+		{	old = aux;
+			aux = aux->next;
+		}
+	
+		new = (persona*) malloc(sizeof(persona));
+		new->py = numero;
+
+		for(i=0;i<x+1;i++)
+			new->name[i] = name[i];
+	
+		old->next = new;
+		new->next = aux;
+       			
+		}
+	
 }
-/*Funzione per l'acquisizione*/
-void fetch(persona coda*,int i*,int f*)
+
+/*Funzione di uscita*/
+/*void exit(persona *head)
 {	
+	persona *aux;
+
+
+	if(head==NULL)
+	{
+		printf("\nNon ci sono utenti nella coda");
+	}
+	else{
+		aux = head;
+		aux = aux->next;
+		head = aux;
+		free(aux);
+	}
+}
+
+/*Funzione per l'acquisizione*/
+void fetch(persona *head)
+{	
+	char c;
+	/*Controllo il primo carattere che è quello che mi fa diramare la funzione in due*/
+	
+	c=getchar();
+
 	while(c!='\n' || c=='n')
 	{
 		if(c=='i')
 		{ 		
-			insert(coda,i,f,c);
+			insert(head);
 		}
 	
-		else if{ c=='e'}
+		else if(c=='e')
 		{
-			exit(coda,i,f);
+			
 		}
-		
+
+	printf("ciao2");       
+  
 	c=getchar();	
 
 	}	
 
 }
-int main()
+int main(int argc, char *argv[])
 {	
+	
 	char c;
-	persona coda[100];
-	int i=0,f=0,t;
-
-	init();
-
-	while(t<N) 
+	persona head;
+	int t,n;
+	n = 10;
+	
+	
+	
+	while(t < n) 
 	{
-		c = getchar();
-		fetch(coda,i,f,c);
+		
+		fetch(&head);
+		visual(&head);
 		t++;
 	}	
 
 			
 }
 
-:
