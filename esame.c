@@ -21,10 +21,9 @@ void visual(persona *head)
 	
 	aux = head;	
 	if(head->py!=5)
-	{
+	{	printf("\nSituazione coda:\n");
 		while(aux!=NULL)
 		{
-			printf("\n\nSituazione coda:\n");
 			printf("-----------\n Name: %s \n Priority: %d\n------------\n",aux->name,aux->py);
 			aux= aux->next;
 		}
@@ -55,7 +54,7 @@ void insert(persona *head)
 		
 		x++;
         }
-	printf("ciao");
+	
 	if(head->py==5)
 	{
 		/*Inizializza coda*/
@@ -68,7 +67,7 @@ void insert(persona *head)
 	else{
 		
 		aux = head;
-		while( aux->next!=NULL )
+		while((aux->py > numero) || ( aux->next!=NULL) )
 		{	old = aux;
 			aux = aux->next;
 		}
@@ -90,11 +89,11 @@ void insert(persona *head)
 			new->next = head;
 			head = new;
 		}
-		
+		else{
 		old->next = new;
 		new->next = aux;
-       			
-		}
+       		}	
+	}
 	
 }
 
@@ -129,7 +128,7 @@ void fetch(persona *head)
 		if(c=='i')
 		{ 		
 			insert(head);
-			printf("\nfetch i\n");
+			
 		}
 	
 		else if(c=='e')
@@ -156,7 +155,7 @@ int main(int argc, char *argv[])
 	
 	while(t < n) 
 	{
-		printf("\nmain\n");
+		
 		fetch(&head);
 		visual(&head);
 		t++;
