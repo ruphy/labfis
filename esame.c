@@ -66,10 +66,9 @@ void insert(persona *head)
 		head->next = NULL;
 	}
 	else{
-		printf("c");
+		
 		aux = head;
-    		printf("ci");
-		while(numero < aux->py || aux->next!=NULL )
+		while( aux->next!=NULL )
 		{	old = aux;
 			aux = aux->next;
 		}
