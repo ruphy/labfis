@@ -8,7 +8,6 @@ struct persona {
 	char name[30];
 	int  py;
         struct persona *next;
-	struct persona *prev;
 };
 
 
@@ -21,16 +20,17 @@ void visual(persona *head)
 	persona *aux;
 	
 	aux = head;	
-	if(head!=NULL)
+	if(head->py!=5)
 	{
 		while(aux!=NULL)
 		{
-			printf("--------\n Name: %s \n Priority: %d",aux->name,aux->py);
+			printf("\n\nSituazione coda:\n");
+			printf("-----------\n Name: %s \n Priority: %d\n------------\n",aux->name,aux->py);
 			aux= aux->next;
 		}
 	}
 	else
-		printf("Coda vuota!");
+		printf("\n\nCoda vuota!\n");
 }
 /*Funzione di inserimento*/
 void insert(persona *head)
@@ -44,44 +44,54 @@ void insert(persona *head)
 	
 	x=0;
 	i=0;
-
 	
-	while(x<4)
+	numero = getchar()-'0';
+	
+	while(x<3)
         {
 		c=getchar();
-        	
-		if(x==0)
-                	numero = c-'0';
-                else
+      
                 name[x]=c;
-                x++;
-        }       
-	printf("%s,%d",name,numero);
-
-	if(head==NULL)
+		
+		x++;
+        }
+	printf("ciao");
+	if(head->py==5)
 	{
 		/*Inizializza coda*/
-		head = (persona*)malloc(sizeof(persona));
+		/*head = (persona*)malloc(sizeof(persona));*/
 		head->py = numero;
-		printf("Something");
-		for(i=0;i<x+1;i++)
+		for(i=0;i<3;i++)
 			head->name[i] = name[i];
+		head->next = NULL;
 	}
 	else{
-
+		printf("c");
 		aux = head;
-    
-		while(numero < aux->py )
+    		printf("ci");
+		while(numero < aux->py || aux->next!=NULL )
 		{	old = aux;
 			aux = aux->next;
 		}
 	
 		new = (persona*) malloc(sizeof(persona));
 		new->py = numero;
-
-		for(i=0;i<x+1;i++)
+		
+		for(i=0;i<3;i++)
 			new->name[i] = name[i];
 	
+		
+		if(aux->next == NULL)
+		{
+			aux->next = new;
+			new->next = NULL;
+		}
+		else if(aux == head)
+		{
+			new->next = head;
+			head = new;
+		}
+		
 		old->next = new;
 		new->next = aux;
        			
@@ -90,12 +100,12 @@ void insert(persona *head)
 }
 
 /*Funzione di uscita*/
-/*void exit(persona *head)
+void out(persona *head)
 {	
 	persona *aux;
 
 
-	if(head==NULL)
+	if(head->py==5)
 	{
 		printf("\nNon ci sono utenti nella coda");
 	}
@@ -114,20 +124,21 @@ void fetch(persona *head)
 	/*Controllo il primo carattere che è quello che mi fa diramare la funzione in due*/
 	
 	c=getchar();
-
-	while(c!='\n' || c=='n')
+	
+	while(c!='\n')
 	{
 		if(c=='i')
 		{ 		
 			insert(head);
+			printf("\nfetch i\n");
 		}
 	
 		else if(c=='e')
 		{
-			
+			out(head);	
 		}
 
-	printf("ciao2");       
+	      
   
 	c=getchar();	
 
@@ -142,11 +153,11 @@ int main(int argc, char *argv[])
 	int t,n;
 	n = 10;
 	
-	
+	head.py = 5;
 	
 	while(t < n) 
 	{
-		
+		printf("\nmain\n");
 		fetch(&head);
 		visual(&head);
 		t++;
