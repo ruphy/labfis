@@ -1,22 +1,24 @@
 
 \chapter{Tubo di risonanza}
+
 \section{Introduzione}
-\section{Tubo aperto contenente aria}
+
+\section{Strumentazione}
+\subsubsection{Tubo aperto contente aria}
 Dati geometrici tubo:
 lunghezza = $L_{tubo}$ = 90cm
 diametro = $d$ = 3.9cm
-\\
-Data la relazione
+
+\section{Tubo aperto contenente aria}
+Cerchiamo le frequenze cui corrisponde, sullo schermo dell'oscilloscopio, il segnale massimo: in tal caso si ha la condizione di risonanza. Vogliamo verificare che tali valori stiano fra loro come multipli interi, secondo la legge:
+
 \begin{equation} \label{eq:gianni}
-\nu_n= \frac{vn}{2L}		
+\nu_n= n\frac{v}{2L} \hspace{3cm} n\in\mathbb{N} = \lbrace 1,2,3 \dots \rbrace
 \end{equation}
- con $v$ velocità del suono nel mezzo e $n \in \mathbb{N} = \{1,2,3\dots\}$ 
+
+con $v$ velocità del suono nel mezzo.
 \\
-
-Verifichiamo che data una certa frequenza $\nu_0$ fondamentale, che viene determinata dal valore $n=1$, quelle successive saranno multipli interi della fondamentale. 
-
-
-
+Di seguito i dati raccolti:
 \begin{center}
 \begin{tabular}{c|c|c|c|c|c}
 $\nu$ (Hz) & 185 & 370 & 558 & 930 & 1320 \\
@@ -25,14 +27,15 @@ $n$ & 1 & 2 & 3 & 5 & 7\\
 \end{tabular}
 \end{center}
 
-RIFAI GRAFICO
-%\includegraphics[scale=0.5]{risonanza}
+Interpoliamo i dati con una retta, usando il metodo dei minimi quadrati. Poniamo $x_i=n_i$, $y_i=\nu_i$ ed $m=\displaystyle{\frac{v}{2L}}$. Per stabilire l'errore sulle $y$, ossia sulle frequenze, si opera ad una analisi sperimentale della sensibilità dell'oscilloscopio; si verifica che all'interno di un intervallo minore di 10 Hz lo strumento non è in grado di distinguere ulteriori variazioni nella lettura delle frequenze: se ne ricava che l'incertezza relativa alle misure è di $\pm5 Hz$.
 
-Si verifica sperimentalmente che all'interno di un intervallo minore di 10 Hz lo strumento non è in grado di distinguere ulteriori variazioni nella lettura delle frequenze. Se ne ricava che l'incertezza relativa alle misure è di $\pm$5 Hz.
+\begin{center}
+\includegraphics[scale=0.5]{../grafici/tubo/tubo1.png}
 
-$$ \frac{v}{2L_{tubo}} = m = \frac{\nu}{n} = (189 \pm 1.1)\ s^{-1}$$
+$m = 189\pm 1\ s^{-1}$
+\end{center}
 
-con $m$  coefficente angolare della retta. Per la \ref{eq:gianni} si ha che $\displaystyle{m=\frac{v}{2L}}$, da cui ricaviamo $v$. Prima di confrontare questa formula con i dati sperimentali, però, bisogna apportare una correzione alla formula scritta in precedenza. Per un tubo aperto reale, infatti la posizione di nodi e antinodi dipende anche dal diametro del tubo, pertanto apportiamo la seguente correzione:
+Tuttavia per un tubo aperto reale, la posizione di nodi e antinodi dipende anche dal diametro del tubo, pertanto, prima di calcolare $v$ dal valore di $m$ apportiamo la seguente correzione:
 
 $$ L_c = L_{tubo}+0.8d = n\frac{\lambda}{2} $$
 
