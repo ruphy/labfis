@@ -2,11 +2,12 @@
 \chapter{Molla}
 
 \section{Introduzione}
-Oggetto di studio è la verifica della legge di Hooke, che lega la deformazione che si manifesta su un corpo soggetto ad una forza elastica e l'intensità della forza stessa:
+Oggetto di studio è la verifica della legge di Hooke, che lega la deformazione che si manifesta su un corpo soggetto ad una forza elastica all'intensità della forza stessa:
 \begin{equation}\label{Hooke}
-F_{el}=-kx
+F=-kx
 \end{equation}
-Noto il valore della forza (nel nostro caso si tratterà sempre della forza peso $F=Mg$), si può inoltre determinare la costante elastica $k$ caratteristica di ciascuna molla.
+Nello specifico delle nostre analisi, ci occuperemo della forza di richiamo di una molla. $x$, che compare nella \ref{Hooke} è l'allungamento della molla dalla posizione di equilibrio.
+Noto il valore della forza (nel nostro caso si tratterà sempre della forza peso $F=Mg$), si può inoltre determinare la costante di proporzionalità $k$, caratteristica di ciascuna molla.
 
 \section{Strumenti}
 La strumentazione si compone di un gancio cui si appende la molla di cui si vogliono studiare le caratteristiche, e nel punto corrispondente del tavolo (lungo la perpendicolare) si pone un sensore di posizione che trasmette i dati rilevati (allungamento) al computer, dove sono poi analizzati con il programma DataStudio.\\
@@ -17,6 +18,8 @@ La strumentazione si compone di un gancio cui si appende la molla di cui si vogl
 \textbf{Molla B} & \hspace{1.5cm} $L_B=0.426\ m$ & \hspace{1.5cm} $M_B=4.029\ g$\\
 \end{tabular}
 \\
+Per la terza parte dell'esperimento ci siamo serviti di un disco di cartone di massa $M=2.5\ g$. 
+\\
 \\
 Con $L_A$ ed $L_B$ lunghezze a riposo delle due molle.
 
@@ -26,6 +29,7 @@ La \ref{Hooke} implica che il rapporto tra l'allungamento della molla e la forza
 $$k=\frac{Mg}{x}$$
 Facendo variare le masse appese, verifichiamo dunque la validità della \ref{Hooke} e successivamente otteniamo il valore di $k_1$ e $k_2$ corrispondenti alle due molle.   
 Di seguito in tabella i valori raccolti per le due molle.\footnote{I valori sono stati raccolti con una frequenza di campionamento di 10 $Hz$}
+\footnote{Durante tutto l'esperimento gli errori associati alle interpolazioni si sono rivelati trascurabili (dell'ordine di $10^{-5}$ i più grandi), per cui ne abbiamo evitato anche la trascrizione.}
 
 \begin{center}
 
@@ -33,35 +37,35 @@ Di seguito in tabella i valori raccolti per le due molle.\footnote{I valori sono
 \textbf{Molla A} & \hspace{2cm} \textbf{Molla B}\\
 \\
 \begin{tabular}{c|c|c}
-Massa ($g$) & Misura L ($m$) & $\Delta L$ ($m$)\\
+Massa ($kg$) & Misura L ($m$) & $\Delta L$ ($m$)\\
 \midrule
-200 & 0.422 & 0.008\\
-250 & 0.420 & 0.010\\
-300 & 0.418 & 0.012\\
-400 & 0.414 & 0.016\\
-450 & 0.412 & 0.018\\
-500 & 0.410 & 0.020\\
-550 & 0.408 & 0.022\\
-600 & 0.406 & 0.024\\
-650 & 0.404 & 0.026\\
-700 & 0.402 & 0.028\\
+0.200 & 0.422 & 0.008\\
+0.250 & 0.420 & 0.010\\
+0.300 & 0.418 & 0.012\\
+0.400 & 0.414 & 0.016\\
+0.450 & 0.412 & 0.018\\
+0.500 & 0.410 & 0.020\\
+0.550 & 0.408 & 0.022\\
+0.600 & 0.406 & 0.024\\
+0.650 & 0.404 & 0.026\\
+0.700 & 0.402 & 0.028\\
 \end{tabular}
 
 & \hspace{2cm}
 
 \begin{tabular}{c|c|c}
-Massa ($g$) & Misura L ($m$) & $\Delta L$ ($m$)\\
+Massa ($kg$) & Misura L ($m$) & $\Delta L$ ($m$)\\
 \midrule
-200 & 0,424 & 0.002\\
-250 & 0,422 & 0.004\\
-300 & 0,420 & 0.006\\
-400 & 0,416 & 0.001\\
-450 & 0,413 & 0.013\\
-500 & 0,411 & 0.015\\
-550 & 0,409 & 0.017\\
-600 & 0,407 & 0.0019\\
-650 & 0,404 & 0.022\\
-700 & 0,402 & 0.024\\
+0.200 & 0,424 & 0.002\\
+0.250 & 0,422 & 0.004\\
+0.300 & 0,420 & 0.006\\
+0.400 & 0,416 & 0.001\\
+0.450 & 0,413 & 0.013\\
+0.500 & 0,411 & 0.015\\
+0.550 & 0,409 & 0.017\\
+0.600 & 0,407 & 0.002\\
+0.650 & 0,404 & 0.022\\
+0.700 & 0,402 & 0.024\\
 \end{tabular}
 
 \end{tabular}
@@ -128,14 +132,93 @@ Massa ($g$) & Periodo ($s$) & Pulsazione ($rad/s$)\\
 
 I grafici mostrano la dipendeza lineare tra $T^2$ ed $M$.
 
+%Grafici della dipendenza lineare (uno sotto molla A e l'altro sotto molla B)
+
 Dall'interpolazione ricaviamo:
 \begin{center}
 \begin{tabular}{c c}
-$m_A=0.182$ & \hspace{1cm} $k_A=\displaystyle{\frac{4\pi^2}{m_A}}=216.9\ Nm$ \\
+$m_A=0.182$ & \hspace{3cm} $m_B=0.188$\\ 
 \\
-$m_B=0.188$ & \hspace{1cm} $k_B=\displaystyle{\frac{4\pi^2}{m_B}}=210.0\ Nm$ \\
+$k_A=\displaystyle{\frac{4\pi^2}{m_A}}=216.9\ Nm$ & \hspace{3cm} $k_B=\displaystyle{\frac{4\pi^2}{m_B}}=210.0\ Nm$ \\
 \end{tabular}
 \end{center}
+
 \section{Moto armonico smorzato}
 
 Fissando il disco di cartone all'estremità oscillante della molla, si aumenta l'effetto frenante dell'aria ($F=-bv$, con $b$ coefficiente di smorzamento).  
+In tal caso si assiste ad una diminuzione dell'ampiezza di oscillazione, secondo la legge:
+\begin{equation}\label{Asm}
+A(t)=A_{max}exp[-b/2M)t]
+\end{equation}
+E la legge del moto diventa:
+\begin{equation}
+x(t)=A(t)\cos(\omega't-\phi)=A_{max}exp[-(b/2M)t]\cos(\omega't-\phi)
+\end{equation}
+con $\omega'^2=\omega^2-(b/2M)^2$.
+
+Utilizziamo tale funzione per interpolare i dati e ricavare il valore della costante $b$, al variare di M.\footnote{I dati sono stati raccolti con una frequenza di campionamento di 40 $Hz$}
+\begin{center}
+
+\begin{tabular}{c c}
+\textbf{Molla A} & \hspace{1cm} \textbf{Molla B}\\
+\\
+\begin{tabular}{c | c | c | c}
+$\boldsymbol{M}$ ($kg$) & $\boldsymbol{T}$ ($s$) & $\boldsymbol{\omega'}$ ($rad/s$) & $\boldsymbol{b}$ ($kg/s$)\\
+\midrule
+0.400 & 0.284 & 22.113 & 0.0228\\
+0.600 & 0.336 & 18.690 & 0.0329\\
+0.800 & 0.381 & 16.483 & 0.0369\\
+\end{tabular}
+
+& \hspace{1cm}
+
+\begin{tabular}{c | c | c | c}
+$\boldsymbol{M}$ ($kg$) & $\boldsymbol{T}$ ($s$) & $\boldsymbol{\omega'}$ ($rad/s$) & $\boldsymbol{b}$ ($kg/s$)\\
+\midrule
+0.500 & 0.321 & 19.574 & 0.0262\\
+0.900 & 0.416 & 15.096 & 0.0364\\
+0.700 & 0.372 & 16.882 & 0.0291\\
+\end{tabular}
+
+\end{tabular}
+
+\end{center}
+
+\begin{center}
+
+\begin{tabular}{c c}
+$\bar{b}_A=\displaystyle{\frac{\sum{b_i}}{N}}=0.0309\ kg/s$ & \hspace{1cm} $\bar{b}_B=\displaystyle{\frac{\sum{b_i}}{N}}= 0.0306\ kg/s$\\
+\\
+$\sigma_{\bar{b}_A}=\displaystyle{\sqrt{\frac{\sum{(b_i-\bar{b})^2}}{N-1}}}=0.0073\ kg/s$ & \hspace{1cm} $\sigma_{\bar{b}_B}=\displaystyle{\sqrt{\frac{\sum{(b_i-\bar{b})^2}}{N-1}}}= 0.0053\ kg/s$\\
+\end{tabular}
+
+\end{center}
+
+È inoltre possibile ricavare $\omega'$ direttamente dal periodo delle oscillazioni smorzate: confrontiamo i valori ottenuti con i due differenti metodi:
+
+\begin{center}
+
+\begin{tabular}{c c}
+\textbf{Molla A} & \hspace{2cm} \textbf{Molla B}\\
+\\
+\begin{tabular}{c | c}
+$\boldsymbol{\omega'_{interpolato}}$ ($rad/s$) & $\boldsymbol{\omega'_{calcolato}}$ ($rad/s$)\\
+\midrule
+22.113 & 22.123\\
+18.690 & 18.699\\
+16.483 & 16.491\\
+\end{tabular}
+
+& \hspace{1cm}
+
+\begin{tabular}{c | c}
+$\boldsymbol{\omega'_{interpolato}}$ ($rad/s$) & $\boldsymbol{\omega'_{calcolato}}$ ($rad/s$)\\
+\midrule
+19.574 & 19.573\\
+15.096 & 15.103\\
+16.882 & 16.890\\
+\end{tabular}
+
+\end{tabular}
+
+\end{center}
