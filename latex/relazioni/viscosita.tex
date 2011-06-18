@@ -4,29 +4,32 @@
 L'obiettivo della ricerca è misurare l'indice di viscosità del fluido all'interno di un cilindro, tramite la misura dei tempi di caduta di una serie di sferette di acciaio di massa e diametro noti. 
 \subsection{Strumenti di laboratorio}
 
-Il diametro della sfere è stato misurato con un calibro, e l'incertezza associata alla misura è di $\pm0.05 mm$. Il peso è stato misurato con una bilancia, e l'incertezza associata alla misura è  $\pm10^{-6}$ kg
-
+Il diametro della sfere è stato misurato con un calibro, e l'incertezza associata alla misura è di $\pm0.05 mm$. Il peso è stato misurato con una bilancia, e l'incertezza associata alla misura è  $\pm10^{-6}$ kg.
+La densità del liquido è il valore tabulato:$\rho_{liquido} =  1260.0\  kg/m^3 $, scelto a 25 C°
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{ll |c}
+& Massa ($g$)& $\rho_{sfera} \ (kg/m^3)$\\
+\midrule
  \textbf{Sferette da 3mm:}
- & 0.1102g & 0.1102g \\
- & 0.1101g & \\
+ & 0.110 & 7780.91 \\
  \midrule
 \textbf{Sferette da 4mm: }
- & 0.2612g & 0.2613g \\
- & 0.2613g & 0.2612g \\
+ & 0.261 & 7788.65\\
  \midrule
 \textbf{Sferette da 5mm: }
- & 0,5098g & 0,5100g \\
- & 0,5094g & 0,5100g \\
- & 0,5096g & 0,5098g \\
+ & 0.510 & 7792.23 \\
  \midrule
  \textbf{Sferette da 6mm:}
-  & (3.521g/4) & 0.8806g \\
-  & 0.8802g & 0.8807g \\
+  & 0.880 & 7780.91\\
+  \midrule
+  & $\-{\rho_{sfera}}$& 7785.65\\
 \end{tabular}
 \end{center}
+Conservando le tre cifre significative iniziali ottengo un $\-{\rho_{sfera}} = \ 7.79 \cdot 10^3 \ kg/m^3$
+\\
+
 Ai fini dell'esperimento, le incertezze associate alle misure della massa e del diametro sono sufficientemente piccole da risultare trascurabili. Nell'analisi dei dati verranno quindi considerate solo le incertezze dovute all'analisi statistica dei risultati. 
+\\
 
 Il set-up per l'esperimento è costituto da un cilindro graduato riempito di glicerina, e  da un cronometro digitale. L'incertezza associata a quest'ultimo strumento è $\pm0.01s$. Abbiamo quindi segnato due tacche sul cilindro graduato, per facilitare la lettura del tempo di caduta, poste ad una distanza di $15.1 cm$, distanza misurata con un metro a nastro di sensibilità $1mm$.
 
@@ -40,14 +43,14 @@ Per calcolare questo coefficente di viscosità, si può misurare quindi la veloc
 
 $$ R = F_{peso} - F_{archimede} - F_{res} = 0 $$
 Da questa uguaglianza si ricava:
-$$ \eta= 2 g r^2\frac{(\rho_{sfera} - \rho_{liquido})}{9v_{limite}}$$
-
+\\
+\begin{equation}\label{eta}
+\eta= 2 g r^2\frac{(\rho_{sfera} - \rho_{liquido})}{9v_{limite}}
+\end{equation}
+\clearpage
 Per ricavare la velocità limite, si divide la distanza percorsa per il tempo di caduta. 
 
 \section{Raccolta dati}
-
-
-\subsection{Dati sperimentali}
 Di seguito le tabelle che registrano il tempo di caduta delle sfere.
 \subsubsection{Sferette da 6mm}
 \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
@@ -98,36 +101,56 @@ Di seguito le tabelle che registrano il tempo di caduta delle sfere.
 * = per queste misurazioni, la pallina si è avvicinata molto alla parete del tubo, e dunque le misurazioni potrebbero essere falsate.
 Per le sferette da 6mm abbiamo scartato il valore 2,21s, connotato dall'asterisco, perchè esso dista circa 6,5 deviazioni standard dal valore medio.
 
-\section{Elaborazione dei dati}
-\subsection{Calcolo dei tempi}
-Di seguito, gli istogrammi relative alle misure, e la gaussiana associata.
-\\
-\includegraphics[scale=0.4]{"../grafici/3mm"}
-\includegraphics[scale=0.4]{"../grafici/4mm"}
+\section{Calcolo dei tempi}
+Di seguito, gli istogrammi relative alle misure con la gaussiana associata:
 \\
 \includegraphics[scale=0.4]{"../grafici/5mm"}
 \includegraphics[scale=0.4]{"../grafici/6mm"}
+Mostriamo solo gli istogrammi e la gaussiana delle sfere da 5 e da 6 mm perchè hanno un numero di misure significativo per mostrare una distribuzione corretta.
 
-\subsection{Calcolo delle velocità}
-Per calcolare la velocità, si divide la distanza ( $ d= 15.1 cm$) per il tempo medio calcolato in precedenza:
+\section{Calcolo delle velocità}
+Per calcolare la velocità, si divide la distanza ( $ d= 15.1\ cm$) per il tempo medio calcolato in precedenza:
 $$ v_{limite} = \frac{d}{t_{\mu}} $$
-L'incertezza sulle due misure si propaga secondo la seguente formula:
+L'incertezza sulle due misure si propaga secondo la seguente formula, con $\sigma_d=20\ cm$
 \begin{equation}
-\displaystyle \frac{\sigma v}{v} = \sqrt{\displaystyle (\frac{\sigma d}{d})^2 + \displaystyle (\frac{\sigma_t}{t})^2} 
+ \frac{\sigma v}{v} = \sqrt{\left(\frac{\sigma d}{d}\right)^2 + \left(\frac{\sigma_t}{t}\right)^2} 
 \end{equation}
 
 \begin{center}
 \begin{tabular}{c|c|c|c|c}
-Sfera & Tempo (s) & $\sigma_t (s) $ & Velocità (m/s) & $\sigma_v (m/s) $\\
+Sfera & Tempo ($s$) & $\sigma_t\ (s) $ & Velocità ($m/s$) & $\sigma_v \ (m/s) $\\
 \midrule
 3mm & 5.09 & 0.13 & 2.96 & 0.08\\
 4mm & 3.15 & 0.10 & 4.79 & 0.15\\
 5mm & 2.16 & 0.11 & 6.99 & 0.36\\
 6mm & 1.56 & 0.10 & 9.68 & 0.62\\
-
 \end{tabular}
 \end{center}
+La relazione tra la velocità e il raggio può essere vista con maggior chiarezza se riscriviamo \ref{eta}  in questo modo: 
+\begin{equation}\label{vlim}
+v_{limite}=  \frac{2g(\rho_{sfera} - \rho_{liquido})}{9 \eta} \cdot r^2
+\end{equation}
+La velocità dipende quindi linearmente dal raggio quadratico.
+
+\begin{center}
+\includegraphics[scale=0.75]{../grafici/velocita}
+\end{center}
+
+Notiamo che il coefficente angolare $m$ dell'equazione \label{vlim} è dato da:
+\begin{equation}
+m= \frac{2g(\rho_{sfera} - \rho_{liquido})}{9 \eta}
+\end{equation}
+
+Conoscendo il valore numerico di $m$, possiamo ricavare il coefficente di viscosità.
+
+\begin{equation}
+\eta = \frac{2g(\rho_{sfera} - \rho_{liquido})}{9 m}
+\end{equation}
+
+$$\eta = $$
+
+L'incertezza su 
 
 
-
-\subsection{Conclusioni}
+\subsection*{Errore sistematico}
+\section{Conclusioni}

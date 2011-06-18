@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <stddef.h>
 #include <ctype.h>
 #define N 100
 
@@ -20,7 +21,7 @@ void visual(persona *head)
 	persona *aux;
 	
 	aux = head;	
-	if(head->py!=5)
+	if(head==NULL)
 	{	printf("\nSituazione coda:\n");
 		while(aux!=NULL)
 		{
@@ -30,48 +31,55 @@ void visual(persona *head)
 	}
 	else
 		printf("\n\nCoda vuota!\n");
+	
 }
 /*Funzione di inserimento*/
-void insert(persona *head)
+persona* insert(persona *head)
 {
 	
 	persona *aux,*old,*new;
 	
 	int numero;
 	char c,name[30];
-	int x,i;
+	int x,i,k;
 	
 	x=0;
 	i=0;
+	k=0;
 	
 	numero = getchar()-'0';
 	
 	while(x<3)
         {
 		c=getchar();
-      
+     		printf("1"); 
                 name[x]=c;
 		
 		x++;
         }
-	
-	if(head->py==5)
+	printf("2");
+
+	if(head->py=5)
 	{
 		/*Inizializza coda*/
-		/*head = (persona*)malloc(sizeof(persona));*/
+		printf("3");
 		head->py = numero;
 		for(i=0;i<3;i++)
 			head->name[i] = name[i];
 		head->next = NULL;
 	}
 	else{
-		
+			
 		aux = head;
-		while((aux->py > numero) || ( aux->next!=NULL) )
-		{	old = aux;
-			aux = aux->next;
-		}
 	
+		
+		while((aux->py < numero) && ( aux->next!=NULL))
+		{
+			old = aux;
+			aux=aux->next;
+			
+		}
+		
 		new = (persona*) malloc(sizeof(persona));
 		new->py = numero;
 		
@@ -79,61 +87,65 @@ void insert(persona *head)
 			new->name[i] = name[i];
 	
 		
-		if(aux->next == NULL)
+		if( aux->next==NULL && aux->py < numero)
 		{
 			aux->next = new;
 			new->next = NULL;
 		}
 		else if(aux == head)
-		{
-			new->next = head;
-			head = new;
-		}
-		else{
-		old->next = new;
-		new->next = aux;
+			{
+				new->next = head;
+				head = new;
+			}
+		else
+		{	
+			old->next = new;
+			new->next = aux;
        		}	
 	}
-	
+		
 }
 
 /*Funzione di uscita*/
-void out(persona *head)
+persona* out(persona *head)
 {	
-	persona *aux;
-
-
+	
 	if(head->py==5)
 	{
 		printf("\nNon ci sono utenti nella coda");
 	}
+	else if(head->next == NULL)
+		{
+			head=NULL;	
+		}
 	else{
-		aux = head;
-		aux = aux->next;
-		head = aux;
-		free(aux);
+	
+		head = head->next;
+			
 	}
+	return head;
 }
 
 /*Funzione per l'acquisizione*/
-void fetch(persona *head)
+persona* fetch(persona *head)
 {	
 	char c;
 	/*Controllo il primo carattere che è quello che mi fa diramare la funzione in due*/
+	
 	
 	c=getchar();
 	
 	while(c!='\n')
 	{
 		if(c=='i')
-		{ 		
-			insert(head);
-			
+		{ 	printf("prima insert");	
+			head=insert(head);
+			printf("dopoinsert");	
 		}
 	
 		else if(c=='e')
 		{
-			out(head);	
+			head = out(head);	
 		}
 
 	      
@@ -142,23 +154,29 @@ void fetch(persona *head)
 
 	}	
 
+return head;
 }
 int main(int argc, char *argv[])
 {	
 	
 	char c;
-	persona head;
+	persona *capo,*aux;
 	int t,n;
-	n = 10;
-	
-	head.py = 5;
+	n = atoi(argv[1]);
+        t=0;	
+
+	capo=(persona*)malloc(sizeof(persona));
+	capo=NULL;
 	
 	while(t < n) 
 	{
 		
-		fetch(&head);
-		visual(&head);
+		aux = capo;
+		printf("main");
+		capo = fetch(capo);
+		visual(capo);
 		t++;
+		free(aux);
 	}	
 
 			
