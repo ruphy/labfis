@@ -16,7 +16,6 @@ Cerchiamo le frequenze cui corrisponde, sullo schermo dell'oscilloscopio, il seg
 \begin{equation} \label{eq:gianni}
 \nu_n= n\frac{v}{2L} \hspace{3cm} n\in\mathbb{N} = \lbrace 1,2,3 \dots \rbrace
 \end{equation}
-
 con $v$ velocità del suono nel mezzo.
 \\
 Di seguito i dati raccolti:
@@ -27,12 +26,10 @@ $\nu$ (Hz) & 185 & 370 & 558 & 930 & 1320 \\
 $n$ & 1 & 2 & 3 & 5 & 7\\
 \end{tabular}
 \end{center}
-
 Interpoliamo i dati con una retta, usando il metodo dei minimi quadrati. Poniamo $x_i=n_i$, $y_i=\nu_i$ ed $m=\displaystyle{\frac{v}{2L}}$. Per stabilire l'errore sulle $y$, ossia sulle frequenze, si opera ad una analisi sperimentale della sensibilità dell'oscilloscopio; si verifica che all'interno di un intervallo minore di 10 Hz lo strumento non è in grado di distinguere ulteriori variazioni nella lettura delle frequenze: se ne ricava che l'incertezza relativa alle misure è di $\pm5 Hz$.
 
 \begin{center}
 \includegraphics[scale=0.5]{../grafici/tubo/tubo1.png}
-
 $m = 187\pm 1\ s^{-1}$\hspace{1cm}\footnote{L'incertezza su $m$ è data da: $$\sigma_m=\frac{\sigma_y}{\sqrt{\sum{x_i^2}}}$$}
 \end{center}
 
@@ -47,7 +44,7 @@ Tuttavia per un tubo aperto reale, la posizione di nodi e antinodi dipende anche
 $$\frac{n\lambda}{2}=L+0.8d$$ pertanto, prima di calcolare $v$ dal valore di $m$ apportiamo la seguente correzione:
 $$ L_c = (90\ cm)+(0.8)(3.9\ cm) = 93.12\ cm = 0.93 m $$
 Si ricava dunque che $$v=2L_cm=348\pm0.02\ m/s$$
-
+\\
 L'errore è stato ricavato dalla propagazione degli errori sulle lunghezze e sull'interpolazione:
 $$\sigma_{L+0.8D}=\sqrt{((\sigma_L)^2+(0.8\sigma_D)^2}=0.55\ cm$$
 $$\sigma_v= \sigma_{2mL_c}= 2\sqrt{\left(\frac{\sigma_m}{m}\right)^2+\left(\frac{\sigma_{L_{c}}}{L_c}\right)^2}= 0.02\ m/s$$
@@ -56,16 +53,15 @@ $$\sigma_v= \sigma_{2mL_c}= 2\sqrt{\left(\frac{\sigma_m}{m}\right)^2+\left(\frac
 %Si può ricavare $v$ direttamente dalla \ref{eq:gianni} (con la correzione), sostituendo a $\nu$ la frequenza fondamentale $\nu_0 = 185$ Hz
 
 %$$ v = 2L_c\frac{\nu}{n} = 344.544\pm9.39\ m/s$$ 
-   
 Confrontiamo il valore ottenuto con quello previsto dalla legge:
 \begin{equation}
 v=\sqrt{\frac{\gamma R T}{M}} = 348\ m/s
 \end{equation}
 con $\gamma=\displaystyle{\frac{C_p}{C_v}}=\frac{7}{5}$ (gas biatomico), $R=8.31\ J/K mol$, $T=293\ K$, $M= 0.028\ kg/mol$ (massa molare dell'azoto $N$).
 
-\subsection{Ventri e nodi}
 
-Posta una frequenza corrispondente a $n>1$ ($n=2, n=3$), spostiamo all'interno del tubo il microfono e cerchiamo i punti corrispondenti a ventri e nodi (posizione rispetto all'inizio del tubo).\\
+\subsection{Ventri e nodi}
+Posta una frequenza corrispondente a $n>1$ ($n=2, n=3$), spostiamo all'interno del tubo il microfono e cerchiamo i punti corrispondenti a ventri e nodi (posizione rispetto all'inizio del tubo).
 
 \begin{center}
 \begin{tabular}{r r r r}
@@ -124,11 +120,11 @@ $\nu_0$= 475 Hz\\
 \end{center}
 
 \subsection{Onda quadra}
-$t_1 = 185 \mu s $\\
-$t_2 = 5160 \mu s $\\
-$\Delta t = 4.98*10^{-3}$ s\\
-$L = (0.9 - 0.03) m $ (stantuffo 1 cm, microfono 2cm)\\
-$v = 349 m/s$
+La velocità del suono all'interno di un gas può essere misurata anche con un secondo metodo. Utilizzando un impulso a onda quadra e divendo la distanza totale percorsa per il tempo tra i due impulsi, otteniamo la velocità.  Per migliorare la precisione della nostra misura, abbiamo portato la risoluzione dello schermo dell'oscilloscipio ad 1 $\mu s$, in modo da poter discernere con più chiarezza la distanza tra i picchi nel grafico tempo-spazio.
+Il $\Delta t$ misurato è di $4.98 \cdot 10^{-6} \ s$ e la lunghezza totale percorsa dall'impulso è $174 cm$ (2 volte la lunghezza del tubo meno la lunghezza del microfono e dello stantuffo). Ottieniamo quindi una velocità di :
+$$v = 349 \pm 4 \ m/s$$
+\\
+con $$\sigma_v=\sqrt{\left(\frac{\sigma_t}{t}\right)+\left(\frac{\sigma_l}{L} \right)^2} \cdot v$$
 
 \subsection{Tubo a lunghezza variabile}
 Abbiamo infine verificato la dipendenza delle frequenze di risonanza dalla lunghezza del tubo.
@@ -137,7 +133,7 @@ Abbiamo infine verificato la dipendenza delle frequenze di risonanza dalla lungh
 \begin{tabular}{*{5}{c|}c}
 L (cm) & 60 & 65 & 70 & 75 & 80 \\
 \midrule
-$\nu$ (Hz) 415 & 380 & 365 & 340 & 315\\
+$\nu$ (Hz) &415 & 380 & 365 & 340 & 315\\
 \end{tabular}
 \end{center}
 Interpoliamo i dati con l'equazione:
@@ -172,14 +168,14 @@ $n$ & 1 & 2 & 3 & 4 & 5\\
 
 Interpolando i dati tramite la funzione lineare 7.1 (con correzione) otteniamo:
 
-$$ m_2 = 104 \pm 0.5 $$ 
+$$ m_2 = 104 \pm 0.5  $$ 
 \\
 Da questa $m$, tramite il procedimento illustrato in precedenza, calcoliamo: 
-$$v = 308.4\pm0.5*..  m/s $$
+$$v = 308.4\pm0.5 m/s $$
 \\
 La seguente relazione:
 $$v=\sqrt{\frac{\gamma RT}{M}}$$
-
+\\
 con $\gamma = \frac{C_p}{C_v}$, $R$ è la costante dei gas, $M$ la massa molare e $T$ la temperatura in gradi Kelvin, ci fornisce il valore teorico della velocità di propagazione di un'onda sonora in relazione alle caratteristiche del mezzo. 
 Il risultato atteso è dunque $v=222.7 m/s$. Confrontando questo risultato con il valore misurato sperimentalmente siamo giunti alla conclusione che all'interno del tubo non era presente solo Kripton ma anche una certa percentuale di aria.
 
