@@ -29,12 +29,9 @@ $n$ & 1 & 2 & 3 & 5 & 7\\
 Interpoliamo i dati con una retta, usando il metodo dei minimi quadrati. Poniamo $x_i=n_i$, $y_i=\nu_i$ ed $m=\displaystyle{\frac{v}{2L}}$. Per stabilire l'errore sulle $y$, ossia sulle frequenze, si opera ad una analisi sperimentale della sensibilità dell'oscilloscopio; si verifica che all'interno di un intervallo minore di 10 Hz lo strumento non è in grado di distinguere ulteriori variazioni nella lettura delle frequenze: se ne ricava che l'incertezza relativa alle misure è di $\pm5 Hz$.
 
 \begin{center}
-<<<<<<< HEAD
-%\includegraphics[scale=0.5]{../grafici/tubo/tubo1.pdf}
 
-=======
 \includegraphics[scale=0.5]{../grafici/tubo/tubo1.png}
->>>>>>> 28c9e3f9b3f94c7ff3a9d06cf79cff91aed87615
+
 $m = 187\pm 1\ s^{-1}$\hspace{1cm}\footnote{L'incertezza su $m$ è data da: $$\sigma_m=\frac{\sigma_y}{\sqrt{\sum{x_i^2}}}$$}
 \end{center}
 
@@ -111,7 +108,7 @@ $n$ & 2 & 3 & 4 & 5 & 6 \\
 
 
 \begin{center}
-%\includegraphics[scale=0.5]{../grafici/tubo/tubo2.pdf}
+\includegraphics[scale=0.5]{../grafici/tubo/tubo2.png}
 
 $m = v = 169\pm 1\ m/s$
 \\
@@ -135,7 +132,8 @@ La velocità del suono all'interno di un gas può essere misurata anche con un s
 Il $\Delta t$ misurato è di $4.98 \cdot 10^{-6} \ s$ e la lunghezza totale percorsa dall'impulso è $174 cm$ (2 volte la lunghezza del tubo meno la lunghezza del microfono e dello stantuffo). Ottieniamo quindi una velocità di :
 $$v = 349 \pm 4 \ m/s$$
 \\
-con $$\sigma_v=\sqrt{\left(\frac{\sigma_t}{t}\right)+\left(\frac{\sigma_l}{L} \right)^2} \cdot v$$
+con $$\sigma_v=\sqrt{\left(\frac{\sigma_t}{t}\right)^2+\left(\frac{\sigma_l}{L} \right)^2} \cdot v$$
+Per la propagazione del suono nell'aria. Nel tubo contenente una miscela di $Kr$ (Kripton) e aria, con $L_{tubo} = 147 cm$ troviamo invece una velocità di $305 \pm 2\ m/s$. 
 
 \subsection{Tubo a lunghezza variabile}
 Abbiamo infine verificato la dipendenza delle frequenze di risonanza dalla lunghezza del tubo.
@@ -156,7 +154,7 @@ $$\nu=\frac{v}{L}$$
 Poniamo $x_i=1/L_i$, $y_i=\nu_i$ ed $m=v$.
 
 \begin{center}
-%\includegraphics[scale=0.5]{../grafici/tubo/tubo3.pdf}
+\includegraphics[scale=0.5]{../grafici/tubo/tubo3.png}
 
 $m = v = 251\pm 1\ m/s$
 \end{center}
@@ -164,11 +162,9 @@ $m = v = 251\pm 1\ m/s$
 \section{Tubo chiuso da ambo i lati, contenente Kripton}
 
 $L_{tubo}$ = 147 cm\\
-$D_{tubo}$ = sacchi cm
+$D_{tubo}$ = 15 cm
 $\nu$ = 75.7 Hz
  
-
-
 \begin{center}
 \begin{tabular}{c|c|c|c|c|c}
 $\nu$ (Hz) & 102 & 204 & 312 & 415 & 518 \\
@@ -176,25 +172,18 @@ $\nu$ (Hz) & 102 & 204 & 312 & 415 & 518 \\
 $n$ & 1 & 2 & 3 & 4 & 5\\
 \end{tabular}
 \end{center}
-
 Interpolando i dati tramite la funzione lineare 7.1 (con correzione) otteniamo:
 
-$$ m_2 = 104 \pm 0.5  $$ 
+$$ m_2 = 104 \pm 0.5 \ Hz  $$ 
 \\
 Da questa $m$, tramite il procedimento illustrato in precedenza, calcoliamo: 
-$$v = 308.4\pm0.5 m/s $$
+$$v = 308.4\pm0.5\ m/s $$
 \\
 La seguente relazione:
 $$v=\sqrt{\frac{\gamma RT}{M}}$$
 \\
 con $\gamma = \frac{C_p}{C_v}$, $R$ è la costante dei gas, $M$ la massa molare e $T$ la temperatura in gradi Kelvin, ci fornisce il valore teorico della velocità di propagazione di un'onda sonora in relazione alle caratteristiche del mezzo. 
-Il risultato atteso è dunque $v=222.7 m/s$. Confrontando questo risultato con il valore misurato sperimentalmente siamo giunti alla conclusione che all'interno del tubo non era presente solo Kripton ma anche una certa percentuale di aria.
+Il risultato atteso è dunque $v=222.7 m/s$. Confrontando questo risultato con il valore misurato sperimentalmente siamo giunti alla conclusione che all'interno del tubo vi è presente una miscela di Kripton e aria $\simeq 50\%.$
 
-\subsection{Onda quadra}
-$t_1 = 4.96 ms $\\
-$t_2 = 14.6 ms $\\
-$\Delta t = 9.64 ms $ \\
-Applicando la formula  con $L_{tubo} = 147 cm$, otteniamo:
-$$ v = 305.0 \pm \sigma m/s $$ 
 
 
