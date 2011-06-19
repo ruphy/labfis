@@ -1,11 +1,11 @@
 \chapter{Viscosità}
 \section{Introduzione}
 \subsection{Obiettivo di ricerca}
-L'obiettivo della ricerca è misurare l'indice di viscosità del fluido all'interno di un cilindro, tramite la misura dei tempi di caduta di una serie di sferette di acciaio di massa e diametro noti. 
-\subsection{Strumenti di laboratorio}
+L'obiettivo della ricerca è misurare l'indice di viscosità della glicerina. Questo risultato sarà raggiunto tramite la misura dei tempi di caduta di una serie di sferette di acciaio di diverse dimensioni all'interno di un cilindro riempito di glicerina. 
 
+\subsection{Strumenti di laboratorio}
 Il diametro della sfere è stato misurato con un calibro, e l'incertezza associata alla misura è di $\pm0.05 mm$. Il peso è stato misurato con una bilancia, e l'incertezza associata alla misura è  $\pm10^{-6}$ kg.
-La densità del liquido è il valore tabulato:$\rho_{liquido} =  1260.0\  kg/m^3 $, scelto a 25 C°
+La densità del liquido è il valore tabulato :  $\rho_{liquido} =  1260.0\  kg/m^3 $, scelto a 25 C°
 \begin{center}
 \begin{tabular}{ll |c}
 & Massa ($g$)& $\rho_{sfera} \ (kg/m^3)$\\
@@ -28,10 +28,10 @@ La densità del liquido è il valore tabulato:$\rho_{liquido} =  1260.0\  kg/m^3
 Conservando le tre cifre significative iniziali ottengo un $\-{\rho_{sfera}} = \ 7.79 \cdot 10^3 \ kg/m^3$
 \\
 
-Ai fini dell'esperimento, le incertezze associate alle misure della massa e del diametro sono sufficientemente piccole da risultare trascurabili. Nell'analisi dei dati verranno quindi considerate solo le incertezze dovute all'analisi statistica dei risultati. 
+Ai fini dell'esperimento, le incertezze associate alle misure della massa e del diametro sono state considerate trascurabili, essendo sufficientemente piccole. Nell'analisi dei dati verranno quindi considerate solo le incertezze dovute all'analisi statistica dei tempi misurati. 
 \\
 
-Il set-up per l'esperimento è costituto da un cilindro graduato riempito di glicerina, e  da un cronometro digitale. L'incertezza associata a quest'ultimo strumento è $\pm0.01s$. Abbiamo quindi segnato due tacche sul cilindro graduato, per facilitare la lettura del tempo di caduta, poste ad una distanza di $15.1 cm$, distanza misurata con un metro a nastro di sensibilità $1mm$.
+Il set-up per l'esperimento è costituto da un cilindro graduato riempito di glicerina, e  da un cronometro digitale. L'incertezza associata a quest'ultimo strumento è $\pm0.01s$. Abbiamo quindi segnato due tacche sul cilindro graduato, per facilitare la lettura del tempo di caduta, poste ad una distanza di $15.1 cm$, distanza misurata con un metro a nastro di sensibilità $\pm 1mm$.
 
 \subsection{Contenuti teorici}
 La viscosità è l'attrito dinamico che si oppone al moto di un corpo all'interno di un fluido. Per un moto laminare, la forza di attrito è proporzionale alla velocità e alle caratteristiche del corpo secondo la seguente formula:
@@ -39,7 +39,7 @@ La viscosità è l'attrito dinamico che si oppone al moto di un corpo all'intern
 $$F_{res} = 6 \pi r v \eta $$
 
 con \textbf{r}  raggio del corpo,\textbf{ v} velocità e $\nu$ indice di viscosità del fluido. 
-Per calcolare questo coefficente di viscosità, si può misurare quindi la velocità del corpo nel fluido, che ad un certo punto risulterà costante. La sommatoria delle forze agenti sul corpo è quindi uguale a zero
+Per calcolare questo coefficiente di viscosità, si può misurare quindi la velocità del corpo nel fluido, che ad un certo punto risulterà costante. La sommatoria delle forze agenti sul corpo è quindi uguale a zero
 
 $$ R = F_{peso} - F_{archimede} - F_{res} = 0 $$
 Da questa uguaglianza si ricava:
@@ -47,7 +47,7 @@ Da questa uguaglianza si ricava:
 \begin{equation}\label{eta}
 \eta= 2 g r^2\frac{(\rho_{sfera} - \rho_{liquido})}{9v_{limite}}
 \end{equation}
-\clearpage
+
 Per ricavare la velocità limite, si divide la distanza percorsa per il tempo di caduta. 
 
 \section{Raccolta dati}
@@ -98,8 +98,9 @@ Di seguito le tabelle che registrano il tempo di caduta delle sfere.
 \bottomrule
 \end{tabular}
 
+
 * = per queste misurazioni, la pallina si è avvicinata molto alla parete del tubo, e dunque le misurazioni potrebbero essere falsate.
-Per le sferette da 6mm abbiamo scartato il valore 2,21s, connotato dall'asterisco, perchè esso dista circa 6,5 deviazioni standard dal valore medio.
+Per le sferette da 6mm abbiamo scartato il valore 2.21s, connotato dall'asterisco, perchè esso dista circa 6.5 deviazioni standard dal valore medio.
 
 \section{Calcolo dei tempi}
 Di seguito, gli istogrammi relative alle misure con la gaussiana associata:
@@ -131,26 +132,23 @@ La relazione tra la velocità e il raggio può essere vista con maggior chiarezz
 v_{limite}=  \frac{2g(\rho_{sfera} - \rho_{liquido})}{9 \eta} \cdot r^2
 \end{equation}
 La velocità dipende quindi linearmente dal raggio quadratico.
-
 \begin{center}
 \includegraphics[scale=0.75]{../grafici/velocita}
 \end{center}
-
-Notiamo che il coefficente angolare $m$ dell'equazione \label{vlim} è dato da:
+Notiamo che il coefficiente angolare $m$ dell'equazione \label{vlim} è dato da:
 \begin{equation}
 m= \frac{2g(\rho_{sfera} - \rho_{liquido})}{9 \eta}
 \end{equation}
-
-Conoscendo il valore numerico di $m$, possiamo ricavare il coefficente di viscosità.
+Conoscendo il valore numerico di $m$ , possiamo ricavare il coefficiente di viscosità.
 
 \begin{equation}
 \eta = \frac{2g(\rho_{sfera} - \rho_{liquido})}{9 m}
 \end{equation}
-
-$$\eta = $$
-
-L'incertezza su 
-
+Con $m = 9.92 \cdot 10^{5} m^{-1}\cdot s^{-1}$ otteniamo  $\eta = 1.4344 \ Pa \cdot s$.
+Il valore tabulato per la glicerina a 20C  è di $1.412 Pa \cdot s$. Abbiamo quindi raggiunto un risultato in accordo con la teoria. 
 
 \subsection*{Errore sistematico}
+La retta che interpola i dati non passa dall'orgine. L'equazione \ref{vlim} è infatti una relazione lineare con $q=0$. Il discostamento della retta prevista rispetto a  quella che effettivamente interpola i dati potrebbe essere dovuto ad un errore sistematico che si è ripetuto su tutte le misure. L'entità di questo errore  è $q =0.77 \ m/s$. Nel corso dell'esperimento abbiamo quindi sovvrastimato la velocità di circa $0.77 \ m/s$. Questo errore però non inficia i risultati precedentemente ottenuti: il coefficiente angolare delle due rette è il medesimo, e quindi lo è anche il coefficiente di viscosità.
+
 \section{Conclusioni}
+Abbiamo 
