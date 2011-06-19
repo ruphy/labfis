@@ -75,6 +75,7 @@ Nell'elaborazione dei dati, abbiamo selezionato solo le coppie di misure cui cor
 \end{tabular}\\
 
 \end{center}
+
 (*) in questo caso abbiamo tenuto un numero superiore di cifre significative, in quanto si tratta di calcoli intermedi 
 %Ripensare alle cifre significative
 
@@ -146,12 +147,21 @@ p & q &d &p &q&d\\
 \end{tabular}
 \end{center}
 
-Inserire propagazione degli errori. 
 \subsection{Analisi dei dati}
 Per verificare la validità, rappresentare su un grafico i punti ($\frac{1}{p};\frac{1}{q})$ e verificare che i punti sono disposti lungo una retta. 
-Calcolo l'incertezza $\sigma_{q}$ e $\sigma_{p}$, tramite la Dev. Std. 
+\\
+\includegraphics[scale=0.75]{../grafici/ottica}
 
-%Grafico delle due rette
+L'intecetta trovata è $q_1 = 0.1024$ e $q_2 = 0.05108$.
+Ricaviamo i valore della focale $f = \frac{1}{q}$. $f_{1} = 9.76\  cm$ e $f_{2} = 19.57\ cm$. 
+
+L'incertezza sulla focale è data dall'espressione:
+$$\delta f = \sqrt{\frac{q^4(\delta p)^2 + p^4(\delta q)^2}{(p+q)^2}}$$
+
+ottenuta tramite il metodo delle derivate parziali.
+
+$$\delta f_{1} = \pm 2.66\ cm $$ 
+$$ \delta f_{2} = \pm 5.43\ cm $$
 
 
 \section{Conclusioni}

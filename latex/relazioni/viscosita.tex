@@ -53,38 +53,46 @@ Per ricavare la velocità limite, si divide la distanza percorsa per il tempo di
 \section{Raccolta dati}
 Di seguito le tabelle che registrano il tempo di caduta delle sfere.
 \subsubsection{Sferette da 6mm}
-\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+\begin{tabular}{cccccccccc}
 \toprule
  1,68s & 1,68s & 1,65s & 2,21s* & 1,68s & 1,68s & 1,62s & 1,71s & 1,71s & 1,75s \\
+ \midrule
  1,78s & 1,71s & 1,71s & 1,65s & 1,59s  & 1,65s  & 1,71s  & 1,68s & 1,68s & 1,65s \\
 \midrule
  1,62s & 1,56s & 1,71s & 1,71s & 1,68s & 1,62s & 1,59s & 1,59s & 1,53s & 1,59s \\
+ \midrule
  1,46s & 1,62s & 1,59s & 1,56s & 1,62s & 1,56s & 1,62s & 1,43s & 1,53s & 1,59s \\
 \midrule
  1,56s & 1,56s & 1,53s & 1,62s & 1,68s & 1,56s & 1,56s & 1,59s & 1,59s & 1,50s\\
+ \midrule
  1,53s & 1,62s & 1,50s & 1,56s & 1,59s & 1,62s & 1,43s & 1,62s & 1,43s & 1,40s \\
 \midrule
  1,59s & 1,46s & 1,46s & 1,59s & 1,65s & 1,59s & 1,68s & 1,43s & 1,53s & 1,62s \\
+ \midrule
  1,46s & 1,50s & 1,56s & 1,59s & 1,50s & 1,59s  & 1,59s & 1,59s & 1,53s & 1,59s \\
 \midrule
 1,59s & 1,46s & 1,53s & 1,43s & 1,53s & 1,46s & 1,46 & 1,56 & 1,40s & 1,34s \\
+\midrule
 1,46s & 1,37s  & 1,50s   & 1,50s  & 1,43s & 1,31s & 1,40s  & 1,43s  & 1,34s & 1,43s \\
 \bottomrule
 \end{tabular}
 \subsubsection{Sferette da 5mm}
-\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+\begin{tabular}{cccccccccc}
 \toprule
  2,34s* & 2,43s* & 2,31s & 2,21s & 2,12s & 2,53s* & 2,21s & 2,21s & 2,71s* & 2,71s* \\
+ \midrule
  2,12s & 2,34s & 2,18s & 2,34* & 2,12s & 2,06s & 2,12s & 2,59s* & 2,03s & 2,06s \\
 \midrule
  2,87s* & 2,21s & 2,21s & 2,12s & 2,03s & 2,09s & 2,12s & 2,46* & 2,06s & 2,25s \\
+ \midrule
  2,15s & 2,25s & 2,00s &  &  &  &  &  &  & \\
 \bottomrule
 \end{tabular}
 \subsubsection{Sferette da 4mm}
-\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+\begin{tabular}{cccccccccc}
 \toprule
  3,06s & 3,09s & 3,15s & 3,12s & 3,03s & 3,15s & 3,25s & 3,25s & 3,18s & 3,09s \\
+ \midrule
  3,09s & 3,09s & 3,21s & 3,12s & 3,06s & 3,06s & 3,15s & 3,46s & 3,25s & 3,12s \\
 \bottomrule
 \end{tabular}
@@ -112,14 +120,14 @@ Mostriamo solo gli istogrammi e la gaussiana delle sfere da 5 e da 6 mm perchè 
 \section{Calcolo delle velocità}
 Per calcolare la velocità, si divide la distanza ( $ d= 15.1\ cm$) per il tempo medio calcolato in precedenza:
 $$ v_{limite} = \frac{d}{t_{\mu}} $$
-L'incertezza sulle due misure si propaga secondo la seguente formula, con $\sigma_d=20\ cm$
+L'incertezza sulle due misure si propaga secondo la seguente formula, con $\sigma_d=0.1 \ cm$
 \begin{equation}
  \frac{\sigma v}{v} = \sqrt{\left(\frac{\sigma d}{d}\right)^2 + \left(\frac{\sigma_t}{t}\right)^2} 
 \end{equation}
 
 \begin{center}
 \begin{tabular}{c|c|c|c|c}
-Sfera & Tempo ($s$) & $\sigma_t\ (s) $ & Velocità ($m/s$) & $\sigma_v \ (m/s) $\\
+Sfera & Tempo ($s$) & $\sigma_t\ (s) $ & Velocità ($cm/s$) & $\sigma_v \ (cm/s) $\\
 \midrule
 3mm & 5.09 & 0.13 & 2.96 & 0.08\\
 4mm & 3.15 & 0.10 & 4.79 & 0.15\\
@@ -147,11 +155,14 @@ Conoscendo il valore numerico di $m$ , possiamo ricavare il coefficiente di visc
 \begin{equation}
 \eta = \frac{2g(\rho_{sfera} - \rho_{liquido})}{9 m}
 \end{equation}
-Con $m = 9.92 \cdot 10^{5} m^{-1}\cdot s^{-1}$ otteniamo  $\eta = 1.4344 \ Pa \cdot s$.
-Il valore tabulato per la glicerina a 20C  è di $1.412 Pa \cdot s$. Abbiamo quindi raggiunto un risultato in accordo con la teoria. 
+Con $m = 9.92 \cdot 10^{3} m^{-1}\cdot s^{-1}$ otteniamo  $\eta = 1.4344 \ Pa \cdot s$. 
+Il valore tabulato per la glicerina a 20C  è di $1.412\ Pa \cdot s$. Abbiamo quindi raggiunto un risultato in accordo con la teoria. 
 
 \subsection*{Errore sistematico}
-La retta che interpola i dati non passa dall'orgine. L'equazione \ref{vlim} è infatti una relazione lineare con $q=0$. Il discostamento della retta prevista rispetto a  quella che effettivamente interpola i dati potrebbe essere dovuto ad un errore sistematico che si è ripetuto su tutte le misure. L'entità di questo errore  è $q =0.77 \ m/s$. Nel corso dell'esperimento abbiamo quindi sovvrastimato la velocità di circa $0.77 \ m/s$. Questo errore però non inficia i risultati precedentemente ottenuti: il coefficiente angolare delle due rette è il medesimo, e quindi lo è anche il coefficiente di viscosità.
+La retta che interpola i dati non passa dall'orgine. L'equazione \ref{vlim} è infatti una relazione lineare con $q=0$. Il discostamento della retta prevista rispetto a  quella che effettivamente interpola i dati potrebbe essere dovuto ad un errore sistematico che si è ripetuto su tutte le misure. L'entità di questo errore  è $q =0.77 \ m/s$. Nel corso dell'esperimento abbiamo quindi sovvrastimato la velocità di circa $0.77 \ m/s$. Questo errore però non inficia i risultati precedentemente ottenuti: il coefficiente angolare delle due rette è il medesimo, e quindi lo è anche il coefficiente di viscosità. 
 
 \section{Conclusioni}
-Abbiamo 
+Abbiamo verificato la relazione \ref{vlim}
+
+
+
