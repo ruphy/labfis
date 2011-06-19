@@ -3,10 +3,10 @@
 
 \section{Introduzione}
 Oggetto di studio è la verifica della legge di Hooke, che lega la deformazione che si manifesta su un corpo soggetto ad una forza elastica all'intensità della forza stessa:
-\begin{equation}\label{Hooke}
+\begin{equation}\label{eq:Hooke}
 F=-kx
 \end{equation}
-Nello specifico delle nostre analisi, ci occuperemo della forza di richiamo di una molla. $x$, che compare nella \ref{Hooke} è l'allungamento della molla dalla posizione di equilibrio.
+Nello specifico delle nostre analisi, ci occuperemo della forza di richiamo di una molla. $x$, che compare nella \ref{eq:Hooke} è l'allungamento della molla dalla posizione di equilibrio.
 Noto il valore della forza (nel nostro caso si tratterà sempre della forza peso $F=Mg$), si può inoltre determinare la costante di proporzionalità $k$, caratteristica di ciascuna molla.
 
 \section{Strumenti}
@@ -18,6 +18,7 @@ La strumentazione si compone di un gancio cui si appende la molla di cui si vogl
 \textbf{Molla B} & \hspace{1.5cm} $L_B=0.426\ m$ & \hspace{1.5cm} $M_B=4.029\ g$\\
 \end{tabular}
 \\
+\\
 Per la terza parte dell'esperimento ci siamo serviti di un disco di cartone di massa $M=2.5\ g$. 
 \\
 \\
@@ -25,9 +26,9 @@ Con $L_A$ ed $L_B$ lunghezze a riposo delle due molle.
 
 \section{Misura statica}
 
-La \ref{Hooke} implica che il rapporto tra l'allungamento della molla e la forza esercitata sia un valore costante:
+La \ref{eq:Hooke} implica che il rapporto tra l'allungamento della molla e la forza esercitata sia un valore costante:
 $$k=\frac{Mg}{x}$$
-Facendo variare le masse appese, verifichiamo dunque la validità della \ref{Hooke} e successivamente otteniamo il valore di $k_1$ e $k_2$ corrispondenti alle due molle.   
+Facendo variare le masse appese, verifichiamo dunque la validità della \ref{eq:Hooke} e successivamente otteniamo il valore di $k_1$ e $k_2$ corrispondenti alle due molle.   
 Di seguito in tabella i valori raccolti per le due molle.\footnote{I valori sono stati raccolti con una frequenza di campionamento di 10 $Hz$}
 \footnote{Durante tutto l'esperimento gli errori associati alle interpolazioni si sono rivelati trascurabili (dell'ordine di $10^{-5}$ i più grandi), per cui ne abbiamo evitato anche la trascrizione.}
 
@@ -78,9 +79,9 @@ Massa ($kg$) & Misura L ($m$) & $\Delta L$ ($m$)\\
 
 \subsubsection{Procedimento e breve accenno di teoria}
 
-Quando una molla viene spostata dalla propria posizione di equilibrio, essa esercita una forza di richiamo data dalla \ref{Hooke}. Se su di essa agisce anche la forza peso, si ha:
+Quando una molla viene spostata dalla propria posizione di equilibrio, essa esercita una forza di richiamo data dalla \ref{eq:Hooke}. Se su di essa agisce anche la forza peso, si ha:
 $$\displaystyle\sum{F}=Mg-kx$$
-Dalla II legge di Newton, dividendo tutto per M ed esprimendo $g$ dalla \ref{Hooke} come $g=\displaystyle{\frac{kx_0}{M}}$, ricaviamo:
+Dalla II legge di Newton, dividendo tutto per M ed esprimendo $g$ dalla \ref{eq:Hooke} come $g=\displaystyle{\frac{kx_0}{M}}$, ricaviamo:
 
 \begin{equation}
 \frac{d^2x}{dt^2}+\frac{k}{M}(x-x_0)
@@ -142,6 +143,8 @@ $m_A=0.182$ & \hspace{3cm} $m_B=0.188$\\
 $k_A=\displaystyle{\frac{4\pi^2}{m_A}}=216.9\ Nm$ & \hspace{3cm} $k_B=\displaystyle{\frac{4\pi^2}{m_B}}=210.0\ Nm$ \\
 \end{tabular}
 \end{center}
+
+%Grafici dell'energia potenziale, en.cinetica ed energia potenziale.
 
 \section{Moto armonico smorzato}
 

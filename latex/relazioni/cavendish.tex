@@ -8,8 +8,11 @@ Misurazione della costante di gravitazione G mediante la bilancia di Cavendish.
 m=38.3$\pm$0.2 g & massa sfere piccole\\
 M=1500$\pm$10 g	 & massa sfere grandi\\
 r=9.53 mm & raggio sfere piccole\\
-R=31.9 mm	 & raggio sfere grandi\\
+R=31.9 mm & raggio sfere grandi\\
+L=5.50m & distanza schermo-bilancia \\
 $m_c\cong 2m$ & massa manubrio\\
+b = 46.5 mm &\\
+d = 50 mm &\\
 \end{tabular}
 
 
@@ -38,7 +41,7 @@ La misurazione sulla posizione di equilibrio e in generale sulla posizione del p
 \section[Misura di k e theta]{Misura $k$ e $\theta$}
 L'incertezza relativa allo strumento per la misurazione del periodo è trascurabile rispetto l'entità della misura. Non è così per quella da attribuire allo sperimentatore, che è infatti molto elevata.
 
-Il periodo misurato è dunque ottenuto come media di 5 periodi.
+Il periodo misurato è dunque ottenuto come media di 5 periodi. L'incertezza è la massima stimata e dipende interamente dallo sperimentatore.
 
 $$T = 513 \pm 20 \ s$$
 
@@ -46,41 +49,39 @@ Per ricavare $k$, ricordiamo che:
 $$T^2 = 4 \pi^2 \frac{I}{k}$$
 Quindi
 $$k = 4 \pi^2 \frac{I}{T^2} = 2.84 \cdot 10^{-8}\ kg\cdot m^2\cdot{s}^{-2}$$
-
-Inoltre, chiamamdo $F_g$ la forza di attrazione tra una sferetta piccola e una grande, si ha che:
-$$ \tau_G = 2dF_G = 2d\frac{GmM}{b^2} = G\frac{2mMd}{b^2} $$
+Per quanto riguarda $\theta$, chiamando $s_1$ la prima posizione di equilibrio e $s_2$ la seconda, si ha che:
+$$ tan(4\theta) = \frac{s_1-s_2}{L} $$
+dove $s_1-s_2$ vale 0.115 m. Si misura $4\theta$ perché la rotazione di $\pi/2$ delle masse più grandi fornisce una rotazione della bilancia pari a $2\theta$ rispetto alla posizione di equilibrio, che va raddoppiata, misurando noi l'angolo riflesso.
+$$ \theta = \frac{arctan(\frac{s_1-s_2}{L})}{4} \simeq 5.23 \cdot 10^{-3} rad $$
+Inoltre, chiamamdo $F_G$ la forza di attrazione tra una sferetta piccola e quella grande più vicina, si ha che:
+$$ \tau_G = 2dF_G = G\frac{mM}{b^2}2d $$
 ma per ipotesi
 $$ \tau_T = -k\theta = -\tau_G $$
+$$ G\cdot\frac{2mMd}{b^2} = k\theta $$
 dunque:
-$$G = \frac{k \theta b^2}{2mMd} = 5.73 \cdot 10^{-11}\ {m}^3\cdot {kg}^{-1}\cdot{s}^{-2}$$
+$$G = \frac{k \theta b^2}{2mMd} = 5.733 \cdot 10^{-11}\ {m}^3\cdot {kg}^{-1}\cdot{s}^{-2}$$
 
 \section{Analisi dati} 
 
-periodo = 512.8
-$ine = 1.94283*10^-4$
-dist = 5.50
-b = 0.0465
-d = 0.05
-mp = 0.0383
-Mg = 1.500
-
 Correzione:
-Bisogna applicare una correzione di 1.07 a $G$, data dall'attrazione che c'è tra le altre due sfere, che tende a fare ruotare il pendolo in senso opposto. Infatti, questa forza ($F_{G_2}$) fornsce un contributo negativo, e noi in realtà misuriamo una forza data da:
+Bisogna applicare una correzione a $G$, dovuta dall'attrazione che non è stata considerata, tra le sferette piccole e le masse più lontane, che tende a fare ruotare il pendolo in senso opposto. Infatti, questa forza ($F_{G_2}$) fornsce un contributo negativo, e dunque noi con l'esperimento in realtà abbiamo misurato una forza data da:
 
-$$ F_{G'} = F_G - F_{G_2} $$
+\begin{equation}\label{eq:fgrav}
+ F_{G'} = F_G - F_{G_2}
+\end{equation}
+
+(nota: per chiarezza abbiamo preferito $G_t$ come abbreviazione il valore vero (corretto) di $G$, per non confonderla con $G'=G$ che abbiamo misurato prima)
+Dunque, non abbiamo misurato il valore vero di $G$, ma un'altro valore, $G'$. Valendo però la relazione \ref{eq:fgrav}, $G_t$ e $G'$ sono legati da una relazione:
 
 \begin{eqnarray*}
 G'\cdot\frac{mM}{b^2} & = & G_tmM(\frac{1}{b^2} - \frac{1}{b^2+4d^2}) \\
                       & = & G_t\frac{mM}{b^2}(1 - \frac{b^2}{b^2+4d^2}) \\
 \end{eqnarray*}
 
-(nota: per chiarezza $G_t$ è il valore vero di $G$, NON la $G$ che abbiamo misurato prima)
-e
+e quindi:
 $$ \frac{G'}{G_t} = 1-\frac{b^2}{b^2+4d^2} = 0.822$$
 sicché
 $$ G_t = \frac{G'}{0.822}$$
 Inoltre:
 
-$$ G_t = 1.216\cdot \frac{\theta k b^2}{2mMd} = 6.974\cdot 10^{-11}\ {m}^3\cdot {kg}^{-1}\cdot{s}^{-2}$$
-
-\section{Conclusioni}
+$$ G_t = 1.216\cdot \frac{\theta k b^2}{2mMd} = 6.9723\cdot 10^{-11}\ {m}^3\cdot {kg}^{-1}\cdot{s}^{-2}$$
