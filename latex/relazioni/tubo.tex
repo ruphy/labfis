@@ -5,9 +5,10 @@
 
 \section{Strumentazione}
 \subsubsection{Tubo aperto contente aria}
-Dati geometrici tubo:
-lunghezza = $L_{tubo}$ = 90cm
-diametro = $d$ = 3.9cm
+Dati geometrici tubo:\\
+$L = 90\pm 0.5\ cm$\\
+$d = 3.9\pm 0.1\ cm$\\
+con $L$ lunghezza e $d$ diametro del tubo.
 
 \section{Tubo aperto contenente aria}
 Cerchiamo le frequenze cui corrisponde, sullo schermo dell'oscilloscopio, il segnale massimo: in tal caso si ha la condizione di risonanza. Vogliamo verificare che tali valori stiano fra loro come multipli interi, secondo la legge:
@@ -32,57 +33,70 @@ Interpoliamo i dati con una retta, usando il metodo dei minimi quadrati. Poniamo
 \begin{center}
 \includegraphics[scale=0.5]{../grafici/tubo/tubo1.png}
 
-$m = 189\pm 1\ s^{-1}$
+$m = 187\pm 1\ s^{-1}$\hspace{1cm}\footnote{L'incertezza su $m$ è data da: $$\sigma_m=\frac{\sigma_y}{\sqrt{\sum{x_i^2}}}$$}
 \end{center}
 
-Tuttavia per un tubo aperto reale, la posizione di nodi e antinodi dipende anche dal diametro del tubo, pertanto, prima di calcolare $v$ dal valore di $m$ apportiamo la seguente correzione:
+Verifichiamo l'accordo tra la funzione ed i dati sperimentiali con un test del $\chi^2$, ponendo la soglia di accettabilità al 5\%.
+\begin{equation}\label{chi2}
+\chi^2=\displaystyle{\frac{\sum{(y_i-mx_i)^2}}{\sigma_{y}^2}}
+\end{equation}
 
-$$ L_c = L_{tubo}+0.8d = n\frac{\lambda}{2} $$
+ponedo $\sigma_{y_i}=5\ Hz$ e $d=4$ otteniamo: $\tilde{\chi}^2=1,75$. Allora la probabilità che $\chi^2\geq\tilde{\chi}^2$ è del 13\%, il che conferma la correttezza delle ipotesi fatte.\\
+\\
+Tuttavia per un tubo aperto reale, la posizione di nodi e antinodi dipende anche dal diametro del tubo, secondo la legge:
+$$\frac{n\lambda}{2}=L+0.8d$$ pertanto, prima di calcolare $v$ dal valore di $m$ apportiamo la seguente correzione:
+$$ L_c = (90\ cm)+(0.8)(3.9\ cm) = 93.12\ cm = 0.93 m $$
+Si ricava dunque che $$v=2L_cm=348\pm0.02\ m/s$$
 
-dove $d$ è il diametro del tubo (3.9 cm) e $L_{tubo}$ la sua lunghezza. 
-Si ricava dunque che $$v=2L_cm=351.994\ m/s$$.
-Dunque si vede che:
-$$ 2L_c= n.... v = \lambda\nu$$
+L'errore è stato ricavato dalla propagazione degli errori sulle lunghezze e sull'interpolazione:
+$$\sigma_{L+0.8D}=\sqrt{((\sigma_L)^2+(0.8\sigma_D)^2}=0.55\ cm$$
+$$\sigma_v= \sigma_{2mL_c}= 2\sqrt{\left(\frac{\sigma_m}{m}\right)^2+\left(\frac{\sigma_{L_{c}}}{L_c}\right)^2}= 0.02\ m/s$$
 
-Si può ricavare $v$ direttamente dalla \ref{eq:gianni} (con la correzione), sostituendo a $\nu$ la frequenza fondamentale $\nu_0 = 185$ Hz
 
-$$ v = 2L_c\frac{\nu}{n} = 344.544\pm9.39\ m/s$$ 
+%Si può ricavare $v$ direttamente dalla \ref{eq:gianni} (con la correzione), sostituendo a $\nu$ la frequenza fondamentale $\nu_0 = 185$ Hz
+
+%$$ v = 2L_c\frac{\nu}{n} = 344.544\pm9.39\ m/s$$ 
    
- 
+Confrontiamo il valore ottenuto con quello previsto dalla legge:
+\begin{equation}
+v=\sqrt{\frac{\gamma R T}{M}} = 348\ m/s
+\end{equation}
+con $\gamma=\displaystyle{\frac{C_p}{C_v}}=\frac{7}{5}$ (gas biatomico), $R=8.31\ J/K mol$, $T=293\ K$, $M= 0.028\ kg/mol$ (massa molare dell'azoto $N$).
+
 \subsection{Ventri e nodi}
 
-Posta una frequenza corrispondente a $n>1$, spostiamo all'interno del tubo il microfono e cerchiamo i punti corrispondenti a ventri e nodi (posizione rispetto all'inizio del tubo).\\
+Posta una frequenza corrispondente a $n>1$ ($n=2, n=3$), spostiamo all'interno del tubo il microfono e cerchiamo i punti corrispondenti a ventri e nodi (posizione rispetto all'inizio del tubo).\\
 
 \begin{center}
 \begin{tabular}{r r r r}
 
-\multicolumn{2}{c}{$\nu$ = 370 Hz}&\multicolumn{2}{c}{$\nu$ = 558 Hz}\\
-\textit{nodo 1}:& 0 cm & \textit{nodo 1}:& 0 cm\\
-\textit{ventre 1}:& 22.5 cm & \textit{ventre 2}:& 15 cm\\
-\textit{nodo 2}:& 45 cm &\textit{nodo 2}:& 30 cm\\
-\textit{ventre 2}:& 67.5 cm&\textit{ventre 3}:& 45 cm\\
-\textit{nodo 3}:& 90 cm & \textit{nodo 3}:& 60 cm\\
+\multicolumn{2}{c}{$\nu$ = 370 Hz}& \multicolumn{2}{c}{$\nu$ = 558 Hz}\\
+\textit{nodo 1}:& 0 cm & \hspace{2cm}\textit{nodo 1}:& 0 cm\\
+\textit{ventre 1}:& 22.5 cm & \hspace{2cm}\textit{ventre 2}:& 15 cm\\
+\textit{nodo 2}:& 45 cm &\hspace{2cm}\textit{nodo 2}:& 30 cm\\
+\textit{ventre 2}:& 67.5 cm &\hspace{2cm}\textit{ventre 3}:& 45 cm\\
+\textit{nodo 3}:& 90 cm &\hspace{2cm} \textit{nodo 3}:& 60 cm\\
 & & \textit{ventre 4}:& 75 cm \\
 & & \textit{nodo 4}:& 90 cm \\
 \end{tabular}
 \end{center}
 
- 
- %propagazione misure
+Si verifica che essi corrispondono a quanto previsto dalla \ref{frequenza}: per $n=2$ si hanno tre nodi (uno all'inizio, uno alla fine ed uno al centro della corda) e due ventri (nei punti medi dei segmenti congiungenti due nodi consecutivi); analogalmente avviene per $n=3$, in cui si hanno 5 nodi e 3 ventri. \footnote{Abbiamo omesso in tabella di riportare tutte le incertezze, per renderla più leggibile. La precisione del metro a nastro è di $\pm1\ mm$.}
+
 \section{Tubo chiuso ad una estremità, contenente aria}
 
 La condizione per l'instaurarsi di onde stazionarie in un tubo chiuso ad una estremità è data dalla relazione:
-
+\\
 \begin{equation}
  L=(2n-1)\frac{\lambda}{4}
 \end{equation}
-
 Operativamente, abbiamo risolto l'equazione soprastante rispetto a $n$.
 
 $$ n = \frac{2L_c\nu}{v} + \frac{1}{2} $$
+Verifichiamo, come nel caso del tubo aperto, che le frequenze di risonanza stanno fra loro come multipli interi: 
 
-Verifichiamo, come nel caso del tubo aperto, che 
-
+\textbf{L = 90 cm}
+\\
 \begin{center}
 \begin{tabular}{c|c|c|c|c|c}
 $\nu$ (Hz) & 285 & 475 & 670 & 860 & 1050 \\
@@ -91,10 +105,15 @@ $n$ & 2 & 3 & 4 & 5 & 6 \\
 \end{tabular}
 \end{center}
 
-\subsection{Ventri e nodi}
-$\nu_0$= 475 Hz\\
 
 \begin{center}
+\includegraphics[scale=0.5]{../grafici/tubo/tubo2.png}
+
+$m = v = 169\pm 1\ m/s$
+\end{center}
+
+\begin{center}
+$\nu_0$= 475 Hz\\
 \begin{tabular}{r r}
 \textit{nodo 1}: & 0 cm\\
 \textit{ventre 2}: & 17 cm\\
@@ -102,7 +121,6 @@ $\nu_0$= 475 Hz\\
 \textit{ventre 4}: & 53 cm\\
 \textit{nodo 5}: & 70 cm\\
 \end{tabular}
-
 \end{center}
 
 \subsection{Onda quadra}
@@ -113,16 +131,28 @@ $L = (0.9 - 0.03) m $ (stantuffo 1 cm, microfono 2cm)\\
 $v = 349 m/s$
 
 \subsection{Tubo a lunghezza variabile}
-Variando la lunghezza del tubo abbiamo cercato la frequenza secondo cui si riusciva a trovare la prima armonica - detto come si sarebe dovuto dire, abbiamo verificat la dipendenza dell'equazione dalla lunghezza del tubo.
+Abbiamo infine verificato la dipendenza delle frequenze di risonanza dalla lunghezza del tubo.
 
 \begin{center}
 \begin{tabular}{*{5}{c|}c}
 L (cm) & 60 & 65 & 70 & 75 & 80 \\
 \midrule
-$\nu$ (Hz) & 415 & 380 & bianchetto & 340 & 315\\
+$\nu$ (Hz) 415 & 380 & 365 & 340 & 315\\
 \end{tabular}
 \end{center}
+Interpoliamo i dati con l'equazione:
+\begin{equation}\label{tubochiuso}
+\nu=\frac{(2n-1)}{L}v
+\end{equation} 
+usando il metodo dei minimi quadrati. Nel nostro caso la \ref{tubochiuso}, avendo $n=1$, si presenta nella forma più semmplice:
+$$\nu=\frac{v}{L}$$
+Poniamo $x_i=1/L_i$, $y_i=\nu_i$ ed $m=v$.
 
+\begin{center}
+\includegraphics[scale=0.5]{../grafici/tubo/tubo3.png}
+
+$m = v = 251\pm 1\ m/s$
+\end{center}
 
 \section{Tubo chiuso da ambo i lati, contenente Kripton}
 
