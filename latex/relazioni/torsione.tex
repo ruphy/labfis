@@ -37,18 +37,17 @@ Diametro carrucola: & 29 mm\\
 \end{tabular}
 
 \section{Raccolta dei dati}
-
-In primis sono stati raccolti i dati relativi alle caratteristiche geometriche dei tre fili in esame:
+Per quanto riguarda i tre fili in esame:
+\begin{center}
 
 \begin{tabular}{l|l|l|l}
-
  & Filo A & Filo B & Filo C \\
 \midrule
 Diametro (mm) & 1.750 & 1.175 & 0.880 \\
 
 Lunghezza (cm) & 41.3 &  43 & 33.5 \\
 \midrule
-\end{tabular}
+\end{tabular}\end{center}
 
 \subsection{Misura dei momenti d'inerzia}
 
@@ -56,7 +55,7 @@ In questa fase si provvederà a ricavare  sperimentalmente i momenti d'inerzia d
 \begin{itemize}
 \item Disco 
 \item Anello
-\item Sbarra cilindrica omogenea, con due masse uguali, scorrevoli su di essa, poste equidistanti dall’asse di rotazione
+\item Sbarra cilindrica omogenea, con due masse uguali, scorrevoli su di essa, poste equidistanti dall’asse di rotazione (a una distanza \textbf{VEDI QUADERNO}
 \end{itemize}
 
 Si è utilizzato un sistema di due pulleggie e un sensore di rotazione.
@@ -64,92 +63,83 @@ Il sensore di rotazione fornisce la posizione angolare in funzione del tempo.
 
 
 
-- Grafico angolo/tempo cadute
-- Grafico accelerazione/tempo cadute
-- Calcolo momenti da dati sperimentali:
-
-
-
-
-
-\subsection{Pendolo di torsione}
-
-Abbiamo ricavato i seguenti periodi per ogni filo:
+- Grafico angolo/tempo cadute?
+- Grafico accelerazione/tempo cadute?
 \\
-\includegraphics[scale=0.5]{../grafici/filoA}
-\\
-\includegraphics[scale=0.5]{../grafici/filoB}
-\\
-\includegraphics[scale=0.5]{../grafici/filoC}
-
-
-
-
-\subsection{ Misura di equilibrio}
-
-
-\subsubsection{Filo A,B,C}
-\begin{tabular}{l|l|l|l}
-
-\multicolumn{2}{|c|}{ciao}\\
-
+\begin{center}
+\begin{tabular}{c|ccc}
+Oggetto & Accelerazione lineare & Accelerazione angolare & Momento d'inerzia \\
 \midrule
-& A & B & C \\
-50g & 4.0 & 12.0 & 31.0 \\
-100g & 7.0 & 23.0 & 61.0 \\
-200g & 13.0 & 47.0 & 126.0 \\
-\midrule
-
-
+Disco & \\
+Anello & \\
+Sbarra &\\
 \end{tabular}
-
-\section{Analisi dei dati}
-
-\subsection{Misura dei momenti d'inerzia}
-
+\end{center}
 Acquisiti i dati della posizione angolare in funzione del tempo, è possibile calcolare l'accelerazione angolare del sistema. A questo punto, si può calcolare $I$ nel seguente modo:
 $$ bF_p = I\alpha $$
 La forza peso ($F_p$) è nota, così come il braccio ($b$) e, dall'elaborazione dei dati sperimentali, possiamo calcolare $\alpha$.
 
-seguenti corpi, elencati con i rispettivi momenti teorici:
-$$ \frac{1}{2} m R^2 $$
-$$ \frac{1}{2} m (R^2_1 + R^2_2) $$
-$$ \frac{1}{12} m L^2 + 2 \mu D^2  $$
-
-Grafici
+seguenti corpi, elencati con i rispettivi momenti d'inerzia \textbf{teorici}:
+$$ I_{sbarra} = \frac{1}{2} m R^2 = 0.00844 $$
+$$ I_{anello}?? =\frac{1}{2} m (R^2_1 + R^2_2) = 0.00046 $$
+$$ I_{disco}?? = \frac{1}{12} m L^2 + 2 \mu D^2 = 0.00013 $$
 
 
-Questi dati vanno confrontati con i momenti d'inerzia calcolati partendo dai dati geometrici dei corpi
-
-
-$$ I_sbarra = 0.00844 $$
-$$ I_disco = 0.00013 $$
-$$ I_anello = 0.00046 $$
 
 \subsection{Pendolo di torsione}
 
+Abbiamo ricavato i seguenti periodi di oscillazione per ogni filo:
+\\
+\begin{tabular}{cc}
+\includegraphics[scale=0.4]{../grafici/FiloA.png}
+&
+\includegraphics[scale=0.4]{../grafici/FiloB.png}
+\\
+\begin{tabular}{ll}
+Filo A: & $0.644 \pm 0.015\ s$\\
+Filo B: & $2.429 \pm 0.033\ s$\\
+Filo C: & $3.844 \pm 0.046\ s$
+\end{tabular}
+&
+\includegraphics[scale=0.4]{../grafici/FiloC.png}
 
-Questo ci permetterà di calcolare nella seconda parte la costante di torsione $c$ sfruttando la seguente eguaglianza:
+\end{tabular}
 
+
+Questo ci permette di calcolare la costante di torsione $c$ sfruttando la seguente eguaglianza:
+$$ -c\theta = I\frac{d^2\theta}{d\theta^2} $$
+che identifica un moto oscillatorio di periodo
+$$ T = 2\pi \sqrt{\frac{I}{c}}$$
+da cui
 $$ c = 4\pi^2\frac{I}{T^2} $$
 
-
-$$ T = 2\pi \sqrt{\frac{I}{c}}$$
-
-
+\begin{tabular}{l|l l}
+& Periodo (s) & Costante di torsione () \\
+\midrule
+Filo A & \\
+Filo B & \\
+Filo C & \\
+\end{tabular}
 
 
 \subsection{Misura di equilibrio}
 
-$$ c = G \frac{\pi}{2}\frac{r^4}{l} $$
-
-dove $r$ e $l$ sono rispettivamente il raggio e la lunghezza del filo, $I$ è il momento d'inerzia, $T$ il periodo, e $G$ è il modulo di rigidità o di scorrimento ed è una proprietà specifica del materiale di cui il filo è realizzato.
-
-Ponendo
-$$ M_{peso} = bmg = c\theta $$
-
+Tabulati gli angoli di deflessione per ogni filo in base alla massa sospesa (controlla!)\\
+\begin{center}
+\begin{tabular}{l|lll}
+& A & B & C \\
+\midrule
+50g & 4.0 & 12.0 & 31.0 \\
+100g & 7.0 & 23.0 & 61.0 \\
+200g & 13.0 & 47.0 & 126.0 \\
+\midrule
+\end{tabular}\end{center}
+Essendo il pendolo in equilibrio, poniamo
+$$ \tau_{peso} = b\cdot mg = c\theta $$
+da cui
+$$ c = \frac{b\cdot mg}{\theta} $$
 dove $b$ è il braccio di applicazione della forza peso, ovvero il raggio della carrucola.
-I valori di c calcolati dono dunque stati (in $N\cdot m/rad$):
+I valori di $c$ calcolati sono dunque stati (in $N\cdot m/rad$):
 
 \begin{center}
 \begin{tabular}{l|lll}
@@ -159,11 +149,20 @@ Peso & Filo A & Filo B & Filo C \\
 100g & 0.1164 & 0.0354 & 0.0134 \\
 200g & 0.1254 & 0.0347 & 0.0129 \\
 \midrule
-Media & & & \\
+$c_{best}$ & $0.115$ & $0.035$& $0.013$ \\
+$\sigma_{c}$ & $0.012$ & $\sim0$ & $\sim 0$ \\
 \end{tabular}
 \end{center}
 
-Non siamo riusciti a trovare i valori di G tabulati in quanto non conoscevamo il materiale in cui era costruito, quindi abbiamo cercato di arrivare a una migliore stima per riconoscere il materiale del filo. Abbiamo utilizzato un valore medio di $c$ per calcolare $G$ secondo la seguente formula:
+\section{Dipendenza di $c$ da $r^4$}
+
+Per la misura statica di $c$, bisogna utilizzare la seguente relazione:
+
+$$ c = G \frac{\pi}{2}\frac{r^4}{l} $$
+
+dove $G$ è il modulo di rigidità o di scorrimento ed è una proprietà specifica del materiale di cui il filo è realizzato.
+
+Non siamo riusciti a trovare i valori di G tabulati in quanto non conoscevamo il materiale in cui era costruito il filo, quindi abbiamo cercato di arrivare a una migliore stima per riconoscerlo. Abbiamo utilizzato il valore di $c$ misurato in precedenza (misura statica) per calcolare $G$ secondo la seguente formula:
 
 $$ G = \frac{2cl}{\pi r^4} $$
 
@@ -176,8 +175,8 @@ Filo A & Filo B & Filo C \\
 \end{tabular}
 \end{center}
 
-Da cui abbiamo dedotto che il filo A fosse in titanio, e i fili B e C in acciaio.
-I dati tabulati sono i seguenti
+Da cui abbiamo supposto che il filo A fosse in acciaio, e i fili B e C in titanio.
+I dati ufficiali tabulati infatti sono i seguenti:
 \begin{center}
 \begin{tabular}{ll}
 Acciaio & Titanio \\
@@ -185,5 +184,25 @@ Acciaio & Titanio \\
 41 GPa & 78 GPa \\
 \end{tabular}
 \end{center}
-
+Ripetendo il calcolo con G come tabulato, otteniamo:
+\begin{center}
+\begin{tabular}{lll}
+Filo A & Filo B & Filo C \\
+\midrule
+0.0914 & 0.0339 & 0.0137 \\
+\end{tabular}
+\end{center}
 \section{Conclusioni}
+Confrontiamo i valori di $c$ teorici e calcolati tramite il metodo statico:
+\begin{center}
+\begin{tabular}{l|lll}
+& Filo A & Filo B & Filo C \\
+\midrule
+Misura statica & $0.115$ & $0.035$& $0.013$ \\
+Misura teorica & 0.0914 & 0.0339 & 0.0137 \\
+\midrule
+Misura media & \\
+Errore ($\frac{\Delta c}{\bar{c}}$) & \\
+\end{tabular}
+\end{center}
+

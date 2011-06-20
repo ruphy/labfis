@@ -36,7 +36,7 @@ for j=firstFile:lastFile
     
   hold on
   plot(tempo(1:end-1), velocita, "o")
-  plot(tem, acc, "1")
+  plot(tem(1:end-2), acc, "1")
 
 endfor
 
